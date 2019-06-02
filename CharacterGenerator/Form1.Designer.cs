@@ -111,6 +111,8 @@
             this.RemoveSpellBtn = new System.Windows.Forms.Button();
             this.SpellsListBox = new System.Windows.Forms.ListBox();
             this.CurrentSpellsLabel = new System.Windows.Forms.Label();
+            this.SpellDescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.SpellDescriptionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ArmorClassNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChallNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharIdNud)).BeginInit();
@@ -845,6 +847,7 @@
             this.SpellsComboBox.Name = "SpellsComboBox";
             this.SpellsComboBox.Size = new System.Drawing.Size(154, 21);
             this.SpellsComboBox.TabIndex = 75;
+            this.SpellsComboBox.SelectedIndexChanged += new System.EventHandler(this.SpellsComboBox_SelectedIndexChanged);
             // 
             // SpellsLabelDD
             // 
@@ -956,6 +959,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.SpellDescriptionLabel);
+            this.tabPage3.Controls.Add(this.SpellDescriptionTextBox);
             this.tabPage3.Controls.Add(this.CurrentSpellsLabel);
             this.tabPage3.Controls.Add(this.SpellsListBox);
             this.tabPage3.Controls.Add(this.RemoveSpellBtn);
@@ -995,7 +1000,7 @@
             // SpellsListBox
             // 
             this.SpellsListBox.FormattingEnabled = true;
-            this.SpellsListBox.Location = new System.Drawing.Point(619, 88);
+            this.SpellsListBox.Location = new System.Drawing.Point(977, 61);
             this.SpellsListBox.Name = "SpellsListBox";
             this.SpellsListBox.Size = new System.Drawing.Size(154, 394);
             this.SpellsListBox.TabIndex = 78;
@@ -1003,11 +1008,28 @@
             // CurrentSpellsLabel
             // 
             this.CurrentSpellsLabel.AutoSize = true;
-            this.CurrentSpellsLabel.Location = new System.Drawing.Point(535, 88);
+            this.CurrentSpellsLabel.Location = new System.Drawing.Point(893, 61);
             this.CurrentSpellsLabel.Name = "CurrentSpellsLabel";
             this.CurrentSpellsLabel.Size = new System.Drawing.Size(75, 13);
             this.CurrentSpellsLabel.TabIndex = 79;
             this.CurrentSpellsLabel.Text = "Current Spells:";
+            // 
+            // SpellDescriptionTextBox
+            // 
+            this.SpellDescriptionTextBox.Location = new System.Drawing.Point(484, 127);
+            this.SpellDescriptionTextBox.Multiline = true;
+            this.SpellDescriptionTextBox.Name = "SpellDescriptionTextBox";
+            this.SpellDescriptionTextBox.Size = new System.Drawing.Size(289, 363);
+            this.SpellDescriptionTextBox.TabIndex = 80;
+            // 
+            // SpellDescriptionLabel
+            // 
+            this.SpellDescriptionLabel.AutoSize = true;
+            this.SpellDescriptionLabel.Location = new System.Drawing.Point(484, 98);
+            this.SpellDescriptionLabel.Name = "SpellDescriptionLabel";
+            this.SpellDescriptionLabel.Size = new System.Drawing.Size(89, 13);
+            this.SpellDescriptionLabel.TabIndex = 81;
+            this.SpellDescriptionLabel.Text = "Spell Description:";
             // 
             // Form1
             // 
@@ -1129,6 +1151,8 @@
         private System.Windows.Forms.Button AddSpellBtn;
         private System.Windows.Forms.ListBox SpellsListBox;
         private System.Windows.Forms.Label CurrentSpellsLabel;
+        private System.Windows.Forms.Label SpellDescriptionLabel;
+        private System.Windows.Forms.TextBox SpellDescriptionTextBox;
     }
 }
 

@@ -19,9 +19,10 @@ namespace CharacterGenerator
         {
             string jsonString = File.ReadAllText(
                 @"C:\Users\jstefanski\Source\Repos\CharacterGenerator\CharacterGenerator\spells.json");
-            Dictionary<string, Sepll2> spellsDictionary = Sepll2.FromJson(jsonString);
-            foreach (KeyValuePair<string, Sepll2> spell in spellsDictionary)
-                SpellsComboBox.Items.Add(spell.Key);
+            Dictionary<string, Spell> spellsDictionary = Spell.FromJson(jsonString);
+            foreach (KeyValuePair<string, Spell> spell in spellsDictionary)
+                SpellsComboBox.Items.Add(spell);
+            SpellsComboBox.DisplayMember = "Key";
             SpellsComboBox.SelectedIndex = 0;
         }
 
@@ -81,12 +82,22 @@ namespace CharacterGenerator
 
         private void AddSpellBtn_Click(object sender, EventArgs e)
         {
-            SpellsListBox.Items.Add(SpellsComboBox.SelectedItem.ToString());
+            if (SpellsComboBox.SelectedItem == null)
+                return;
+
+            var spellComboBoxItem = (KeyValuePair<string, Spell>)SpellsComboBox.SelectedItem;
+            SpellsListBox.Items.Add(spellComboBoxItem.Key);
         }
 
         private void RemoveSpellBtn_Click(object sender, EventArgs e)
         {
             SpellsListBox.Items.Remove(SpellsListBox.SelectedItem);
+        }
+
+        private void SpellsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var spellComboBoxItem = (KeyValuePair<string, Spell>) SpellsComboBox.SelectedItem;
+            SpellDescriptionTextBox.Text = spellComboBoxItem.Value.ToString();
         }
     }
 }
