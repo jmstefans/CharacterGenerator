@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
@@ -19,10 +18,11 @@ namespace CharacterGenerator
         {
             string jsonString = File.ReadAllText(
                 @"C:\Users\jstefanski\Source\Repos\CharacterGenerator\CharacterGenerator\spells.json");
-            Dictionary<string, Spell> spellsDictionary = Spell.FromJson(jsonString);
-            foreach (KeyValuePair<string, Spell> spell in spellsDictionary)
+            Spell[] spells = Spell.FromJson(jsonString);
+            foreach (Spell spell in spells)
                 SpellsComboBox.Items.Add(spell);
-            SpellsComboBox.DisplayMember = "Key";
+            SpellsComboBox.DisplayMember = "Name";
+            SpellsListBox.DisplayMember = "Name";
             SpellsComboBox.SelectedIndex = 0;
         }
 
@@ -34,7 +34,6 @@ namespace CharacterGenerator
                 {
                     ArmorClass = (int)ArmorClassNud.Value,
                     Actions = ActionsTextBox.Text,
-                    Spells = SpellsTextBox.Text,
                     Algn = AlignmentComboBox.SelectedItem.ToString(),
                     Character_Traits = TraitsTextBox.Text,
                     Chall = (int)ChallNud.Value,
@@ -71,6 +70,12 @@ namespace CharacterGenerator
                     Motive = MotiveTextBox.Text,
                     Type = TypeTextBox.Text,
                 };
+
+                // Add comma-separated spells names.
+                foreach (Spell spell in SpellsListBox.Items)
+                    character.Spells += spell.Name + ",";
+                character.Spells = character.Spells.TrimEnd(',');
+
                 JsonTextBox.Text = JsonConvert.SerializeObject(character);
                 Clipboard.SetText(JsonTextBox.Text);
             }
@@ -85,8 +90,8 @@ namespace CharacterGenerator
             if (SpellsComboBox.SelectedItem == null)
                 return;
 
-            var spellComboBoxItem = (KeyValuePair<string, Spell>)SpellsComboBox.SelectedItem;
-            SpellsListBox.Items.Add(spellComboBoxItem.Key);
+            var spell = (Spell)SpellsComboBox.SelectedItem;
+            SpellsListBox.Items.Add(spell);
         }
 
         private void RemoveSpellBtn_Click(object sender, EventArgs e)
@@ -96,8 +101,8 @@ namespace CharacterGenerator
 
         private void SpellsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var spellComboBoxItem = (KeyValuePair<string, Spell>) SpellsComboBox.SelectedItem;
-            SpellDescriptionTextBox.Text = spellComboBoxItem.Value.ToString();
+            var spell = (Spell) SpellsComboBox.SelectedItem;
+            SpellDescriptionTextBox.Text = spell.ToString();
         }
     }
 }
