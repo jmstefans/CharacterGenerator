@@ -16,8 +16,9 @@ namespace CharacterGenerator
 
         private void InitializeSpells()
         {
-            string jsonString = File.ReadAllText(
-                @"C:\Users\jstefanski\Source\Repos\CharacterGenerator\CharacterGenerator\spells.json");
+            string jsonString;
+            using (var r = new StreamReader(Application.StartupPath + @"/spells.json"))
+                jsonString = r.ReadToEnd();
             Spell[] spells = Spell.FromJson(jsonString);
             foreach (Spell spell in spells)
                 SpellsComboBox.Items.Add(spell);

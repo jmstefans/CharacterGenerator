@@ -37,8 +37,6 @@
             this.ArmorClassNud = new System.Windows.Forms.NumericUpDown();
             this.ActionsTextBox = new System.Windows.Forms.TextBox();
             this.ActionsLabel = new System.Windows.Forms.Label();
-            this.SpellsTextBox = new System.Windows.Forms.TextBox();
-            this.SpellsLabel = new System.Windows.Forms.Label();
             this.AlignmentLabel = new System.Windows.Forms.Label();
             this.AlignmentComboBox = new System.Windows.Forms.ComboBox();
             this.TraitsTextBox = new System.Windows.Forms.TextBox();
@@ -107,12 +105,12 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.AddSpellBtn = new System.Windows.Forms.Button();
-            this.RemoveSpellBtn = new System.Windows.Forms.Button();
-            this.SpellsListBox = new System.Windows.Forms.ListBox();
-            this.CurrentSpellsLabel = new System.Windows.Forms.Label();
-            this.SpellDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.SpellDescriptionLabel = new System.Windows.Forms.Label();
+            this.SpellDescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.CurrentSpellsLabel = new System.Windows.Forms.Label();
+            this.SpellsListBox = new System.Windows.Forms.ListBox();
+            this.RemoveSpellBtn = new System.Windows.Forms.Button();
+            this.AddSpellBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ArmorClassNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChallNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharIdNud)).BeginInit();
@@ -205,24 +203,6 @@
             this.ActionsLabel.Size = new System.Drawing.Size(45, 13);
             this.ActionsLabel.TabIndex = 6;
             this.ActionsLabel.Text = "Actions:";
-            // 
-            // SpellsTextBox
-            // 
-            this.SpellsTextBox.Location = new System.Drawing.Point(126, 61);
-            this.SpellsTextBox.Multiline = true;
-            this.SpellsTextBox.Name = "SpellsTextBox";
-            this.SpellsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.SpellsTextBox.Size = new System.Drawing.Size(289, 245);
-            this.SpellsTextBox.TabIndex = 9;
-            // 
-            // SpellsLabel
-            // 
-            this.SpellsLabel.AutoSize = true;
-            this.SpellsLabel.Location = new System.Drawing.Point(42, 61);
-            this.SpellsLabel.Name = "SpellsLabel";
-            this.SpellsLabel.Size = new System.Drawing.Size(38, 13);
-            this.SpellsLabel.TabIndex = 8;
-            this.SpellsLabel.Text = "Spells:";
             // 
             // AlignmentLabel
             // 
@@ -765,9 +745,9 @@
             this.RacialFeaturesLabel.AutoSize = true;
             this.RacialFeaturesLabel.Location = new System.Drawing.Point(395, 142);
             this.RacialFeaturesLabel.Name = "RacialFeaturesLabel";
-            this.RacialFeaturesLabel.Size = new System.Drawing.Size(84, 13);
+            this.RacialFeaturesLabel.Size = new System.Drawing.Size(51, 13);
             this.RacialFeaturesLabel.TabIndex = 64;
-            this.RacialFeaturesLabel.Text = "Racial Features:";
+            this.RacialFeaturesLabel.Text = "Features:";
             // 
             // RacketTextBox
             // 
@@ -965,9 +945,7 @@
             this.tabPage3.Controls.Add(this.SpellsListBox);
             this.tabPage3.Controls.Add(this.RemoveSpellBtn);
             this.tabPage3.Controls.Add(this.AddSpellBtn);
-            this.tabPage3.Controls.Add(this.SpellsTextBox);
             this.tabPage3.Controls.Add(this.SpellsComboBox);
-            this.tabPage3.Controls.Add(this.SpellsLabel);
             this.tabPage3.Controls.Add(this.SpellsLabelDD);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -977,15 +955,39 @@
             this.tabPage3.Text = "Spells";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // AddSpellBtn
+            // SpellDescriptionLabel
             // 
-            this.AddSpellBtn.Location = new System.Drawing.Point(794, 59);
-            this.AddSpellBtn.Name = "AddSpellBtn";
-            this.AddSpellBtn.Size = new System.Drawing.Size(75, 23);
-            this.AddSpellBtn.TabIndex = 76;
-            this.AddSpellBtn.Text = "Add Spell";
-            this.AddSpellBtn.UseVisualStyleBackColor = true;
-            this.AddSpellBtn.Click += new System.EventHandler(this.AddSpellBtn_Click);
+            this.SpellDescriptionLabel.AutoSize = true;
+            this.SpellDescriptionLabel.Location = new System.Drawing.Point(484, 98);
+            this.SpellDescriptionLabel.Name = "SpellDescriptionLabel";
+            this.SpellDescriptionLabel.Size = new System.Drawing.Size(89, 13);
+            this.SpellDescriptionLabel.TabIndex = 81;
+            this.SpellDescriptionLabel.Text = "Spell Description:";
+            // 
+            // SpellDescriptionTextBox
+            // 
+            this.SpellDescriptionTextBox.Location = new System.Drawing.Point(484, 127);
+            this.SpellDescriptionTextBox.Multiline = true;
+            this.SpellDescriptionTextBox.Name = "SpellDescriptionTextBox";
+            this.SpellDescriptionTextBox.Size = new System.Drawing.Size(289, 363);
+            this.SpellDescriptionTextBox.TabIndex = 80;
+            // 
+            // CurrentSpellsLabel
+            // 
+            this.CurrentSpellsLabel.AutoSize = true;
+            this.CurrentSpellsLabel.Location = new System.Drawing.Point(893, 61);
+            this.CurrentSpellsLabel.Name = "CurrentSpellsLabel";
+            this.CurrentSpellsLabel.Size = new System.Drawing.Size(75, 13);
+            this.CurrentSpellsLabel.TabIndex = 79;
+            this.CurrentSpellsLabel.Text = "Current Spells:";
+            // 
+            // SpellsListBox
+            // 
+            this.SpellsListBox.FormattingEnabled = true;
+            this.SpellsListBox.Location = new System.Drawing.Point(977, 61);
+            this.SpellsListBox.Name = "SpellsListBox";
+            this.SpellsListBox.Size = new System.Drawing.Size(154, 394);
+            this.SpellsListBox.TabIndex = 78;
             // 
             // RemoveSpellBtn
             // 
@@ -997,39 +999,15 @@
             this.RemoveSpellBtn.UseVisualStyleBackColor = true;
             this.RemoveSpellBtn.Click += new System.EventHandler(this.RemoveSpellBtn_Click);
             // 
-            // SpellsListBox
+            // AddSpellBtn
             // 
-            this.SpellsListBox.FormattingEnabled = true;
-            this.SpellsListBox.Location = new System.Drawing.Point(977, 61);
-            this.SpellsListBox.Name = "SpellsListBox";
-            this.SpellsListBox.Size = new System.Drawing.Size(154, 394);
-            this.SpellsListBox.TabIndex = 78;
-            // 
-            // CurrentSpellsLabel
-            // 
-            this.CurrentSpellsLabel.AutoSize = true;
-            this.CurrentSpellsLabel.Location = new System.Drawing.Point(893, 61);
-            this.CurrentSpellsLabel.Name = "CurrentSpellsLabel";
-            this.CurrentSpellsLabel.Size = new System.Drawing.Size(75, 13);
-            this.CurrentSpellsLabel.TabIndex = 79;
-            this.CurrentSpellsLabel.Text = "Current Spells:";
-            // 
-            // SpellDescriptionTextBox
-            // 
-            this.SpellDescriptionTextBox.Location = new System.Drawing.Point(484, 127);
-            this.SpellDescriptionTextBox.Multiline = true;
-            this.SpellDescriptionTextBox.Name = "SpellDescriptionTextBox";
-            this.SpellDescriptionTextBox.Size = new System.Drawing.Size(289, 363);
-            this.SpellDescriptionTextBox.TabIndex = 80;
-            // 
-            // SpellDescriptionLabel
-            // 
-            this.SpellDescriptionLabel.AutoSize = true;
-            this.SpellDescriptionLabel.Location = new System.Drawing.Point(484, 98);
-            this.SpellDescriptionLabel.Name = "SpellDescriptionLabel";
-            this.SpellDescriptionLabel.Size = new System.Drawing.Size(89, 13);
-            this.SpellDescriptionLabel.TabIndex = 81;
-            this.SpellDescriptionLabel.Text = "Spell Description:";
+            this.AddSpellBtn.Location = new System.Drawing.Point(794, 59);
+            this.AddSpellBtn.Name = "AddSpellBtn";
+            this.AddSpellBtn.Size = new System.Drawing.Size(75, 23);
+            this.AddSpellBtn.TabIndex = 76;
+            this.AddSpellBtn.Text = "Add Spell";
+            this.AddSpellBtn.UseVisualStyleBackColor = true;
+            this.AddSpellBtn.Click += new System.EventHandler(this.AddSpellBtn_Click);
             // 
             // Form1
             // 
@@ -1077,8 +1055,6 @@
         private System.Windows.Forms.NumericUpDown ArmorClassNud;
         private System.Windows.Forms.TextBox ActionsTextBox;
         private System.Windows.Forms.Label ActionsLabel;
-        private System.Windows.Forms.TextBox SpellsTextBox;
-        private System.Windows.Forms.Label SpellsLabel;
         private System.Windows.Forms.Label AlignmentLabel;
         private System.Windows.Forms.ComboBox AlignmentComboBox;
         private System.Windows.Forms.TextBox TraitsTextBox;
