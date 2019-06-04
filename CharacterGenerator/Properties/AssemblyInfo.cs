@@ -2,4 +2,4 @@
 
 [assembly: AssemblyTitle("CharacterGenerator")]
 [assembly: AssemblyDescription("An application to help create Dungeons and Dragons characters.")]
-[assembly: AssemblyVersion("0.4")]
+[assembly: AssemblyVersion("0.5")]
