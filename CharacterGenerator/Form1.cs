@@ -1,6 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace CharacterGenerator
@@ -25,6 +29,7 @@ namespace CharacterGenerator
             SpellsComboBox.DisplayMember = "Name";
             SpellsListBox.DisplayMember = "Name";
             SpellsComboBox.SelectedIndex = 0;
+            ChallengeRatingComboBox.SelectedIndex = 0;
         }
 
         private void GenerateJsonBtn_Click(object sender, EventArgs e)
@@ -52,7 +57,6 @@ namespace CharacterGenerator
                     Location = LocationTextBox.Text,
                     Race = RaceTextBox.Text,
                     Appearance = AppearanceTextBox.Text,
-                    Skills = SkillsTextBox.Text,
                     Speed = (int)SpeedNud.Value,
                     Stats = new Abilities
                     {
@@ -77,7 +81,27 @@ namespace CharacterGenerator
                     character.Spells += spell.Name + ",";
                 character.Spells = character.Spells?.TrimEnd(',');
 
-                JsonTextBox.Text = JsonConvert.SerializeObject(character);
+                // Add proficient skills.
+                character.Skills = new Skills();
+                List<string> proficientSkills = AddSkillsToJson(ref character);
+
+                // Add all of the rest of the character properties to the allowed property list for
+                //the contract resolver (excludes the one property of NpcCharacter that should not be output).
+                List<string> charProps = character.GetType().GetProperties().Select(prop => prop.Name)
+                    .Where(prop => !prop.Equals("ChallengeRating")).ToList();
+
+                // Create final list of allowed properties to be output.
+                proficientSkills.AddRange(charProps);
+                List<string> allOutputPropertyNames = proficientSkills;
+
+                // Create the JSON from the object and copy it to the clipboard for easy pasting.
+                JsonTextBox.Text = JsonConvert.SerializeObject(character,
+                    new JsonSerializerSettings
+                    {
+                        ContractResolver = new CustomContractResolver(allOutputPropertyNames)
+                    });
+                
+                // Save JSON to clipboard for easy pasting.
                 Clipboard.SetText(JsonTextBox.Text);
             }
             catch (Exception ex)
@@ -104,6 +128,39 @@ namespace CharacterGenerator
         {
             var spell = (Spell) SpellsComboBox.SelectedItem;
             SpellDescriptionTextBox.Text = spell.ToString();
+        }
+
+        private List<string> AddSkillsToJson(ref NpcCharacter character)
+        {
+            var proficientSkills = new List<string>();
+
+            // Set the character's CR with the value from the UI, since we'll need that later to calculate a proficiency bonus.
+            character.ChallengeRating = ChallengeRatingComboBox.SelectedItem.ToString();
+
+            // For all of the possible skills...
+            foreach (object skillCb in SkillsGroupBox.Controls)
+            {
+                // If the skill is proficient...
+                if (skillCb is CheckBox box && box.Checked)
+                {
+                    // For all of the skill properties of the character object...
+                    foreach (PropertyInfo propertyInfo in character.Skills.GetType().GetProperties())
+                    {
+                        // If we found the appropriate character object's skill property...
+                        IEnumerable<Attribute> attributes = propertyInfo.GetCustomAttributes();
+                        if (box.Text.Equals(((DescriptionAttribute) attributes.ElementAt(0)).Description))
+                        {
+                            // Set the character object's skill to the appropriate bonus.
+                            propertyInfo.SetValue(character.Skills, character.GetCrProficiencyBonus());
+
+                            // Save the property name for the JSON contract resolver.
+                            proficientSkills.Add(propertyInfo.Name);
+                        }
+                    }
+                }
+            }
+
+            return proficientSkills;
         }
     }
 }

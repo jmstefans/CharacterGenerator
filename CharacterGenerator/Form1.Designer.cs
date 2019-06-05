@@ -59,8 +59,6 @@
             this.RaceLabel = new System.Windows.Forms.Label();
             this.AppearanceTextBox = new System.Windows.Forms.TextBox();
             this.AppearanceLabel = new System.Windows.Forms.Label();
-            this.SkillsTextBox = new System.Windows.Forms.TextBox();
-            this.SkillsLabel = new System.Windows.Forms.Label();
             this.SpeedLabel = new System.Windows.Forms.Label();
             this.SpeedNud = new System.Windows.Forms.NumericUpDown();
             this.CharismaNud = new System.Windows.Forms.NumericUpDown();
@@ -111,6 +109,28 @@
             this.SpellsListBox = new System.Windows.Forms.ListBox();
             this.RemoveSpellBtn = new System.Windows.Forms.Button();
             this.AddSpellBtn = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.SkillsGroupBox = new System.Windows.Forms.GroupBox();
+            this.AcrobaticsCheckBox = new System.Windows.Forms.CheckBox();
+            this.StealthCheckBox = new System.Windows.Forms.CheckBox();
+            this.ArcanaCheckBox = new System.Windows.Forms.CheckBox();
+            this.SurvivalCheckBox = new System.Windows.Forms.CheckBox();
+            this.AnimalHandlingCheckBox = new System.Windows.Forms.CheckBox();
+            this.SleightOfHandCheckBox = new System.Windows.Forms.CheckBox();
+            this.AthleticsCheckBox = new System.Windows.Forms.CheckBox();
+            this.PersuasionCheckBox = new System.Windows.Forms.CheckBox();
+            this.HistoryCheckBox = new System.Windows.Forms.CheckBox();
+            this.ReligionCheckBox = new System.Windows.Forms.CheckBox();
+            this.DeceptionCheckBox = new System.Windows.Forms.CheckBox();
+            this.PerformanceCheckBox = new System.Windows.Forms.CheckBox();
+            this.InsightCheckBox = new System.Windows.Forms.CheckBox();
+            this.NatureCheckBox = new System.Windows.Forms.CheckBox();
+            this.InvestigationCheckBox = new System.Windows.Forms.CheckBox();
+            this.PerceptionCheckBox = new System.Windows.Forms.CheckBox();
+            this.IntimidationCheckBox = new System.Windows.Forms.CheckBox();
+            this.MedicineCheckBox = new System.Windows.Forms.CheckBox();
+            this.ChallengeRatingComboBox = new System.Windows.Forms.ComboBox();
+            this.ChallengeRatingLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ArmorClassNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChallNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharIdNud)).BeginInit();
@@ -128,6 +148,8 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.SkillsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // GenerateJsonBtn
@@ -152,7 +174,7 @@
             // FirstNameLabel
             // 
             this.FirstNameLabel.AutoSize = true;
-            this.FirstNameLabel.Location = new System.Drawing.Point(23, 161);
+            this.FirstNameLabel.Location = new System.Drawing.Point(58, 164);
             this.FirstNameLabel.Name = "FirstNameLabel";
             this.FirstNameLabel.Size = new System.Drawing.Size(60, 13);
             this.FirstNameLabel.TabIndex = 2;
@@ -161,7 +183,7 @@
             // ArmorClassLabel
             // 
             this.ArmorClassLabel.AutoSize = true;
-            this.ArmorClassLabel.Location = new System.Drawing.Point(23, 26);
+            this.ArmorClassLabel.Location = new System.Drawing.Point(58, 29);
             this.ArmorClassLabel.Name = "ArmorClassLabel";
             this.ArmorClassLabel.Size = new System.Drawing.Size(65, 13);
             this.ArmorClassLabel.TabIndex = 3;
@@ -169,14 +191,14 @@
             // 
             // FirstNameTextBox
             // 
-            this.FirstNameTextBox.Location = new System.Drawing.Point(107, 161);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(142, 164);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(154, 20);
             this.FirstNameTextBox.TabIndex = 4;
             // 
             // ArmorClassNud
             // 
-            this.ArmorClassNud.Location = new System.Drawing.Point(107, 18);
+            this.ArmorClassNud.Location = new System.Drawing.Point(142, 21);
             this.ArmorClassNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -251,7 +273,7 @@
             // 
             // ChallNud
             // 
-            this.ChallNud.Location = new System.Drawing.Point(107, 44);
+            this.ChallNud.Location = new System.Drawing.Point(142, 47);
             this.ChallNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -264,7 +286,7 @@
             // ChallLabel
             // 
             this.ChallLabel.AutoSize = true;
-            this.ChallLabel.Location = new System.Drawing.Point(23, 52);
+            this.ChallLabel.Location = new System.Drawing.Point(58, 55);
             this.ChallLabel.Name = "ChallLabel";
             this.ChallLabel.Size = new System.Drawing.Size(33, 13);
             this.ChallLabel.TabIndex = 14;
@@ -272,7 +294,7 @@
             // 
             // CharIdNud
             // 
-            this.CharIdNud.Location = new System.Drawing.Point(107, 77);
+            this.CharIdNud.Location = new System.Drawing.Point(142, 80);
             this.CharIdNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -285,7 +307,7 @@
             // CharIdLabel
             // 
             this.CharIdLabel.AutoSize = true;
-            this.CharIdLabel.Location = new System.Drawing.Point(23, 85);
+            this.CharIdLabel.Location = new System.Drawing.Point(58, 88);
             this.CharIdLabel.Name = "CharIdLabel";
             this.CharIdLabel.Size = new System.Drawing.Size(70, 13);
             this.CharIdLabel.TabIndex = 16;
@@ -293,7 +315,7 @@
             // 
             // FactionTextBox
             // 
-            this.FactionTextBox.Location = new System.Drawing.Point(107, 106);
+            this.FactionTextBox.Location = new System.Drawing.Point(142, 109);
             this.FactionTextBox.Name = "FactionTextBox";
             this.FactionTextBox.Size = new System.Drawing.Size(154, 20);
             this.FactionTextBox.TabIndex = 19;
@@ -301,7 +323,7 @@
             // FactionLabel
             // 
             this.FactionLabel.AutoSize = true;
-            this.FactionLabel.Location = new System.Drawing.Point(23, 106);
+            this.FactionLabel.Location = new System.Drawing.Point(58, 109);
             this.FactionLabel.Name = "FactionLabel";
             this.FactionLabel.Size = new System.Drawing.Size(45, 13);
             this.FactionLabel.TabIndex = 18;
@@ -309,7 +331,7 @@
             // 
             // HitPointsNud
             // 
-            this.HitPointsNud.Location = new System.Drawing.Point(107, 187);
+            this.HitPointsNud.Location = new System.Drawing.Point(142, 190);
             this.HitPointsNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -322,7 +344,7 @@
             // HpLabel
             // 
             this.HpLabel.AutoSize = true;
-            this.HpLabel.Location = new System.Drawing.Point(23, 195);
+            this.HpLabel.Location = new System.Drawing.Point(58, 198);
             this.HpLabel.Name = "HpLabel";
             this.HpLabel.Size = new System.Drawing.Size(55, 13);
             this.HpLabel.TabIndex = 20;
@@ -330,7 +352,7 @@
             // 
             // ImageTextBox
             // 
-            this.ImageTextBox.Location = new System.Drawing.Point(107, 213);
+            this.ImageTextBox.Location = new System.Drawing.Point(142, 216);
             this.ImageTextBox.Name = "ImageTextBox";
             this.ImageTextBox.Size = new System.Drawing.Size(154, 20);
             this.ImageTextBox.TabIndex = 23;
@@ -338,7 +360,7 @@
             // ImageLabel
             // 
             this.ImageLabel.AutoSize = true;
-            this.ImageLabel.Location = new System.Drawing.Point(23, 213);
+            this.ImageLabel.Location = new System.Drawing.Point(58, 216);
             this.ImageLabel.Name = "ImageLabel";
             this.ImageLabel.Size = new System.Drawing.Size(39, 13);
             this.ImageLabel.TabIndex = 22;
@@ -346,7 +368,7 @@
             // 
             // LastNameTextBox
             // 
-            this.LastNameTextBox.Location = new System.Drawing.Point(107, 239);
+            this.LastNameTextBox.Location = new System.Drawing.Point(142, 242);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.Size = new System.Drawing.Size(154, 20);
             this.LastNameTextBox.TabIndex = 25;
@@ -354,7 +376,7 @@
             // LastNameLabel
             // 
             this.LastNameLabel.AutoSize = true;
-            this.LastNameLabel.Location = new System.Drawing.Point(23, 239);
+            this.LastNameLabel.Location = new System.Drawing.Point(58, 242);
             this.LastNameLabel.Name = "LastNameLabel";
             this.LastNameLabel.Size = new System.Drawing.Size(61, 13);
             this.LastNameLabel.TabIndex = 24;
@@ -362,7 +384,7 @@
             // 
             // LocationTextBox
             // 
-            this.LocationTextBox.Location = new System.Drawing.Point(388, 17);
+            this.LocationTextBox.Location = new System.Drawing.Point(423, 20);
             this.LocationTextBox.Name = "LocationTextBox";
             this.LocationTextBox.Size = new System.Drawing.Size(154, 20);
             this.LocationTextBox.TabIndex = 27;
@@ -370,7 +392,7 @@
             // LocationLabel
             // 
             this.LocationLabel.AutoSize = true;
-            this.LocationLabel.Location = new System.Drawing.Point(304, 17);
+            this.LocationLabel.Location = new System.Drawing.Point(339, 20);
             this.LocationLabel.Name = "LocationLabel";
             this.LocationLabel.Size = new System.Drawing.Size(51, 13);
             this.LocationLabel.TabIndex = 26;
@@ -378,7 +400,7 @@
             // 
             // RaceTextBox
             // 
-            this.RaceTextBox.Location = new System.Drawing.Point(388, 43);
+            this.RaceTextBox.Location = new System.Drawing.Point(423, 46);
             this.RaceTextBox.Name = "RaceTextBox";
             this.RaceTextBox.Size = new System.Drawing.Size(154, 20);
             this.RaceTextBox.TabIndex = 29;
@@ -386,7 +408,7 @@
             // RaceLabel
             // 
             this.RaceLabel.AutoSize = true;
-            this.RaceLabel.Location = new System.Drawing.Point(304, 43);
+            this.RaceLabel.Location = new System.Drawing.Point(339, 46);
             this.RaceLabel.Name = "RaceLabel";
             this.RaceLabel.Size = new System.Drawing.Size(36, 13);
             this.RaceLabel.TabIndex = 28;
@@ -409,24 +431,6 @@
             this.AppearanceLabel.Size = new System.Drawing.Size(68, 13);
             this.AppearanceLabel.TabIndex = 30;
             this.AppearanceLabel.Text = "Appearance:";
-            // 
-            // SkillsTextBox
-            // 
-            this.SkillsTextBox.Location = new System.Drawing.Point(993, 275);
-            this.SkillsTextBox.Multiline = true;
-            this.SkillsTextBox.Name = "SkillsTextBox";
-            this.SkillsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.SkillsTextBox.Size = new System.Drawing.Size(289, 142);
-            this.SkillsTextBox.TabIndex = 33;
-            // 
-            // SkillsLabel
-            // 
-            this.SkillsLabel.AutoSize = true;
-            this.SkillsLabel.Location = new System.Drawing.Point(943, 279);
-            this.SkillsLabel.Name = "SkillsLabel";
-            this.SkillsLabel.Size = new System.Drawing.Size(34, 13);
-            this.SkillsLabel.TabIndex = 32;
-            this.SkillsLabel.Text = "Skills:";
             // 
             // SpeedLabel
             // 
@@ -612,7 +616,7 @@
             // 
             // XpNud
             // 
-            this.XpNud.Location = new System.Drawing.Point(388, 119);
+            this.XpNud.Location = new System.Drawing.Point(423, 122);
             this.XpNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -625,7 +629,7 @@
             // XpLabel
             // 
             this.XpLabel.AutoSize = true;
-            this.XpLabel.Location = new System.Drawing.Point(304, 123);
+            this.XpLabel.Location = new System.Drawing.Point(339, 126);
             this.XpLabel.Name = "XpLabel";
             this.XpLabel.Size = new System.Drawing.Size(24, 13);
             this.XpLabel.TabIndex = 50;
@@ -633,7 +637,7 @@
             // 
             // TitleTextBox
             // 
-            this.TitleTextBox.Location = new System.Drawing.Point(388, 69);
+            this.TitleTextBox.Location = new System.Drawing.Point(423, 72);
             this.TitleTextBox.Name = "TitleTextBox";
             this.TitleTextBox.Size = new System.Drawing.Size(154, 20);
             this.TitleTextBox.TabIndex = 49;
@@ -641,7 +645,7 @@
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Location = new System.Drawing.Point(304, 69);
+            this.TitleLabel.Location = new System.Drawing.Point(339, 72);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(30, 13);
             this.TitleLabel.TabIndex = 48;
@@ -649,7 +653,7 @@
             // 
             // ClassTextBox
             // 
-            this.ClassTextBox.Location = new System.Drawing.Point(388, 148);
+            this.ClassTextBox.Location = new System.Drawing.Point(423, 151);
             this.ClassTextBox.Name = "ClassTextBox";
             this.ClassTextBox.Size = new System.Drawing.Size(154, 20);
             this.ClassTextBox.TabIndex = 53;
@@ -657,7 +661,7 @@
             // ClassLabel
             // 
             this.ClassLabel.AutoSize = true;
-            this.ClassLabel.Location = new System.Drawing.Point(304, 148);
+            this.ClassLabel.Location = new System.Drawing.Point(339, 151);
             this.ClassLabel.Name = "ClassLabel";
             this.ClassLabel.Size = new System.Drawing.Size(35, 13);
             this.ClassLabel.TabIndex = 52;
@@ -665,7 +669,7 @@
             // 
             // AccoladesTextBox
             // 
-            this.AccoladesTextBox.Location = new System.Drawing.Point(388, 177);
+            this.AccoladesTextBox.Location = new System.Drawing.Point(423, 180);
             this.AccoladesTextBox.Name = "AccoladesTextBox";
             this.AccoladesTextBox.Size = new System.Drawing.Size(154, 20);
             this.AccoladesTextBox.TabIndex = 55;
@@ -673,7 +677,7 @@
             // AccoladesLabel
             // 
             this.AccoladesLabel.AutoSize = true;
-            this.AccoladesLabel.Location = new System.Drawing.Point(304, 177);
+            this.AccoladesLabel.Location = new System.Drawing.Point(339, 180);
             this.AccoladesLabel.Name = "AccoladesLabel";
             this.AccoladesLabel.Size = new System.Drawing.Size(60, 13);
             this.AccoladesLabel.TabIndex = 54;
@@ -699,7 +703,7 @@
             // 
             // FactionLeaderTextBox
             // 
-            this.FactionLeaderTextBox.Location = new System.Drawing.Point(107, 132);
+            this.FactionLeaderTextBox.Location = new System.Drawing.Point(142, 135);
             this.FactionLeaderTextBox.Name = "FactionLeaderTextBox";
             this.FactionLeaderTextBox.Size = new System.Drawing.Size(154, 20);
             this.FactionLeaderTextBox.TabIndex = 61;
@@ -707,7 +711,7 @@
             // FactionLeaderLabel
             // 
             this.FactionLeaderLabel.AutoSize = true;
-            this.FactionLeaderLabel.Location = new System.Drawing.Point(23, 132);
+            this.FactionLeaderLabel.Location = new System.Drawing.Point(58, 135);
             this.FactionLeaderLabel.Name = "FactionLeaderLabel";
             this.FactionLeaderLabel.Size = new System.Drawing.Size(81, 13);
             this.FactionLeaderLabel.TabIndex = 60;
@@ -769,7 +773,7 @@
             // 
             // SizeTextBox
             // 
-            this.SizeTextBox.Location = new System.Drawing.Point(388, 203);
+            this.SizeTextBox.Location = new System.Drawing.Point(423, 206);
             this.SizeTextBox.Name = "SizeTextBox";
             this.SizeTextBox.Size = new System.Drawing.Size(154, 20);
             this.SizeTextBox.TabIndex = 69;
@@ -777,7 +781,7 @@
             // SizeLabel
             // 
             this.SizeLabel.AutoSize = true;
-            this.SizeLabel.Location = new System.Drawing.Point(304, 203);
+            this.SizeLabel.Location = new System.Drawing.Point(339, 206);
             this.SizeLabel.Name = "SizeLabel";
             this.SizeLabel.Size = new System.Drawing.Size(30, 13);
             this.SizeLabel.TabIndex = 68;
@@ -785,7 +789,7 @@
             // 
             // TitleOrderNud
             // 
-            this.TitleOrderNud.Location = new System.Drawing.Point(388, 94);
+            this.TitleOrderNud.Location = new System.Drawing.Point(423, 97);
             this.TitleOrderNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -798,7 +802,7 @@
             // TitleOrderLabel
             // 
             this.TitleOrderLabel.AutoSize = true;
-            this.TitleOrderLabel.Location = new System.Drawing.Point(304, 98);
+            this.TitleOrderLabel.Location = new System.Drawing.Point(339, 101);
             this.TitleOrderLabel.Name = "TitleOrderLabel";
             this.TitleOrderLabel.Size = new System.Drawing.Size(59, 13);
             this.TitleOrderLabel.TabIndex = 70;
@@ -806,7 +810,7 @@
             // 
             // TypeTextBox
             // 
-            this.TypeTextBox.Location = new System.Drawing.Point(388, 229);
+            this.TypeTextBox.Location = new System.Drawing.Point(423, 232);
             this.TypeTextBox.Name = "TypeTextBox";
             this.TypeTextBox.Size = new System.Drawing.Size(154, 20);
             this.TypeTextBox.TabIndex = 73;
@@ -814,7 +818,7 @@
             // TypeLabel
             // 
             this.TypeLabel.AutoSize = true;
-            this.TypeLabel.Location = new System.Drawing.Point(304, 229);
+            this.TypeLabel.Location = new System.Drawing.Point(339, 232);
             this.TypeLabel.Name = "TypeLabel";
             this.TypeLabel.Size = new System.Drawing.Size(34, 13);
             this.TypeLabel.TabIndex = 72;
@@ -843,6 +847,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(42, 33);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -851,6 +856,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.ChallengeRatingComboBox);
+            this.tabPage1.Controls.Add(this.ChallengeRatingLabel);
             this.tabPage1.Controls.Add(this.ArmorClassNud);
             this.tabPage1.Controls.Add(this.ArmorClassLabel);
             this.tabPage1.Controls.Add(this.ChallNud);
@@ -925,9 +932,7 @@
             this.tabPage2.Controls.Add(this.AppearanceTextBox);
             this.tabPage2.Controls.Add(this.RacialFeaturesLabel);
             this.tabPage2.Controls.Add(this.RacialFeaturesTextBox);
-            this.tabPage2.Controls.Add(this.SkillsTextBox);
             this.tabPage2.Controls.Add(this.RacketTextBox);
-            this.tabPage2.Controls.Add(this.SkillsLabel);
             this.tabPage2.Controls.Add(this.RacketLabel);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -1009,6 +1014,259 @@
             this.AddSpellBtn.UseVisualStyleBackColor = true;
             this.AddSpellBtn.Click += new System.EventHandler(this.AddSpellBtn_Click);
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.SkillsGroupBox);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1294, 542);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Skills";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // SkillsGroupBox
+            // 
+            this.SkillsGroupBox.Controls.Add(this.AcrobaticsCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.StealthCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.ArcanaCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.SurvivalCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.AnimalHandlingCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.SleightOfHandCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.AthleticsCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.PersuasionCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.HistoryCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.ReligionCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.DeceptionCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.PerformanceCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.InsightCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.NatureCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.InvestigationCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.PerceptionCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.IntimidationCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.MedicineCheckBox);
+            this.SkillsGroupBox.Location = new System.Drawing.Point(277, 32);
+            this.SkillsGroupBox.Name = "SkillsGroupBox";
+            this.SkillsGroupBox.Size = new System.Drawing.Size(200, 474);
+            this.SkillsGroupBox.TabIndex = 18;
+            this.SkillsGroupBox.TabStop = false;
+            this.SkillsGroupBox.Text = "Skill Proficiencies";
+            // 
+            // AcrobaticsCheckBox
+            // 
+            this.AcrobaticsCheckBox.AutoSize = true;
+            this.AcrobaticsCheckBox.Location = new System.Drawing.Point(49, 41);
+            this.AcrobaticsCheckBox.Name = "AcrobaticsCheckBox";
+            this.AcrobaticsCheckBox.Size = new System.Drawing.Size(76, 17);
+            this.AcrobaticsCheckBox.TabIndex = 0;
+            this.AcrobaticsCheckBox.Text = "Acrobatics";
+            this.AcrobaticsCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // StealthCheckBox
+            // 
+            this.StealthCheckBox.AutoSize = true;
+            this.StealthCheckBox.Location = new System.Drawing.Point(49, 409);
+            this.StealthCheckBox.Name = "StealthCheckBox";
+            this.StealthCheckBox.Size = new System.Drawing.Size(59, 17);
+            this.StealthCheckBox.TabIndex = 17;
+            this.StealthCheckBox.Text = "Stealth";
+            this.StealthCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ArcanaCheckBox
+            // 
+            this.ArcanaCheckBox.AutoSize = true;
+            this.ArcanaCheckBox.Location = new System.Drawing.Point(49, 87);
+            this.ArcanaCheckBox.Name = "ArcanaCheckBox";
+            this.ArcanaCheckBox.Size = new System.Drawing.Size(60, 17);
+            this.ArcanaCheckBox.TabIndex = 1;
+            this.ArcanaCheckBox.Text = "Arcana";
+            this.ArcanaCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // SurvivalCheckBox
+            // 
+            this.SurvivalCheckBox.AutoSize = true;
+            this.SurvivalCheckBox.Location = new System.Drawing.Point(49, 432);
+            this.SurvivalCheckBox.Name = "SurvivalCheckBox";
+            this.SurvivalCheckBox.Size = new System.Drawing.Size(64, 17);
+            this.SurvivalCheckBox.TabIndex = 16;
+            this.SurvivalCheckBox.Text = "Survival";
+            this.SurvivalCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // AnimalHandlingCheckBox
+            // 
+            this.AnimalHandlingCheckBox.AutoSize = true;
+            this.AnimalHandlingCheckBox.Location = new System.Drawing.Point(49, 64);
+            this.AnimalHandlingCheckBox.Name = "AnimalHandlingCheckBox";
+            this.AnimalHandlingCheckBox.Size = new System.Drawing.Size(102, 17);
+            this.AnimalHandlingCheckBox.TabIndex = 2;
+            this.AnimalHandlingCheckBox.Text = "Animal Handling";
+            this.AnimalHandlingCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // SleightOfHandCheckBox
+            // 
+            this.SleightOfHandCheckBox.AutoSize = true;
+            this.SleightOfHandCheckBox.Location = new System.Drawing.Point(49, 386);
+            this.SleightOfHandCheckBox.Name = "SleightOfHandCheckBox";
+            this.SleightOfHandCheckBox.Size = new System.Drawing.Size(99, 17);
+            this.SleightOfHandCheckBox.TabIndex = 15;
+            this.SleightOfHandCheckBox.Text = "Sleight of Hand";
+            this.SleightOfHandCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // AthleticsCheckBox
+            // 
+            this.AthleticsCheckBox.AutoSize = true;
+            this.AthleticsCheckBox.Location = new System.Drawing.Point(49, 110);
+            this.AthleticsCheckBox.Name = "AthleticsCheckBox";
+            this.AthleticsCheckBox.Size = new System.Drawing.Size(66, 17);
+            this.AthleticsCheckBox.TabIndex = 3;
+            this.AthleticsCheckBox.Text = "Athletics";
+            this.AthleticsCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // PersuasionCheckBox
+            // 
+            this.PersuasionCheckBox.AutoSize = true;
+            this.PersuasionCheckBox.Location = new System.Drawing.Point(49, 340);
+            this.PersuasionCheckBox.Name = "PersuasionCheckBox";
+            this.PersuasionCheckBox.Size = new System.Drawing.Size(78, 17);
+            this.PersuasionCheckBox.TabIndex = 14;
+            this.PersuasionCheckBox.Text = "Persuasion";
+            this.PersuasionCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // HistoryCheckBox
+            // 
+            this.HistoryCheckBox.AutoSize = true;
+            this.HistoryCheckBox.Location = new System.Drawing.Point(49, 156);
+            this.HistoryCheckBox.Name = "HistoryCheckBox";
+            this.HistoryCheckBox.Size = new System.Drawing.Size(58, 17);
+            this.HistoryCheckBox.TabIndex = 4;
+            this.HistoryCheckBox.Text = "History";
+            this.HistoryCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ReligionCheckBox
+            // 
+            this.ReligionCheckBox.AutoSize = true;
+            this.ReligionCheckBox.Location = new System.Drawing.Point(49, 363);
+            this.ReligionCheckBox.Name = "ReligionCheckBox";
+            this.ReligionCheckBox.Size = new System.Drawing.Size(64, 17);
+            this.ReligionCheckBox.TabIndex = 13;
+            this.ReligionCheckBox.Text = "Religion";
+            this.ReligionCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // DeceptionCheckBox
+            // 
+            this.DeceptionCheckBox.AutoSize = true;
+            this.DeceptionCheckBox.Location = new System.Drawing.Point(49, 133);
+            this.DeceptionCheckBox.Name = "DeceptionCheckBox";
+            this.DeceptionCheckBox.Size = new System.Drawing.Size(75, 17);
+            this.DeceptionCheckBox.TabIndex = 5;
+            this.DeceptionCheckBox.Text = "Deception";
+            this.DeceptionCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // PerformanceCheckBox
+            // 
+            this.PerformanceCheckBox.AutoSize = true;
+            this.PerformanceCheckBox.Location = new System.Drawing.Point(49, 317);
+            this.PerformanceCheckBox.Name = "PerformanceCheckBox";
+            this.PerformanceCheckBox.Size = new System.Drawing.Size(86, 17);
+            this.PerformanceCheckBox.TabIndex = 12;
+            this.PerformanceCheckBox.Text = "Performance";
+            this.PerformanceCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // InsightCheckBox
+            // 
+            this.InsightCheckBox.AutoSize = true;
+            this.InsightCheckBox.Location = new System.Drawing.Point(49, 179);
+            this.InsightCheckBox.Name = "InsightCheckBox";
+            this.InsightCheckBox.Size = new System.Drawing.Size(57, 17);
+            this.InsightCheckBox.TabIndex = 6;
+            this.InsightCheckBox.Text = "Insight";
+            this.InsightCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // NatureCheckBox
+            // 
+            this.NatureCheckBox.AutoSize = true;
+            this.NatureCheckBox.Location = new System.Drawing.Point(49, 271);
+            this.NatureCheckBox.Name = "NatureCheckBox";
+            this.NatureCheckBox.Size = new System.Drawing.Size(58, 17);
+            this.NatureCheckBox.TabIndex = 11;
+            this.NatureCheckBox.Text = "Nature";
+            this.NatureCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // InvestigationCheckBox
+            // 
+            this.InvestigationCheckBox.AutoSize = true;
+            this.InvestigationCheckBox.Location = new System.Drawing.Point(49, 225);
+            this.InvestigationCheckBox.Name = "InvestigationCheckBox";
+            this.InvestigationCheckBox.Size = new System.Drawing.Size(86, 17);
+            this.InvestigationCheckBox.TabIndex = 7;
+            this.InvestigationCheckBox.Text = "Investigation";
+            this.InvestigationCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // PerceptionCheckBox
+            // 
+            this.PerceptionCheckBox.AutoSize = true;
+            this.PerceptionCheckBox.Location = new System.Drawing.Point(49, 294);
+            this.PerceptionCheckBox.Name = "PerceptionCheckBox";
+            this.PerceptionCheckBox.Size = new System.Drawing.Size(77, 17);
+            this.PerceptionCheckBox.TabIndex = 10;
+            this.PerceptionCheckBox.Text = "Perception";
+            this.PerceptionCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // IntimidationCheckBox
+            // 
+            this.IntimidationCheckBox.AutoSize = true;
+            this.IntimidationCheckBox.Location = new System.Drawing.Point(49, 202);
+            this.IntimidationCheckBox.Name = "IntimidationCheckBox";
+            this.IntimidationCheckBox.Size = new System.Drawing.Size(79, 17);
+            this.IntimidationCheckBox.TabIndex = 8;
+            this.IntimidationCheckBox.Text = "Intimidation";
+            this.IntimidationCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // MedicineCheckBox
+            // 
+            this.MedicineCheckBox.AutoSize = true;
+            this.MedicineCheckBox.Location = new System.Drawing.Point(49, 248);
+            this.MedicineCheckBox.Name = "MedicineCheckBox";
+            this.MedicineCheckBox.Size = new System.Drawing.Size(69, 17);
+            this.MedicineCheckBox.TabIndex = 9;
+            this.MedicineCheckBox.Text = "Medicine";
+            this.MedicineCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ChallengeRatingComboBox
+            // 
+            this.ChallengeRatingComboBox.FormattingEnabled = true;
+            this.ChallengeRatingComboBox.Items.AddRange(new object[] {
+            "0",
+            "1/8",
+            "1/4",
+            "1/2",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13"});
+            this.ChallengeRatingComboBox.Location = new System.Drawing.Point(142, 279);
+            this.ChallengeRatingComboBox.Name = "ChallengeRatingComboBox";
+            this.ChallengeRatingComboBox.Size = new System.Drawing.Size(155, 21);
+            this.ChallengeRatingComboBox.TabIndex = 75;
+            // 
+            // ChallengeRatingLabel
+            // 
+            this.ChallengeRatingLabel.AutoSize = true;
+            this.ChallengeRatingLabel.Location = new System.Drawing.Point(24, 282);
+            this.ChallengeRatingLabel.Name = "ChallengeRatingLabel";
+            this.ChallengeRatingLabel.Size = new System.Drawing.Size(115, 13);
+            this.ChallengeRatingLabel.TabIndex = 74;
+            this.ChallengeRatingLabel.Text = "Challenge Rating (CR):";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1040,6 +1298,9 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.SkillsGroupBox.ResumeLayout(false);
+            this.SkillsGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1077,8 +1338,6 @@
         private System.Windows.Forms.Label RaceLabel;
         private System.Windows.Forms.TextBox AppearanceTextBox;
         private System.Windows.Forms.Label AppearanceLabel;
-        private System.Windows.Forms.TextBox SkillsTextBox;
-        private System.Windows.Forms.Label SkillsLabel;
         private System.Windows.Forms.Label SpeedLabel;
         private System.Windows.Forms.NumericUpDown SpeedNud;
         private System.Windows.Forms.NumericUpDown CharismaNud;
@@ -1129,6 +1388,28 @@
         private System.Windows.Forms.Label CurrentSpellsLabel;
         private System.Windows.Forms.Label SpellDescriptionLabel;
         private System.Windows.Forms.TextBox SpellDescriptionTextBox;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.GroupBox SkillsGroupBox;
+        private System.Windows.Forms.CheckBox AcrobaticsCheckBox;
+        private System.Windows.Forms.CheckBox StealthCheckBox;
+        private System.Windows.Forms.CheckBox ArcanaCheckBox;
+        private System.Windows.Forms.CheckBox SurvivalCheckBox;
+        private System.Windows.Forms.CheckBox AnimalHandlingCheckBox;
+        private System.Windows.Forms.CheckBox SleightOfHandCheckBox;
+        private System.Windows.Forms.CheckBox AthleticsCheckBox;
+        private System.Windows.Forms.CheckBox PersuasionCheckBox;
+        private System.Windows.Forms.CheckBox HistoryCheckBox;
+        private System.Windows.Forms.CheckBox ReligionCheckBox;
+        private System.Windows.Forms.CheckBox DeceptionCheckBox;
+        private System.Windows.Forms.CheckBox PerformanceCheckBox;
+        private System.Windows.Forms.CheckBox InsightCheckBox;
+        private System.Windows.Forms.CheckBox NatureCheckBox;
+        private System.Windows.Forms.CheckBox InvestigationCheckBox;
+        private System.Windows.Forms.CheckBox PerceptionCheckBox;
+        private System.Windows.Forms.CheckBox IntimidationCheckBox;
+        private System.Windows.Forms.CheckBox MedicineCheckBox;
+        private System.Windows.Forms.ComboBox ChallengeRatingComboBox;
+        private System.Windows.Forms.Label ChallengeRatingLabel;
     }
 }
 

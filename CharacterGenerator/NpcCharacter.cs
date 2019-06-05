@@ -1,4 +1,6 @@
-﻿namespace CharacterGenerator
+﻿using System;
+
+namespace CharacterGenerator
 {
     public class NpcCharacter
     {
@@ -18,7 +20,7 @@
         public string Location { get; set; }
         public string Race { get; set; }
         public string Appearance { get; set; }
-        public string Skills { get; set; }
+        public Skills Skills { get; set; }
         public int Speed { get; set; }
         public Abilities Stats { get; set; }
         public string Title { get; set; }
@@ -32,5 +34,39 @@
         public string Racket { get; set; }
         public string Size { get; set; }
         public string Type { get; set; }
+
+        // Not supposed to be output.
+        public string ChallengeRating { get; set; }
+
+        public byte GetCrProficiencyBonus()
+        {
+            switch (ChallengeRating)
+            {
+                case "0":
+                case "1/8":
+                case "1/4":
+                case "1/2":
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                    return 2;
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                    return 3;
+                case "9":
+                case "10":
+                case "11":
+                case "12":
+                    return 4;
+                case "13":
+                    return 5;
+            }
+
+            throw new Exception(
+                "Couldn't calculate the proficiency bonus based on the current challenge rating.");
+        }
     }
 }
