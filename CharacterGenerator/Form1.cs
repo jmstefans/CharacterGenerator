@@ -75,7 +75,7 @@ namespace CharacterGenerator
                 // Add comma-separated spells names.
                 foreach (Spell spell in SpellsListBox.Items)
                     character.Spells += spell.Name + ",";
-                character.Spells = character.Spells.TrimEnd(',');
+                character.Spells = character.Spells?.TrimEnd(',');
 
                 JsonTextBox.Text = JsonConvert.SerializeObject(character);
                 Clipboard.SetText(JsonTextBox.Text);
