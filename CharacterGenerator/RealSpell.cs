@@ -6,7 +6,7 @@ using System.Text;
 
 namespace CharacterGenerator
 {
-    public class Spell
+    public class RealSpell
     {
         [JsonProperty("casting_time")]
         public string CastingTime { get; set; }
@@ -62,7 +62,7 @@ namespace CharacterGenerator
 
         #endregion Overrides of Object
 
-        public static Spell[] FromJson(string json) => JsonConvert.DeserializeObject<Spell[]>(json, Converter.Settings);
+        public static RealSpell[] FromJson(string json) => JsonConvert.DeserializeObject<RealSpell[]>(json, RealSpellConverter.Settings);
     }
 
     public class Components
@@ -96,12 +96,12 @@ namespace CharacterGenerator
         public static implicit operator Level(long Integer) => new Level { Integer = Integer };
     }
 
-    public static class Serialize
+    public static class RealSpellSerialize
     {
-        public static string ToJson(this Spell[] self) => JsonConvert.SerializeObject(self, Converter.Settings);
+        public static string ToJson(this RealSpell[] self) => JsonConvert.SerializeObject(self, RealSpellConverter.Settings);
     }
 
-    internal static class Converter
+    internal static class RealSpellConverter
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {

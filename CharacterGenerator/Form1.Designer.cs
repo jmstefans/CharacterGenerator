@@ -97,18 +97,19 @@
             this.TitleOrderLabel = new System.Windows.Forms.Label();
             this.TypeTextBox = new System.Windows.Forms.TextBox();
             this.TypeLabel = new System.Windows.Forms.Label();
-            this.SpellsComboBox = new System.Windows.Forms.ComboBox();
-            this.SpellsLabelDD = new System.Windows.Forms.Label();
+            this.CantripsComboBox = new System.Windows.Forms.ComboBox();
+            this.CantripsLabelDD = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ChallengeRatingComboBox = new System.Windows.Forms.ComboBox();
+            this.ChallengeRatingLabel = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.SpellDescriptionLabel = new System.Windows.Forms.Label();
-            this.SpellDescriptionTextBox = new System.Windows.Forms.TextBox();
-            this.CurrentSpellsLabel = new System.Windows.Forms.Label();
-            this.SpellsListBox = new System.Windows.Forms.ListBox();
-            this.RemoveSpellBtn = new System.Windows.Forms.Button();
-            this.AddSpellBtn = new System.Windows.Forms.Button();
+            this.CasterLabel = new System.Windows.Forms.Label();
+            this.CasterTextBox = new System.Windows.Forms.TextBox();
+            this.CantripsListBox = new System.Windows.Forms.ListBox();
+            this.RemoveCantripBtn = new System.Windows.Forms.Button();
+            this.AddCantripBtn = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.SkillsGroupBox = new System.Windows.Forms.GroupBox();
             this.AcrobaticsCheckBox = new System.Windows.Forms.CheckBox();
@@ -129,8 +130,51 @@
             this.PerceptionCheckBox = new System.Windows.Forms.CheckBox();
             this.IntimidationCheckBox = new System.Windows.Forms.CheckBox();
             this.MedicineCheckBox = new System.Windows.Forms.CheckBox();
-            this.ChallengeRatingComboBox = new System.Windows.Forms.ComboBox();
-            this.ChallengeRatingLabel = new System.Windows.Forms.Label();
+            this.Level1ListBox = new System.Windows.Forms.ListBox();
+            this.RemoveLevel1Btn = new System.Windows.Forms.Button();
+            this.AddLevel1Btn = new System.Windows.Forms.Button();
+            this.Level1ComboBox = new System.Windows.Forms.ComboBox();
+            this.Level1LabelDd = new System.Windows.Forms.Label();
+            this.Level2ListBox = new System.Windows.Forms.ListBox();
+            this.RemoveLevel2Btn = new System.Windows.Forms.Button();
+            this.AddLevel2Btn = new System.Windows.Forms.Button();
+            this.Level2ComboBox = new System.Windows.Forms.ComboBox();
+            this.Level2LabelDd = new System.Windows.Forms.Label();
+            this.Level3ListBox = new System.Windows.Forms.ListBox();
+            this.RemoveLevel3Btn = new System.Windows.Forms.Button();
+            this.AddLevel3Btn = new System.Windows.Forms.Button();
+            this.Level3ComboBox = new System.Windows.Forms.ComboBox();
+            this.Level3LabelDd = new System.Windows.Forms.Label();
+            this.Level4ListBox = new System.Windows.Forms.ListBox();
+            this.RemoveLevel4Btn = new System.Windows.Forms.Button();
+            this.AddLevel4Btn = new System.Windows.Forms.Button();
+            this.Level4ComboBox = new System.Windows.Forms.ComboBox();
+            this.Level4LabelDd = new System.Windows.Forms.Label();
+            this.Level9ListBox = new System.Windows.Forms.ListBox();
+            this.RemoveLevel9Btn = new System.Windows.Forms.Button();
+            this.AddLevel9Btn = new System.Windows.Forms.Button();
+            this.Level9ComboBox = new System.Windows.Forms.ComboBox();
+            this.Level9LabelDd = new System.Windows.Forms.Label();
+            this.Level8ListBox = new System.Windows.Forms.ListBox();
+            this.RemoveLevel8Btn = new System.Windows.Forms.Button();
+            this.AddLevel8Btn = new System.Windows.Forms.Button();
+            this.Level8ComboBox = new System.Windows.Forms.ComboBox();
+            this.Level8LabelDd = new System.Windows.Forms.Label();
+            this.Level7ListBox = new System.Windows.Forms.ListBox();
+            this.RemoveLevel7Btn = new System.Windows.Forms.Button();
+            this.AddLevel7Btn = new System.Windows.Forms.Button();
+            this.Level7ComboBox = new System.Windows.Forms.ComboBox();
+            this.Level7LabelDd = new System.Windows.Forms.Label();
+            this.Level6ListBox = new System.Windows.Forms.ListBox();
+            this.RemoveLevel6Btn = new System.Windows.Forms.Button();
+            this.AddLevel6Btn = new System.Windows.Forms.Button();
+            this.Level6ComboBox = new System.Windows.Forms.ComboBox();
+            this.Level6LabelDd = new System.Windows.Forms.Label();
+            this.Level5ListBox = new System.Windows.Forms.ListBox();
+            this.RemoveLevel5Btn = new System.Windows.Forms.Button();
+            this.AddLevel5Btn = new System.Windows.Forms.Button();
+            this.Level5ComboBox = new System.Windows.Forms.ComboBox();
+            this.Level5LabelDd = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ArmorClassNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChallNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharIdNud)).BeginInit();
@@ -154,7 +198,7 @@
             // 
             // GenerateJsonBtn
             // 
-            this.GenerateJsonBtn.Location = new System.Drawing.Point(621, 625);
+            this.GenerateJsonBtn.Location = new System.Drawing.Point(635, 647);
             this.GenerateJsonBtn.Name = "GenerateJsonBtn";
             this.GenerateJsonBtn.Size = new System.Drawing.Size(184, 23);
             this.GenerateJsonBtn.TabIndex = 0;
@@ -164,7 +208,7 @@
             // 
             // JsonTextBox
             // 
-            this.JsonTextBox.Location = new System.Drawing.Point(371, 660);
+            this.JsonTextBox.Location = new System.Drawing.Point(385, 682);
             this.JsonTextBox.Multiline = true;
             this.JsonTextBox.Name = "JsonTextBox";
             this.JsonTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -824,23 +868,23 @@
             this.TypeLabel.TabIndex = 72;
             this.TypeLabel.Text = "Type:";
             // 
-            // SpellsComboBox
+            // CantripsComboBox
             // 
-            this.SpellsComboBox.FormattingEnabled = true;
-            this.SpellsComboBox.Location = new System.Drawing.Point(619, 61);
-            this.SpellsComboBox.Name = "SpellsComboBox";
-            this.SpellsComboBox.Size = new System.Drawing.Size(154, 21);
-            this.SpellsComboBox.TabIndex = 75;
-            this.SpellsComboBox.SelectedIndexChanged += new System.EventHandler(this.SpellsComboBox_SelectedIndexChanged);
+            this.CantripsComboBox.FormattingEnabled = true;
+            this.CantripsComboBox.Location = new System.Drawing.Point(60, 14);
+            this.CantripsComboBox.Name = "CantripsComboBox";
+            this.CantripsComboBox.Size = new System.Drawing.Size(131, 21);
+            this.CantripsComboBox.TabIndex = 75;
+            this.CantripsComboBox.SelectedIndexChanged += new System.EventHandler(this.SpellsComboBox_SelectedIndexChanged);
             // 
-            // SpellsLabelDD
+            // CantripsLabelDD
             // 
-            this.SpellsLabelDD.AutoSize = true;
-            this.SpellsLabelDD.Location = new System.Drawing.Point(535, 61);
-            this.SpellsLabelDD.Name = "SpellsLabelDD";
-            this.SpellsLabelDD.Size = new System.Drawing.Size(38, 13);
-            this.SpellsLabelDD.TabIndex = 74;
-            this.SpellsLabelDD.Text = "Spells:";
+            this.CantripsLabelDD.AutoSize = true;
+            this.CantripsLabelDD.Location = new System.Drawing.Point(6, 17);
+            this.CantripsLabelDD.Name = "CantripsLabelDD";
+            this.CantripsLabelDD.Size = new System.Drawing.Size(48, 13);
+            this.CantripsLabelDD.TabIndex = 74;
+            this.CantripsLabelDD.Text = "Cantrips:";
             // 
             // tabControl1
             // 
@@ -851,7 +895,7 @@
             this.tabControl1.Location = new System.Drawing.Point(42, 33);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1302, 568);
+            this.tabControl1.Size = new System.Drawing.Size(1302, 606);
             this.tabControl1.TabIndex = 76;
             // 
             // tabPage1
@@ -918,6 +962,41 @@
             this.tabPage1.Text = "Stats";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // ChallengeRatingComboBox
+            // 
+            this.ChallengeRatingComboBox.FormattingEnabled = true;
+            this.ChallengeRatingComboBox.Items.AddRange(new object[] {
+            "0",
+            "1/8",
+            "1/4",
+            "1/2",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13"});
+            this.ChallengeRatingComboBox.Location = new System.Drawing.Point(142, 279);
+            this.ChallengeRatingComboBox.Name = "ChallengeRatingComboBox";
+            this.ChallengeRatingComboBox.Size = new System.Drawing.Size(155, 21);
+            this.ChallengeRatingComboBox.TabIndex = 75;
+            // 
+            // ChallengeRatingLabel
+            // 
+            this.ChallengeRatingLabel.AutoSize = true;
+            this.ChallengeRatingLabel.Location = new System.Drawing.Point(24, 282);
+            this.ChallengeRatingLabel.Name = "ChallengeRatingLabel";
+            this.ChallengeRatingLabel.Size = new System.Drawing.Size(115, 13);
+            this.ChallengeRatingLabel.TabIndex = 74;
+            this.ChallengeRatingLabel.Text = "Challenge Rating (CR):";
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.TraitsTextBox);
@@ -944,75 +1023,110 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.SpellDescriptionLabel);
-            this.tabPage3.Controls.Add(this.SpellDescriptionTextBox);
-            this.tabPage3.Controls.Add(this.CurrentSpellsLabel);
-            this.tabPage3.Controls.Add(this.SpellsListBox);
-            this.tabPage3.Controls.Add(this.RemoveSpellBtn);
-            this.tabPage3.Controls.Add(this.AddSpellBtn);
-            this.tabPage3.Controls.Add(this.SpellsComboBox);
-            this.tabPage3.Controls.Add(this.SpellsLabelDD);
+            this.tabPage3.Controls.Add(this.Level9ListBox);
+            this.tabPage3.Controls.Add(this.RemoveLevel9Btn);
+            this.tabPage3.Controls.Add(this.AddLevel9Btn);
+            this.tabPage3.Controls.Add(this.Level9ComboBox);
+            this.tabPage3.Controls.Add(this.Level9LabelDd);
+            this.tabPage3.Controls.Add(this.Level8ListBox);
+            this.tabPage3.Controls.Add(this.RemoveLevel8Btn);
+            this.tabPage3.Controls.Add(this.AddLevel8Btn);
+            this.tabPage3.Controls.Add(this.Level8ComboBox);
+            this.tabPage3.Controls.Add(this.Level8LabelDd);
+            this.tabPage3.Controls.Add(this.Level7ListBox);
+            this.tabPage3.Controls.Add(this.RemoveLevel7Btn);
+            this.tabPage3.Controls.Add(this.AddLevel7Btn);
+            this.tabPage3.Controls.Add(this.Level7ComboBox);
+            this.tabPage3.Controls.Add(this.Level7LabelDd);
+            this.tabPage3.Controls.Add(this.Level6ListBox);
+            this.tabPage3.Controls.Add(this.RemoveLevel6Btn);
+            this.tabPage3.Controls.Add(this.AddLevel6Btn);
+            this.tabPage3.Controls.Add(this.Level6ComboBox);
+            this.tabPage3.Controls.Add(this.Level6LabelDd);
+            this.tabPage3.Controls.Add(this.Level5ListBox);
+            this.tabPage3.Controls.Add(this.RemoveLevel5Btn);
+            this.tabPage3.Controls.Add(this.AddLevel5Btn);
+            this.tabPage3.Controls.Add(this.Level5ComboBox);
+            this.tabPage3.Controls.Add(this.Level5LabelDd);
+            this.tabPage3.Controls.Add(this.Level4ListBox);
+            this.tabPage3.Controls.Add(this.RemoveLevel4Btn);
+            this.tabPage3.Controls.Add(this.AddLevel4Btn);
+            this.tabPage3.Controls.Add(this.Level4ComboBox);
+            this.tabPage3.Controls.Add(this.Level4LabelDd);
+            this.tabPage3.Controls.Add(this.Level3ListBox);
+            this.tabPage3.Controls.Add(this.RemoveLevel3Btn);
+            this.tabPage3.Controls.Add(this.AddLevel3Btn);
+            this.tabPage3.Controls.Add(this.Level3ComboBox);
+            this.tabPage3.Controls.Add(this.Level3LabelDd);
+            this.tabPage3.Controls.Add(this.Level2ListBox);
+            this.tabPage3.Controls.Add(this.RemoveLevel2Btn);
+            this.tabPage3.Controls.Add(this.AddLevel2Btn);
+            this.tabPage3.Controls.Add(this.Level2ComboBox);
+            this.tabPage3.Controls.Add(this.Level2LabelDd);
+            this.tabPage3.Controls.Add(this.Level1ListBox);
+            this.tabPage3.Controls.Add(this.RemoveLevel1Btn);
+            this.tabPage3.Controls.Add(this.AddLevel1Btn);
+            this.tabPage3.Controls.Add(this.Level1ComboBox);
+            this.tabPage3.Controls.Add(this.Level1LabelDd);
+            this.tabPage3.Controls.Add(this.CasterLabel);
+            this.tabPage3.Controls.Add(this.CasterTextBox);
+            this.tabPage3.Controls.Add(this.CantripsListBox);
+            this.tabPage3.Controls.Add(this.RemoveCantripBtn);
+            this.tabPage3.Controls.Add(this.AddCantripBtn);
+            this.tabPage3.Controls.Add(this.CantripsComboBox);
+            this.tabPage3.Controls.Add(this.CantripsLabelDD);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1294, 542);
+            this.tabPage3.Size = new System.Drawing.Size(1294, 580);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Spells";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // SpellDescriptionLabel
+            // CasterLabel
             // 
-            this.SpellDescriptionLabel.AutoSize = true;
-            this.SpellDescriptionLabel.Location = new System.Drawing.Point(484, 98);
-            this.SpellDescriptionLabel.Name = "SpellDescriptionLabel";
-            this.SpellDescriptionLabel.Size = new System.Drawing.Size(89, 13);
-            this.SpellDescriptionLabel.TabIndex = 81;
-            this.SpellDescriptionLabel.Text = "Spell Description:";
+            this.CasterLabel.AutoSize = true;
+            this.CasterLabel.Location = new System.Drawing.Point(942, 465);
+            this.CasterLabel.Name = "CasterLabel";
+            this.CasterLabel.Size = new System.Drawing.Size(40, 13);
+            this.CasterLabel.TabIndex = 81;
+            this.CasterLabel.Text = "Caster:";
             // 
-            // SpellDescriptionTextBox
+            // CasterTextBox
             // 
-            this.SpellDescriptionTextBox.Location = new System.Drawing.Point(484, 127);
-            this.SpellDescriptionTextBox.Multiline = true;
-            this.SpellDescriptionTextBox.Name = "SpellDescriptionTextBox";
-            this.SpellDescriptionTextBox.Size = new System.Drawing.Size(289, 363);
-            this.SpellDescriptionTextBox.TabIndex = 80;
+            this.CasterTextBox.Location = new System.Drawing.Point(988, 465);
+            this.CasterTextBox.Multiline = true;
+            this.CasterTextBox.Name = "CasterTextBox";
+            this.CasterTextBox.Size = new System.Drawing.Size(289, 94);
+            this.CasterTextBox.TabIndex = 80;
             // 
-            // CurrentSpellsLabel
+            // CantripsListBox
             // 
-            this.CurrentSpellsLabel.AutoSize = true;
-            this.CurrentSpellsLabel.Location = new System.Drawing.Point(893, 61);
-            this.CurrentSpellsLabel.Name = "CurrentSpellsLabel";
-            this.CurrentSpellsLabel.Size = new System.Drawing.Size(75, 13);
-            this.CurrentSpellsLabel.TabIndex = 79;
-            this.CurrentSpellsLabel.Text = "Current Spells:";
+            this.CantripsListBox.FormattingEnabled = true;
+            this.CantripsListBox.Location = new System.Drawing.Point(37, 41);
+            this.CantripsListBox.Name = "CantripsListBox";
+            this.CantripsListBox.Size = new System.Drawing.Size(154, 173);
+            this.CantripsListBox.TabIndex = 78;
             // 
-            // SpellsListBox
+            // RemoveCantripBtn
             // 
-            this.SpellsListBox.FormattingEnabled = true;
-            this.SpellsListBox.Location = new System.Drawing.Point(977, 61);
-            this.SpellsListBox.Name = "SpellsListBox";
-            this.SpellsListBox.Size = new System.Drawing.Size(154, 394);
-            this.SpellsListBox.TabIndex = 78;
+            this.RemoveCantripBtn.Location = new System.Drawing.Point(197, 41);
+            this.RemoveCantripBtn.Name = "RemoveCantripBtn";
+            this.RemoveCantripBtn.Size = new System.Drawing.Size(56, 23);
+            this.RemoveCantripBtn.TabIndex = 77;
+            this.RemoveCantripBtn.Text = "Remove Spell";
+            this.RemoveCantripBtn.UseVisualStyleBackColor = true;
+            this.RemoveCantripBtn.Click += new System.EventHandler(this.RemoveSpellBtn_Click);
             // 
-            // RemoveSpellBtn
+            // AddCantripBtn
             // 
-            this.RemoveSpellBtn.Location = new System.Drawing.Point(794, 88);
-            this.RemoveSpellBtn.Name = "RemoveSpellBtn";
-            this.RemoveSpellBtn.Size = new System.Drawing.Size(83, 23);
-            this.RemoveSpellBtn.TabIndex = 77;
-            this.RemoveSpellBtn.Text = "Remove Spell";
-            this.RemoveSpellBtn.UseVisualStyleBackColor = true;
-            this.RemoveSpellBtn.Click += new System.EventHandler(this.RemoveSpellBtn_Click);
-            // 
-            // AddSpellBtn
-            // 
-            this.AddSpellBtn.Location = new System.Drawing.Point(794, 59);
-            this.AddSpellBtn.Name = "AddSpellBtn";
-            this.AddSpellBtn.Size = new System.Drawing.Size(75, 23);
-            this.AddSpellBtn.TabIndex = 76;
-            this.AddSpellBtn.Text = "Add Spell";
-            this.AddSpellBtn.UseVisualStyleBackColor = true;
-            this.AddSpellBtn.Click += new System.EventHandler(this.AddSpellBtn_Click);
+            this.AddCantripBtn.Location = new System.Drawing.Point(197, 12);
+            this.AddCantripBtn.Name = "AddCantripBtn";
+            this.AddCantripBtn.Size = new System.Drawing.Size(37, 23);
+            this.AddCantripBtn.TabIndex = 76;
+            this.AddCantripBtn.Text = "Add Spell";
+            this.AddCantripBtn.UseVisualStyleBackColor = true;
+            this.AddCantripBtn.Click += new System.EventHandler(this.AddSpellBtn_Click);
             // 
             // tabPage4
             // 
@@ -1232,46 +1346,398 @@
             this.MedicineCheckBox.Text = "Medicine";
             this.MedicineCheckBox.UseVisualStyleBackColor = true;
             // 
-            // ChallengeRatingComboBox
+            // Level1ListBox
             // 
-            this.ChallengeRatingComboBox.FormattingEnabled = true;
-            this.ChallengeRatingComboBox.Items.AddRange(new object[] {
-            "0",
-            "1/8",
-            "1/4",
-            "1/2",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13"});
-            this.ChallengeRatingComboBox.Location = new System.Drawing.Point(142, 279);
-            this.ChallengeRatingComboBox.Name = "ChallengeRatingComboBox";
-            this.ChallengeRatingComboBox.Size = new System.Drawing.Size(155, 21);
-            this.ChallengeRatingComboBox.TabIndex = 75;
+            this.Level1ListBox.FormattingEnabled = true;
+            this.Level1ListBox.Location = new System.Drawing.Point(281, 41);
+            this.Level1ListBox.Name = "Level1ListBox";
+            this.Level1ListBox.Size = new System.Drawing.Size(154, 173);
+            this.Level1ListBox.TabIndex = 86;
             // 
-            // ChallengeRatingLabel
+            // RemoveLevel1Btn
             // 
-            this.ChallengeRatingLabel.AutoSize = true;
-            this.ChallengeRatingLabel.Location = new System.Drawing.Point(24, 282);
-            this.ChallengeRatingLabel.Name = "ChallengeRatingLabel";
-            this.ChallengeRatingLabel.Size = new System.Drawing.Size(115, 13);
-            this.ChallengeRatingLabel.TabIndex = 74;
-            this.ChallengeRatingLabel.Text = "Challenge Rating (CR):";
+            this.RemoveLevel1Btn.Location = new System.Drawing.Point(441, 41);
+            this.RemoveLevel1Btn.Name = "RemoveLevel1Btn";
+            this.RemoveLevel1Btn.Size = new System.Drawing.Size(56, 23);
+            this.RemoveLevel1Btn.TabIndex = 85;
+            this.RemoveLevel1Btn.Text = "Remove Spell";
+            this.RemoveLevel1Btn.UseVisualStyleBackColor = true;
+            // 
+            // AddLevel1Btn
+            // 
+            this.AddLevel1Btn.Location = new System.Drawing.Point(441, 12);
+            this.AddLevel1Btn.Name = "AddLevel1Btn";
+            this.AddLevel1Btn.Size = new System.Drawing.Size(37, 23);
+            this.AddLevel1Btn.TabIndex = 84;
+            this.AddLevel1Btn.Text = "Add Spell";
+            this.AddLevel1Btn.UseVisualStyleBackColor = true;
+            // 
+            // Level1ComboBox
+            // 
+            this.Level1ComboBox.FormattingEnabled = true;
+            this.Level1ComboBox.Location = new System.Drawing.Point(304, 14);
+            this.Level1ComboBox.Name = "Level1ComboBox";
+            this.Level1ComboBox.Size = new System.Drawing.Size(131, 21);
+            this.Level1ComboBox.TabIndex = 83;
+            // 
+            // Level1LabelDd
+            // 
+            this.Level1LabelDd.AutoSize = true;
+            this.Level1LabelDd.Location = new System.Drawing.Point(250, 17);
+            this.Level1LabelDd.Name = "Level1LabelDd";
+            this.Level1LabelDd.Size = new System.Drawing.Size(45, 13);
+            this.Level1LabelDd.TabIndex = 82;
+            this.Level1LabelDd.Text = "Level 1:";
+            // 
+            // Level2ListBox
+            // 
+            this.Level2ListBox.FormattingEnabled = true;
+            this.Level2ListBox.Location = new System.Drawing.Point(525, 41);
+            this.Level2ListBox.Name = "Level2ListBox";
+            this.Level2ListBox.Size = new System.Drawing.Size(154, 173);
+            this.Level2ListBox.TabIndex = 91;
+            // 
+            // RemoveLevel2Btn
+            // 
+            this.RemoveLevel2Btn.Location = new System.Drawing.Point(685, 41);
+            this.RemoveLevel2Btn.Name = "RemoveLevel2Btn";
+            this.RemoveLevel2Btn.Size = new System.Drawing.Size(56, 23);
+            this.RemoveLevel2Btn.TabIndex = 90;
+            this.RemoveLevel2Btn.Text = "Remove Spell";
+            this.RemoveLevel2Btn.UseVisualStyleBackColor = true;
+            // 
+            // AddLevel2Btn
+            // 
+            this.AddLevel2Btn.Location = new System.Drawing.Point(685, 12);
+            this.AddLevel2Btn.Name = "AddLevel2Btn";
+            this.AddLevel2Btn.Size = new System.Drawing.Size(37, 23);
+            this.AddLevel2Btn.TabIndex = 89;
+            this.AddLevel2Btn.Text = "Add Spell";
+            this.AddLevel2Btn.UseVisualStyleBackColor = true;
+            // 
+            // Level2ComboBox
+            // 
+            this.Level2ComboBox.FormattingEnabled = true;
+            this.Level2ComboBox.Location = new System.Drawing.Point(548, 14);
+            this.Level2ComboBox.Name = "Level2ComboBox";
+            this.Level2ComboBox.Size = new System.Drawing.Size(131, 21);
+            this.Level2ComboBox.TabIndex = 88;
+            // 
+            // Level2LabelDd
+            // 
+            this.Level2LabelDd.AutoSize = true;
+            this.Level2LabelDd.Location = new System.Drawing.Point(494, 17);
+            this.Level2LabelDd.Name = "Level2LabelDd";
+            this.Level2LabelDd.Size = new System.Drawing.Size(45, 13);
+            this.Level2LabelDd.TabIndex = 87;
+            this.Level2LabelDd.Text = "Level 2:";
+            // 
+            // Level3ListBox
+            // 
+            this.Level3ListBox.FormattingEnabled = true;
+            this.Level3ListBox.Location = new System.Drawing.Point(771, 41);
+            this.Level3ListBox.Name = "Level3ListBox";
+            this.Level3ListBox.Size = new System.Drawing.Size(154, 173);
+            this.Level3ListBox.TabIndex = 96;
+            // 
+            // RemoveLevel3Btn
+            // 
+            this.RemoveLevel3Btn.Location = new System.Drawing.Point(931, 41);
+            this.RemoveLevel3Btn.Name = "RemoveLevel3Btn";
+            this.RemoveLevel3Btn.Size = new System.Drawing.Size(56, 23);
+            this.RemoveLevel3Btn.TabIndex = 95;
+            this.RemoveLevel3Btn.Text = "Remove Spell";
+            this.RemoveLevel3Btn.UseVisualStyleBackColor = true;
+            // 
+            // AddLevel3Btn
+            // 
+            this.AddLevel3Btn.Location = new System.Drawing.Point(931, 12);
+            this.AddLevel3Btn.Name = "AddLevel3Btn";
+            this.AddLevel3Btn.Size = new System.Drawing.Size(37, 23);
+            this.AddLevel3Btn.TabIndex = 94;
+            this.AddLevel3Btn.Text = "Add Spell";
+            this.AddLevel3Btn.UseVisualStyleBackColor = true;
+            // 
+            // Level3ComboBox
+            // 
+            this.Level3ComboBox.FormattingEnabled = true;
+            this.Level3ComboBox.Location = new System.Drawing.Point(794, 14);
+            this.Level3ComboBox.Name = "Level3ComboBox";
+            this.Level3ComboBox.Size = new System.Drawing.Size(131, 21);
+            this.Level3ComboBox.TabIndex = 93;
+            // 
+            // Level3LabelDd
+            // 
+            this.Level3LabelDd.AutoSize = true;
+            this.Level3LabelDd.Location = new System.Drawing.Point(740, 17);
+            this.Level3LabelDd.Name = "Level3LabelDd";
+            this.Level3LabelDd.Size = new System.Drawing.Size(45, 13);
+            this.Level3LabelDd.TabIndex = 92;
+            this.Level3LabelDd.Text = "Level 3:";
+            // 
+            // Level4ListBox
+            // 
+            this.Level4ListBox.FormattingEnabled = true;
+            this.Level4ListBox.Location = new System.Drawing.Point(1016, 41);
+            this.Level4ListBox.Name = "Level4ListBox";
+            this.Level4ListBox.Size = new System.Drawing.Size(154, 173);
+            this.Level4ListBox.TabIndex = 101;
+            // 
+            // RemoveLevel4Btn
+            // 
+            this.RemoveLevel4Btn.Location = new System.Drawing.Point(1176, 41);
+            this.RemoveLevel4Btn.Name = "RemoveLevel4Btn";
+            this.RemoveLevel4Btn.Size = new System.Drawing.Size(56, 23);
+            this.RemoveLevel4Btn.TabIndex = 100;
+            this.RemoveLevel4Btn.Text = "Remove Spell";
+            this.RemoveLevel4Btn.UseVisualStyleBackColor = true;
+            // 
+            // AddLevel4Btn
+            // 
+            this.AddLevel4Btn.Location = new System.Drawing.Point(1176, 12);
+            this.AddLevel4Btn.Name = "AddLevel4Btn";
+            this.AddLevel4Btn.Size = new System.Drawing.Size(37, 23);
+            this.AddLevel4Btn.TabIndex = 99;
+            this.AddLevel4Btn.Text = "Add Spell";
+            this.AddLevel4Btn.UseVisualStyleBackColor = true;
+            // 
+            // Level4ComboBox
+            // 
+            this.Level4ComboBox.FormattingEnabled = true;
+            this.Level4ComboBox.Location = new System.Drawing.Point(1039, 14);
+            this.Level4ComboBox.Name = "Level4ComboBox";
+            this.Level4ComboBox.Size = new System.Drawing.Size(131, 21);
+            this.Level4ComboBox.TabIndex = 98;
+            // 
+            // Level4LabelDd
+            // 
+            this.Level4LabelDd.AutoSize = true;
+            this.Level4LabelDd.Location = new System.Drawing.Point(985, 17);
+            this.Level4LabelDd.Name = "Level4LabelDd";
+            this.Level4LabelDd.Size = new System.Drawing.Size(45, 13);
+            this.Level4LabelDd.TabIndex = 97;
+            this.Level4LabelDd.Text = "Level 4:";
+            // 
+            // Level9ListBox
+            // 
+            this.Level9ListBox.FormattingEnabled = true;
+            this.Level9ListBox.Location = new System.Drawing.Point(1016, 272);
+            this.Level9ListBox.Name = "Level9ListBox";
+            this.Level9ListBox.Size = new System.Drawing.Size(154, 173);
+            this.Level9ListBox.TabIndex = 126;
+            // 
+            // RemoveLevel9Btn
+            // 
+            this.RemoveLevel9Btn.Location = new System.Drawing.Point(1176, 272);
+            this.RemoveLevel9Btn.Name = "RemoveLevel9Btn";
+            this.RemoveLevel9Btn.Size = new System.Drawing.Size(56, 23);
+            this.RemoveLevel9Btn.TabIndex = 125;
+            this.RemoveLevel9Btn.Text = "Remove Spell";
+            this.RemoveLevel9Btn.UseVisualStyleBackColor = true;
+            // 
+            // AddLevel9Btn
+            // 
+            this.AddLevel9Btn.Location = new System.Drawing.Point(1176, 243);
+            this.AddLevel9Btn.Name = "AddLevel9Btn";
+            this.AddLevel9Btn.Size = new System.Drawing.Size(37, 23);
+            this.AddLevel9Btn.TabIndex = 124;
+            this.AddLevel9Btn.Text = "Add Spell";
+            this.AddLevel9Btn.UseVisualStyleBackColor = true;
+            // 
+            // Level9ComboBox
+            // 
+            this.Level9ComboBox.FormattingEnabled = true;
+            this.Level9ComboBox.Location = new System.Drawing.Point(1039, 245);
+            this.Level9ComboBox.Name = "Level9ComboBox";
+            this.Level9ComboBox.Size = new System.Drawing.Size(131, 21);
+            this.Level9ComboBox.TabIndex = 123;
+            // 
+            // Level9LabelDd
+            // 
+            this.Level9LabelDd.AutoSize = true;
+            this.Level9LabelDd.Location = new System.Drawing.Point(985, 248);
+            this.Level9LabelDd.Name = "Level9LabelDd";
+            this.Level9LabelDd.Size = new System.Drawing.Size(45, 13);
+            this.Level9LabelDd.TabIndex = 122;
+            this.Level9LabelDd.Text = "Level 9:";
+            // 
+            // Level8ListBox
+            // 
+            this.Level8ListBox.FormattingEnabled = true;
+            this.Level8ListBox.Location = new System.Drawing.Point(771, 272);
+            this.Level8ListBox.Name = "Level8ListBox";
+            this.Level8ListBox.Size = new System.Drawing.Size(154, 173);
+            this.Level8ListBox.TabIndex = 121;
+            // 
+            // RemoveLevel8Btn
+            // 
+            this.RemoveLevel8Btn.Location = new System.Drawing.Point(931, 272);
+            this.RemoveLevel8Btn.Name = "RemoveLevel8Btn";
+            this.RemoveLevel8Btn.Size = new System.Drawing.Size(56, 23);
+            this.RemoveLevel8Btn.TabIndex = 120;
+            this.RemoveLevel8Btn.Text = "Remove Spell";
+            this.RemoveLevel8Btn.UseVisualStyleBackColor = true;
+            // 
+            // AddLevel8Btn
+            // 
+            this.AddLevel8Btn.Location = new System.Drawing.Point(931, 243);
+            this.AddLevel8Btn.Name = "AddLevel8Btn";
+            this.AddLevel8Btn.Size = new System.Drawing.Size(37, 23);
+            this.AddLevel8Btn.TabIndex = 119;
+            this.AddLevel8Btn.Text = "Add Spell";
+            this.AddLevel8Btn.UseVisualStyleBackColor = true;
+            // 
+            // Level8ComboBox
+            // 
+            this.Level8ComboBox.FormattingEnabled = true;
+            this.Level8ComboBox.Location = new System.Drawing.Point(794, 245);
+            this.Level8ComboBox.Name = "Level8ComboBox";
+            this.Level8ComboBox.Size = new System.Drawing.Size(131, 21);
+            this.Level8ComboBox.TabIndex = 118;
+            // 
+            // Level8LabelDd
+            // 
+            this.Level8LabelDd.AutoSize = true;
+            this.Level8LabelDd.Location = new System.Drawing.Point(740, 248);
+            this.Level8LabelDd.Name = "Level8LabelDd";
+            this.Level8LabelDd.Size = new System.Drawing.Size(45, 13);
+            this.Level8LabelDd.TabIndex = 117;
+            this.Level8LabelDd.Text = "Level 8:";
+            // 
+            // Level7ListBox
+            // 
+            this.Level7ListBox.FormattingEnabled = true;
+            this.Level7ListBox.Location = new System.Drawing.Point(525, 272);
+            this.Level7ListBox.Name = "Level7ListBox";
+            this.Level7ListBox.Size = new System.Drawing.Size(154, 173);
+            this.Level7ListBox.TabIndex = 116;
+            // 
+            // RemoveLevel7Btn
+            // 
+            this.RemoveLevel7Btn.Location = new System.Drawing.Point(685, 272);
+            this.RemoveLevel7Btn.Name = "RemoveLevel7Btn";
+            this.RemoveLevel7Btn.Size = new System.Drawing.Size(56, 23);
+            this.RemoveLevel7Btn.TabIndex = 115;
+            this.RemoveLevel7Btn.Text = "Remove Spell";
+            this.RemoveLevel7Btn.UseVisualStyleBackColor = true;
+            // 
+            // AddLevel7Btn
+            // 
+            this.AddLevel7Btn.Location = new System.Drawing.Point(685, 243);
+            this.AddLevel7Btn.Name = "AddLevel7Btn";
+            this.AddLevel7Btn.Size = new System.Drawing.Size(37, 23);
+            this.AddLevel7Btn.TabIndex = 114;
+            this.AddLevel7Btn.Text = "Add Spell";
+            this.AddLevel7Btn.UseVisualStyleBackColor = true;
+            // 
+            // Level7ComboBox
+            // 
+            this.Level7ComboBox.FormattingEnabled = true;
+            this.Level7ComboBox.Location = new System.Drawing.Point(548, 245);
+            this.Level7ComboBox.Name = "Level7ComboBox";
+            this.Level7ComboBox.Size = new System.Drawing.Size(131, 21);
+            this.Level7ComboBox.TabIndex = 113;
+            // 
+            // Level7LabelDd
+            // 
+            this.Level7LabelDd.AutoSize = true;
+            this.Level7LabelDd.Location = new System.Drawing.Point(494, 248);
+            this.Level7LabelDd.Name = "Level7LabelDd";
+            this.Level7LabelDd.Size = new System.Drawing.Size(45, 13);
+            this.Level7LabelDd.TabIndex = 112;
+            this.Level7LabelDd.Text = "Level 7:";
+            // 
+            // Level6ListBox
+            // 
+            this.Level6ListBox.FormattingEnabled = true;
+            this.Level6ListBox.Location = new System.Drawing.Point(281, 272);
+            this.Level6ListBox.Name = "Level6ListBox";
+            this.Level6ListBox.Size = new System.Drawing.Size(154, 173);
+            this.Level6ListBox.TabIndex = 111;
+            // 
+            // RemoveLevel6Btn
+            // 
+            this.RemoveLevel6Btn.Location = new System.Drawing.Point(441, 272);
+            this.RemoveLevel6Btn.Name = "RemoveLevel6Btn";
+            this.RemoveLevel6Btn.Size = new System.Drawing.Size(56, 23);
+            this.RemoveLevel6Btn.TabIndex = 110;
+            this.RemoveLevel6Btn.Text = "Remove Spell";
+            this.RemoveLevel6Btn.UseVisualStyleBackColor = true;
+            // 
+            // AddLevel6Btn
+            // 
+            this.AddLevel6Btn.Location = new System.Drawing.Point(441, 243);
+            this.AddLevel6Btn.Name = "AddLevel6Btn";
+            this.AddLevel6Btn.Size = new System.Drawing.Size(37, 23);
+            this.AddLevel6Btn.TabIndex = 109;
+            this.AddLevel6Btn.Text = "Add Spell";
+            this.AddLevel6Btn.UseVisualStyleBackColor = true;
+            // 
+            // Level6ComboBox
+            // 
+            this.Level6ComboBox.FormattingEnabled = true;
+            this.Level6ComboBox.Location = new System.Drawing.Point(304, 245);
+            this.Level6ComboBox.Name = "Level6ComboBox";
+            this.Level6ComboBox.Size = new System.Drawing.Size(131, 21);
+            this.Level6ComboBox.TabIndex = 108;
+            // 
+            // Level6LabelDd
+            // 
+            this.Level6LabelDd.AutoSize = true;
+            this.Level6LabelDd.Location = new System.Drawing.Point(250, 248);
+            this.Level6LabelDd.Name = "Level6LabelDd";
+            this.Level6LabelDd.Size = new System.Drawing.Size(45, 13);
+            this.Level6LabelDd.TabIndex = 107;
+            this.Level6LabelDd.Text = "Level 6:";
+            // 
+            // Level5ListBox
+            // 
+            this.Level5ListBox.FormattingEnabled = true;
+            this.Level5ListBox.Location = new System.Drawing.Point(37, 272);
+            this.Level5ListBox.Name = "Level5ListBox";
+            this.Level5ListBox.Size = new System.Drawing.Size(154, 173);
+            this.Level5ListBox.TabIndex = 106;
+            // 
+            // RemoveLevel5Btn
+            // 
+            this.RemoveLevel5Btn.Location = new System.Drawing.Point(197, 272);
+            this.RemoveLevel5Btn.Name = "RemoveLevel5Btn";
+            this.RemoveLevel5Btn.Size = new System.Drawing.Size(56, 23);
+            this.RemoveLevel5Btn.TabIndex = 105;
+            this.RemoveLevel5Btn.Text = "Remove Spell";
+            this.RemoveLevel5Btn.UseVisualStyleBackColor = true;
+            // 
+            // AddLevel5Btn
+            // 
+            this.AddLevel5Btn.Location = new System.Drawing.Point(197, 243);
+            this.AddLevel5Btn.Name = "AddLevel5Btn";
+            this.AddLevel5Btn.Size = new System.Drawing.Size(37, 23);
+            this.AddLevel5Btn.TabIndex = 104;
+            this.AddLevel5Btn.Text = "Add Spell";
+            this.AddLevel5Btn.UseVisualStyleBackColor = true;
+            // 
+            // Level5ComboBox
+            // 
+            this.Level5ComboBox.FormattingEnabled = true;
+            this.Level5ComboBox.Location = new System.Drawing.Point(60, 245);
+            this.Level5ComboBox.Name = "Level5ComboBox";
+            this.Level5ComboBox.Size = new System.Drawing.Size(131, 21);
+            this.Level5ComboBox.TabIndex = 103;
+            // 
+            // Level5LabelDd
+            // 
+            this.Level5LabelDd.AutoSize = true;
+            this.Level5LabelDd.Location = new System.Drawing.Point(6, 248);
+            this.Level5LabelDd.Name = "Level5LabelDd";
+            this.Level5LabelDd.Size = new System.Drawing.Size(45, 13);
+            this.Level5LabelDd.TabIndex = 102;
+            this.Level5LabelDd.Text = "Level 5:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1399, 769);
+            this.ClientSize = new System.Drawing.Size(1399, 789);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.JsonTextBox);
             this.Controls.Add(this.GenerateJsonBtn);
@@ -1376,18 +1842,17 @@
         private System.Windows.Forms.Label TitleOrderLabel;
         private System.Windows.Forms.TextBox TypeTextBox;
         private System.Windows.Forms.Label TypeLabel;
-        private System.Windows.Forms.ComboBox SpellsComboBox;
-        private System.Windows.Forms.Label SpellsLabelDD;
+        private System.Windows.Forms.ComboBox CantripsComboBox;
+        private System.Windows.Forms.Label CantripsLabelDD;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button RemoveSpellBtn;
-        private System.Windows.Forms.Button AddSpellBtn;
-        private System.Windows.Forms.ListBox SpellsListBox;
-        private System.Windows.Forms.Label CurrentSpellsLabel;
-        private System.Windows.Forms.Label SpellDescriptionLabel;
-        private System.Windows.Forms.TextBox SpellDescriptionTextBox;
+        private System.Windows.Forms.Button RemoveCantripBtn;
+        private System.Windows.Forms.Button AddCantripBtn;
+        private System.Windows.Forms.ListBox CantripsListBox;
+        private System.Windows.Forms.Label CasterLabel;
+        private System.Windows.Forms.TextBox CasterTextBox;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.GroupBox SkillsGroupBox;
         private System.Windows.Forms.CheckBox AcrobaticsCheckBox;
@@ -1410,6 +1875,51 @@
         private System.Windows.Forms.CheckBox MedicineCheckBox;
         private System.Windows.Forms.ComboBox ChallengeRatingComboBox;
         private System.Windows.Forms.Label ChallengeRatingLabel;
+        private System.Windows.Forms.ListBox Level4ListBox;
+        private System.Windows.Forms.Button RemoveLevel4Btn;
+        private System.Windows.Forms.Button AddLevel4Btn;
+        private System.Windows.Forms.ComboBox Level4ComboBox;
+        private System.Windows.Forms.Label Level4LabelDd;
+        private System.Windows.Forms.ListBox Level3ListBox;
+        private System.Windows.Forms.Button RemoveLevel3Btn;
+        private System.Windows.Forms.Button AddLevel3Btn;
+        private System.Windows.Forms.ComboBox Level3ComboBox;
+        private System.Windows.Forms.Label Level3LabelDd;
+        private System.Windows.Forms.ListBox Level2ListBox;
+        private System.Windows.Forms.Button RemoveLevel2Btn;
+        private System.Windows.Forms.Button AddLevel2Btn;
+        private System.Windows.Forms.ComboBox Level2ComboBox;
+        private System.Windows.Forms.Label Level2LabelDd;
+        private System.Windows.Forms.ListBox Level1ListBox;
+        private System.Windows.Forms.Button RemoveLevel1Btn;
+        private System.Windows.Forms.Button AddLevel1Btn;
+        private System.Windows.Forms.ComboBox Level1ComboBox;
+        private System.Windows.Forms.Label Level1LabelDd;
+        private System.Windows.Forms.ListBox Level9ListBox;
+        private System.Windows.Forms.Button RemoveLevel9Btn;
+        private System.Windows.Forms.Button AddLevel9Btn;
+        private System.Windows.Forms.ComboBox Level9ComboBox;
+        private System.Windows.Forms.Label Level9LabelDd;
+        private System.Windows.Forms.ListBox Level8ListBox;
+        private System.Windows.Forms.Button RemoveLevel8Btn;
+        private System.Windows.Forms.Button AddLevel8Btn;
+        private System.Windows.Forms.ComboBox Level8ComboBox;
+        private System.Windows.Forms.Label Level8LabelDd;
+        private System.Windows.Forms.ListBox Level7ListBox;
+        private System.Windows.Forms.Button RemoveLevel7Btn;
+        private System.Windows.Forms.Button AddLevel7Btn;
+        private System.Windows.Forms.ComboBox Level7ComboBox;
+        private System.Windows.Forms.Label Level7LabelDd;
+        private System.Windows.Forms.ListBox Level6ListBox;
+        private System.Windows.Forms.Button RemoveLevel6Btn;
+        private System.Windows.Forms.Button AddLevel6Btn;
+        private System.Windows.Forms.ComboBox Level6ComboBox;
+        private System.Windows.Forms.Label Level6LabelDd;
+        private System.Windows.Forms.ListBox Level5ListBox;
+        private System.Windows.Forms.Button RemoveLevel5Btn;
+        private System.Windows.Forms.Button AddLevel5Btn;
+        private System.Windows.Forms.ComboBox Level5ComboBox;
+        private System.Windows.Forms.Label Level5LabelDd;
     }
 }
 

@@ -23,12 +23,12 @@ namespace CharacterGenerator
             string jsonString;
             using (var r = new StreamReader(Application.StartupPath + @"/spells.json"))
                 jsonString = r.ReadToEnd();
-            Spell[] spells = Spell.FromJson(jsonString);
-            foreach (Spell spell in spells)
-                SpellsComboBox.Items.Add(spell);
-            SpellsComboBox.DisplayMember = "Name";
-            SpellsListBox.DisplayMember = "Name";
-            SpellsComboBox.SelectedIndex = 0;
+            RealSpell[] realSpells = RealSpell.FromJson(jsonString);
+            foreach (RealSpell spell in realSpells)
+                CantripsComboBox.Items.Add(spell);
+            CantripsComboBox.DisplayMember = "Name";
+            CantripsListBox.DisplayMember = "Name";
+            CantripsComboBox.SelectedIndex = 0;
             ChallengeRatingComboBox.SelectedIndex = 0;
         }
 
@@ -77,7 +77,7 @@ namespace CharacterGenerator
                 };
 
                 // Add comma-separated spells names.
-                foreach (Spell spell in SpellsListBox.Items)
+                foreach (RealSpell spell in CantripsListBox.Items)
                     character.Spells += spell.Name + ",";
                 character.Spells = character.Spells?.TrimEnd(',');
 
@@ -112,22 +112,22 @@ namespace CharacterGenerator
 
         private void AddSpellBtn_Click(object sender, EventArgs e)
         {
-            if (SpellsComboBox.SelectedItem == null)
+            if (CantripsComboBox.SelectedItem == null)
                 return;
 
-            var spell = (Spell)SpellsComboBox.SelectedItem;
-            SpellsListBox.Items.Add(spell);
+            var spell = (RealSpell)CantripsComboBox.SelectedItem;
+            CantripsListBox.Items.Add(spell);
         }
 
         private void RemoveSpellBtn_Click(object sender, EventArgs e)
         {
-            SpellsListBox.Items.Remove(SpellsListBox.SelectedItem);
+            CantripsListBox.Items.Remove(CantripsListBox.SelectedItem);
         }
 
         private void SpellsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var spell = (Spell) SpellsComboBox.SelectedItem;
-            SpellDescriptionTextBox.Text = spell.ToString();
+            var spell = (RealSpell) CantripsComboBox.SelectedItem;
+            CasterTextBox.Text = spell.ToString();
         }
 
         private List<string> AddSkillsToJson(ref NpcCharacter character)
