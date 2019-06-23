@@ -20,21 +20,60 @@ namespace CharacterGenerator
 
         private void InitializeSpells()
         {
+            int count = 0;
+            // Create an array of the 5e spells from the JSON flat file.
             string jsonString;
             using (var r = new StreamReader(Application.StartupPath + @"/spells.json"))
                 jsonString = r.ReadToEnd();
             RealSpell[] realSpells = RealSpell.FromJson(jsonString);
+
+            // Populate the spell dropdowns by level.
             foreach (RealSpell spell in realSpells)
             {
-                Level spellLevel = spell.Level;
+                Level level = spell.Level;
+                if (level.Enum == null && level.Integer == null)
+                {
+                    count++;
+                    continue;
+                }
 
-                CantripsComboBox.Items.Add(spell);
-
+                if (level.Enum == Class.Cantrip)
+                    CantripsComboBox.Items.Add(spell);
+                else if (level.Enum == Class.Level1 || level.Integer == 1)
+                    Level1ComboBox.Items.Add(spell);
+                else if (level.Enum == Class.Level2 || level.Integer == 2)
+                    Level2ComboBox.Items.Add(spell);
+                else if (level.Enum == Class.Level3 || level.Integer == 3)
+                    Level3ComboBox.Items.Add(spell);
+                else if (level.Enum == Class.Level4 || level.Integer == 4)
+                    Level4ComboBox.Items.Add(spell);
+                else if (level.Enum == Class.Level5 || level.Integer == 5)
+                    Level5ComboBox.Items.Add(spell);
+                else if (level.Enum == Class.Level6 || level.Integer == 6)
+                    Level6ComboBox.Items.Add(spell);
+                else if (level.Enum == Class.Level7 || level.Integer == 7)
+                    Level7ComboBox.Items.Add(spell);
+                else if (level.Enum == Class.Level8 || level.Integer == 8)
+                    Level8ComboBox.Items.Add(spell);
+                else if (level.Enum == Class.Level9 || level.Integer == 9)
+                    Level9ComboBox.Items.Add(spell);
             }
-            CantripsComboBox.DisplayMember = "Name";
-            CantripsListBox.DisplayMember = "Name";
-            CantripsComboBox.SelectedIndex = 0;
-            ChallengeRatingComboBox.SelectedIndex = 0;
+
+            // For every combo box and list box on the spells tab set the display member to the
+            // name of the spell.
+            foreach (Control control in SpellsTab.Controls)
+            {
+                if (control is ListControl listControl)
+                {
+                    listControl.DisplayMember = "Name";
+
+                    // Set all of the combo boxes selected index to 0.
+                    if (control is ComboBox comboBox)
+                        comboBox.SelectedIndex = 0;
+                }
+            }
+
+            MessageBox.Show($"Skipped {count} spells because the level enum was null.");
         }
 
         private void GenerateJsonBtn_Click(object sender, EventArgs e)

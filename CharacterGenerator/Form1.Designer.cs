@@ -99,57 +99,12 @@
             this.TypeLabel = new System.Windows.Forms.Label();
             this.CantripsComboBox = new System.Windows.Forms.ComboBox();
             this.CantripsLabelDD = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.TabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.ChallengeRatingComboBox = new System.Windows.Forms.ComboBox();
             this.ChallengeRatingLabel = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.CasterLabel = new System.Windows.Forms.Label();
-            this.CasterTextBox = new System.Windows.Forms.TextBox();
-            this.CantripsListBox = new System.Windows.Forms.ListBox();
-            this.RemoveCantripBtn = new System.Windows.Forms.Button();
-            this.AddCantripBtn = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.SkillsGroupBox = new System.Windows.Forms.GroupBox();
-            this.AcrobaticsCheckBox = new System.Windows.Forms.CheckBox();
-            this.StealthCheckBox = new System.Windows.Forms.CheckBox();
-            this.ArcanaCheckBox = new System.Windows.Forms.CheckBox();
-            this.SurvivalCheckBox = new System.Windows.Forms.CheckBox();
-            this.AnimalHandlingCheckBox = new System.Windows.Forms.CheckBox();
-            this.SleightOfHandCheckBox = new System.Windows.Forms.CheckBox();
-            this.AthleticsCheckBox = new System.Windows.Forms.CheckBox();
-            this.PersuasionCheckBox = new System.Windows.Forms.CheckBox();
-            this.HistoryCheckBox = new System.Windows.Forms.CheckBox();
-            this.ReligionCheckBox = new System.Windows.Forms.CheckBox();
-            this.DeceptionCheckBox = new System.Windows.Forms.CheckBox();
-            this.PerformanceCheckBox = new System.Windows.Forms.CheckBox();
-            this.InsightCheckBox = new System.Windows.Forms.CheckBox();
-            this.NatureCheckBox = new System.Windows.Forms.CheckBox();
-            this.InvestigationCheckBox = new System.Windows.Forms.CheckBox();
-            this.PerceptionCheckBox = new System.Windows.Forms.CheckBox();
-            this.IntimidationCheckBox = new System.Windows.Forms.CheckBox();
-            this.MedicineCheckBox = new System.Windows.Forms.CheckBox();
-            this.Level1ListBox = new System.Windows.Forms.ListBox();
-            this.RemoveLevel1Btn = new System.Windows.Forms.Button();
-            this.AddLevel1Btn = new System.Windows.Forms.Button();
-            this.Level1ComboBox = new System.Windows.Forms.ComboBox();
-            this.Level1LabelDd = new System.Windows.Forms.Label();
-            this.Level2ListBox = new System.Windows.Forms.ListBox();
-            this.RemoveLevel2Btn = new System.Windows.Forms.Button();
-            this.AddLevel2Btn = new System.Windows.Forms.Button();
-            this.Level2ComboBox = new System.Windows.Forms.ComboBox();
-            this.Level2LabelDd = new System.Windows.Forms.Label();
-            this.Level3ListBox = new System.Windows.Forms.ListBox();
-            this.RemoveLevel3Btn = new System.Windows.Forms.Button();
-            this.AddLevel3Btn = new System.Windows.Forms.Button();
-            this.Level3ComboBox = new System.Windows.Forms.ComboBox();
-            this.Level3LabelDd = new System.Windows.Forms.Label();
-            this.Level4ListBox = new System.Windows.Forms.ListBox();
-            this.RemoveLevel4Btn = new System.Windows.Forms.Button();
-            this.AddLevel4Btn = new System.Windows.Forms.Button();
-            this.Level4ComboBox = new System.Windows.Forms.ComboBox();
-            this.Level4LabelDd = new System.Windows.Forms.Label();
+            this.SpellsTab = new System.Windows.Forms.TabPage();
             this.Level9ListBox = new System.Windows.Forms.ListBox();
             this.RemoveLevel9Btn = new System.Windows.Forms.Button();
             this.AddLevel9Btn = new System.Windows.Forms.Button();
@@ -175,6 +130,51 @@
             this.AddLevel5Btn = new System.Windows.Forms.Button();
             this.Level5ComboBox = new System.Windows.Forms.ComboBox();
             this.Level5LabelDd = new System.Windows.Forms.Label();
+            this.Level4ListBox = new System.Windows.Forms.ListBox();
+            this.RemoveLevel4Btn = new System.Windows.Forms.Button();
+            this.AddLevel4Btn = new System.Windows.Forms.Button();
+            this.Level4ComboBox = new System.Windows.Forms.ComboBox();
+            this.Level4LabelDd = new System.Windows.Forms.Label();
+            this.Level3ListBox = new System.Windows.Forms.ListBox();
+            this.RemoveLevel3Btn = new System.Windows.Forms.Button();
+            this.AddLevel3Btn = new System.Windows.Forms.Button();
+            this.Level3ComboBox = new System.Windows.Forms.ComboBox();
+            this.Level3LabelDd = new System.Windows.Forms.Label();
+            this.Level2ListBox = new System.Windows.Forms.ListBox();
+            this.RemoveLevel2Btn = new System.Windows.Forms.Button();
+            this.AddLevel2Btn = new System.Windows.Forms.Button();
+            this.Level2ComboBox = new System.Windows.Forms.ComboBox();
+            this.Level2LabelDd = new System.Windows.Forms.Label();
+            this.Level1ListBox = new System.Windows.Forms.ListBox();
+            this.RemoveLevel1Btn = new System.Windows.Forms.Button();
+            this.AddLevel1Btn = new System.Windows.Forms.Button();
+            this.Level1ComboBox = new System.Windows.Forms.ComboBox();
+            this.Level1LabelDd = new System.Windows.Forms.Label();
+            this.CasterLabel = new System.Windows.Forms.Label();
+            this.CasterTextBox = new System.Windows.Forms.TextBox();
+            this.CantripsListBox = new System.Windows.Forms.ListBox();
+            this.RemoveCantripBtn = new System.Windows.Forms.Button();
+            this.AddCantripBtn = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.SkillsGroupBox = new System.Windows.Forms.GroupBox();
+            this.AcrobaticsCheckBox = new System.Windows.Forms.CheckBox();
+            this.StealthCheckBox = new System.Windows.Forms.CheckBox();
+            this.ArcanaCheckBox = new System.Windows.Forms.CheckBox();
+            this.SurvivalCheckBox = new System.Windows.Forms.CheckBox();
+            this.AnimalHandlingCheckBox = new System.Windows.Forms.CheckBox();
+            this.SleightOfHandCheckBox = new System.Windows.Forms.CheckBox();
+            this.AthleticsCheckBox = new System.Windows.Forms.CheckBox();
+            this.PersuasionCheckBox = new System.Windows.Forms.CheckBox();
+            this.HistoryCheckBox = new System.Windows.Forms.CheckBox();
+            this.ReligionCheckBox = new System.Windows.Forms.CheckBox();
+            this.DeceptionCheckBox = new System.Windows.Forms.CheckBox();
+            this.PerformanceCheckBox = new System.Windows.Forms.CheckBox();
+            this.InsightCheckBox = new System.Windows.Forms.CheckBox();
+            this.NatureCheckBox = new System.Windows.Forms.CheckBox();
+            this.InvestigationCheckBox = new System.Windows.Forms.CheckBox();
+            this.PerceptionCheckBox = new System.Windows.Forms.CheckBox();
+            this.IntimidationCheckBox = new System.Windows.Forms.CheckBox();
+            this.MedicineCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ArmorClassNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChallNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharIdNud)).BeginInit();
@@ -188,10 +188,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.WisdomNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XpNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TitleOrderNud)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.TabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.SpellsTab.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.SkillsGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -886,17 +886,17 @@
             this.CantripsLabelDD.TabIndex = 74;
             this.CantripsLabelDD.Text = "Cantrips:";
             // 
-            // tabControl1
+            // TabControl
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(42, 33);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1302, 606);
-            this.tabControl1.TabIndex = 76;
+            this.TabControl.Controls.Add(this.tabPage1);
+            this.TabControl.Controls.Add(this.tabPage2);
+            this.TabControl.Controls.Add(this.SpellsTab);
+            this.TabControl.Controls.Add(this.tabPage4);
+            this.TabControl.Location = new System.Drawing.Point(42, 33);
+            this.TabControl.Name = "TabControl";
+            this.TabControl.SelectedIndex = 0;
+            this.TabControl.Size = new System.Drawing.Size(1302, 606);
+            this.TabControl.TabIndex = 76;
             // 
             // tabPage1
             // 
@@ -957,7 +957,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1294, 542);
+            this.tabPage1.Size = new System.Drawing.Size(1294, 580);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Stats";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1016,507 +1016,72 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1294, 542);
+            this.tabPage2.Size = new System.Drawing.Size(1294, 580);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Descriptions";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.Level9ListBox);
-            this.tabPage3.Controls.Add(this.RemoveLevel9Btn);
-            this.tabPage3.Controls.Add(this.AddLevel9Btn);
-            this.tabPage3.Controls.Add(this.Level9ComboBox);
-            this.tabPage3.Controls.Add(this.Level9LabelDd);
-            this.tabPage3.Controls.Add(this.Level8ListBox);
-            this.tabPage3.Controls.Add(this.RemoveLevel8Btn);
-            this.tabPage3.Controls.Add(this.AddLevel8Btn);
-            this.tabPage3.Controls.Add(this.Level8ComboBox);
-            this.tabPage3.Controls.Add(this.Level8LabelDd);
-            this.tabPage3.Controls.Add(this.Level7ListBox);
-            this.tabPage3.Controls.Add(this.RemoveLevel7Btn);
-            this.tabPage3.Controls.Add(this.AddLevel7Btn);
-            this.tabPage3.Controls.Add(this.Level7ComboBox);
-            this.tabPage3.Controls.Add(this.Level7LabelDd);
-            this.tabPage3.Controls.Add(this.Level6ListBox);
-            this.tabPage3.Controls.Add(this.RemoveLevel6Btn);
-            this.tabPage3.Controls.Add(this.AddLevel6Btn);
-            this.tabPage3.Controls.Add(this.Level6ComboBox);
-            this.tabPage3.Controls.Add(this.Level6LabelDd);
-            this.tabPage3.Controls.Add(this.Level5ListBox);
-            this.tabPage3.Controls.Add(this.RemoveLevel5Btn);
-            this.tabPage3.Controls.Add(this.AddLevel5Btn);
-            this.tabPage3.Controls.Add(this.Level5ComboBox);
-            this.tabPage3.Controls.Add(this.Level5LabelDd);
-            this.tabPage3.Controls.Add(this.Level4ListBox);
-            this.tabPage3.Controls.Add(this.RemoveLevel4Btn);
-            this.tabPage3.Controls.Add(this.AddLevel4Btn);
-            this.tabPage3.Controls.Add(this.Level4ComboBox);
-            this.tabPage3.Controls.Add(this.Level4LabelDd);
-            this.tabPage3.Controls.Add(this.Level3ListBox);
-            this.tabPage3.Controls.Add(this.RemoveLevel3Btn);
-            this.tabPage3.Controls.Add(this.AddLevel3Btn);
-            this.tabPage3.Controls.Add(this.Level3ComboBox);
-            this.tabPage3.Controls.Add(this.Level3LabelDd);
-            this.tabPage3.Controls.Add(this.Level2ListBox);
-            this.tabPage3.Controls.Add(this.RemoveLevel2Btn);
-            this.tabPage3.Controls.Add(this.AddLevel2Btn);
-            this.tabPage3.Controls.Add(this.Level2ComboBox);
-            this.tabPage3.Controls.Add(this.Level2LabelDd);
-            this.tabPage3.Controls.Add(this.Level1ListBox);
-            this.tabPage3.Controls.Add(this.RemoveLevel1Btn);
-            this.tabPage3.Controls.Add(this.AddLevel1Btn);
-            this.tabPage3.Controls.Add(this.Level1ComboBox);
-            this.tabPage3.Controls.Add(this.Level1LabelDd);
-            this.tabPage3.Controls.Add(this.CasterLabel);
-            this.tabPage3.Controls.Add(this.CasterTextBox);
-            this.tabPage3.Controls.Add(this.CantripsListBox);
-            this.tabPage3.Controls.Add(this.RemoveCantripBtn);
-            this.tabPage3.Controls.Add(this.AddCantripBtn);
-            this.tabPage3.Controls.Add(this.CantripsComboBox);
-            this.tabPage3.Controls.Add(this.CantripsLabelDD);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1294, 580);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Spells";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // CasterLabel
-            // 
-            this.CasterLabel.AutoSize = true;
-            this.CasterLabel.Location = new System.Drawing.Point(942, 465);
-            this.CasterLabel.Name = "CasterLabel";
-            this.CasterLabel.Size = new System.Drawing.Size(40, 13);
-            this.CasterLabel.TabIndex = 81;
-            this.CasterLabel.Text = "Caster:";
-            // 
-            // CasterTextBox
-            // 
-            this.CasterTextBox.Location = new System.Drawing.Point(988, 465);
-            this.CasterTextBox.Multiline = true;
-            this.CasterTextBox.Name = "CasterTextBox";
-            this.CasterTextBox.Size = new System.Drawing.Size(289, 94);
-            this.CasterTextBox.TabIndex = 80;
-            // 
-            // CantripsListBox
-            // 
-            this.CantripsListBox.FormattingEnabled = true;
-            this.CantripsListBox.Location = new System.Drawing.Point(37, 41);
-            this.CantripsListBox.Name = "CantripsListBox";
-            this.CantripsListBox.Size = new System.Drawing.Size(154, 173);
-            this.CantripsListBox.TabIndex = 78;
-            // 
-            // RemoveCantripBtn
-            // 
-            this.RemoveCantripBtn.Location = new System.Drawing.Point(197, 41);
-            this.RemoveCantripBtn.Name = "RemoveCantripBtn";
-            this.RemoveCantripBtn.Size = new System.Drawing.Size(56, 23);
-            this.RemoveCantripBtn.TabIndex = 77;
-            this.RemoveCantripBtn.Text = "Remove Spell";
-            this.RemoveCantripBtn.UseVisualStyleBackColor = true;
-            this.RemoveCantripBtn.Click += new System.EventHandler(this.RemoveSpellBtn_Click);
-            // 
-            // AddCantripBtn
-            // 
-            this.AddCantripBtn.Location = new System.Drawing.Point(197, 12);
-            this.AddCantripBtn.Name = "AddCantripBtn";
-            this.AddCantripBtn.Size = new System.Drawing.Size(37, 23);
-            this.AddCantripBtn.TabIndex = 76;
-            this.AddCantripBtn.Text = "Add Spell";
-            this.AddCantripBtn.UseVisualStyleBackColor = true;
-            this.AddCantripBtn.Click += new System.EventHandler(this.AddSpellBtn_Click);
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.SkillsGroupBox);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1294, 542);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Skills";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // SkillsGroupBox
-            // 
-            this.SkillsGroupBox.Controls.Add(this.AcrobaticsCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.StealthCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.ArcanaCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.SurvivalCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.AnimalHandlingCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.SleightOfHandCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.AthleticsCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.PersuasionCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.HistoryCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.ReligionCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.DeceptionCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.PerformanceCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.InsightCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.NatureCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.InvestigationCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.PerceptionCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.IntimidationCheckBox);
-            this.SkillsGroupBox.Controls.Add(this.MedicineCheckBox);
-            this.SkillsGroupBox.Location = new System.Drawing.Point(277, 32);
-            this.SkillsGroupBox.Name = "SkillsGroupBox";
-            this.SkillsGroupBox.Size = new System.Drawing.Size(200, 474);
-            this.SkillsGroupBox.TabIndex = 18;
-            this.SkillsGroupBox.TabStop = false;
-            this.SkillsGroupBox.Text = "Skill Proficiencies";
-            // 
-            // AcrobaticsCheckBox
-            // 
-            this.AcrobaticsCheckBox.AutoSize = true;
-            this.AcrobaticsCheckBox.Location = new System.Drawing.Point(49, 41);
-            this.AcrobaticsCheckBox.Name = "AcrobaticsCheckBox";
-            this.AcrobaticsCheckBox.Size = new System.Drawing.Size(76, 17);
-            this.AcrobaticsCheckBox.TabIndex = 0;
-            this.AcrobaticsCheckBox.Text = "Acrobatics";
-            this.AcrobaticsCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // StealthCheckBox
-            // 
-            this.StealthCheckBox.AutoSize = true;
-            this.StealthCheckBox.Location = new System.Drawing.Point(49, 409);
-            this.StealthCheckBox.Name = "StealthCheckBox";
-            this.StealthCheckBox.Size = new System.Drawing.Size(59, 17);
-            this.StealthCheckBox.TabIndex = 17;
-            this.StealthCheckBox.Text = "Stealth";
-            this.StealthCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // ArcanaCheckBox
-            // 
-            this.ArcanaCheckBox.AutoSize = true;
-            this.ArcanaCheckBox.Location = new System.Drawing.Point(49, 87);
-            this.ArcanaCheckBox.Name = "ArcanaCheckBox";
-            this.ArcanaCheckBox.Size = new System.Drawing.Size(60, 17);
-            this.ArcanaCheckBox.TabIndex = 1;
-            this.ArcanaCheckBox.Text = "Arcana";
-            this.ArcanaCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // SurvivalCheckBox
-            // 
-            this.SurvivalCheckBox.AutoSize = true;
-            this.SurvivalCheckBox.Location = new System.Drawing.Point(49, 432);
-            this.SurvivalCheckBox.Name = "SurvivalCheckBox";
-            this.SurvivalCheckBox.Size = new System.Drawing.Size(64, 17);
-            this.SurvivalCheckBox.TabIndex = 16;
-            this.SurvivalCheckBox.Text = "Survival";
-            this.SurvivalCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // AnimalHandlingCheckBox
-            // 
-            this.AnimalHandlingCheckBox.AutoSize = true;
-            this.AnimalHandlingCheckBox.Location = new System.Drawing.Point(49, 64);
-            this.AnimalHandlingCheckBox.Name = "AnimalHandlingCheckBox";
-            this.AnimalHandlingCheckBox.Size = new System.Drawing.Size(102, 17);
-            this.AnimalHandlingCheckBox.TabIndex = 2;
-            this.AnimalHandlingCheckBox.Text = "Animal Handling";
-            this.AnimalHandlingCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // SleightOfHandCheckBox
-            // 
-            this.SleightOfHandCheckBox.AutoSize = true;
-            this.SleightOfHandCheckBox.Location = new System.Drawing.Point(49, 386);
-            this.SleightOfHandCheckBox.Name = "SleightOfHandCheckBox";
-            this.SleightOfHandCheckBox.Size = new System.Drawing.Size(99, 17);
-            this.SleightOfHandCheckBox.TabIndex = 15;
-            this.SleightOfHandCheckBox.Text = "Sleight of Hand";
-            this.SleightOfHandCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // AthleticsCheckBox
-            // 
-            this.AthleticsCheckBox.AutoSize = true;
-            this.AthleticsCheckBox.Location = new System.Drawing.Point(49, 110);
-            this.AthleticsCheckBox.Name = "AthleticsCheckBox";
-            this.AthleticsCheckBox.Size = new System.Drawing.Size(66, 17);
-            this.AthleticsCheckBox.TabIndex = 3;
-            this.AthleticsCheckBox.Text = "Athletics";
-            this.AthleticsCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // PersuasionCheckBox
-            // 
-            this.PersuasionCheckBox.AutoSize = true;
-            this.PersuasionCheckBox.Location = new System.Drawing.Point(49, 340);
-            this.PersuasionCheckBox.Name = "PersuasionCheckBox";
-            this.PersuasionCheckBox.Size = new System.Drawing.Size(78, 17);
-            this.PersuasionCheckBox.TabIndex = 14;
-            this.PersuasionCheckBox.Text = "Persuasion";
-            this.PersuasionCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // HistoryCheckBox
-            // 
-            this.HistoryCheckBox.AutoSize = true;
-            this.HistoryCheckBox.Location = new System.Drawing.Point(49, 156);
-            this.HistoryCheckBox.Name = "HistoryCheckBox";
-            this.HistoryCheckBox.Size = new System.Drawing.Size(58, 17);
-            this.HistoryCheckBox.TabIndex = 4;
-            this.HistoryCheckBox.Text = "History";
-            this.HistoryCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // ReligionCheckBox
-            // 
-            this.ReligionCheckBox.AutoSize = true;
-            this.ReligionCheckBox.Location = new System.Drawing.Point(49, 363);
-            this.ReligionCheckBox.Name = "ReligionCheckBox";
-            this.ReligionCheckBox.Size = new System.Drawing.Size(64, 17);
-            this.ReligionCheckBox.TabIndex = 13;
-            this.ReligionCheckBox.Text = "Religion";
-            this.ReligionCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // DeceptionCheckBox
-            // 
-            this.DeceptionCheckBox.AutoSize = true;
-            this.DeceptionCheckBox.Location = new System.Drawing.Point(49, 133);
-            this.DeceptionCheckBox.Name = "DeceptionCheckBox";
-            this.DeceptionCheckBox.Size = new System.Drawing.Size(75, 17);
-            this.DeceptionCheckBox.TabIndex = 5;
-            this.DeceptionCheckBox.Text = "Deception";
-            this.DeceptionCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // PerformanceCheckBox
-            // 
-            this.PerformanceCheckBox.AutoSize = true;
-            this.PerformanceCheckBox.Location = new System.Drawing.Point(49, 317);
-            this.PerformanceCheckBox.Name = "PerformanceCheckBox";
-            this.PerformanceCheckBox.Size = new System.Drawing.Size(86, 17);
-            this.PerformanceCheckBox.TabIndex = 12;
-            this.PerformanceCheckBox.Text = "Performance";
-            this.PerformanceCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // InsightCheckBox
-            // 
-            this.InsightCheckBox.AutoSize = true;
-            this.InsightCheckBox.Location = new System.Drawing.Point(49, 179);
-            this.InsightCheckBox.Name = "InsightCheckBox";
-            this.InsightCheckBox.Size = new System.Drawing.Size(57, 17);
-            this.InsightCheckBox.TabIndex = 6;
-            this.InsightCheckBox.Text = "Insight";
-            this.InsightCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // NatureCheckBox
-            // 
-            this.NatureCheckBox.AutoSize = true;
-            this.NatureCheckBox.Location = new System.Drawing.Point(49, 271);
-            this.NatureCheckBox.Name = "NatureCheckBox";
-            this.NatureCheckBox.Size = new System.Drawing.Size(58, 17);
-            this.NatureCheckBox.TabIndex = 11;
-            this.NatureCheckBox.Text = "Nature";
-            this.NatureCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // InvestigationCheckBox
-            // 
-            this.InvestigationCheckBox.AutoSize = true;
-            this.InvestigationCheckBox.Location = new System.Drawing.Point(49, 225);
-            this.InvestigationCheckBox.Name = "InvestigationCheckBox";
-            this.InvestigationCheckBox.Size = new System.Drawing.Size(86, 17);
-            this.InvestigationCheckBox.TabIndex = 7;
-            this.InvestigationCheckBox.Text = "Investigation";
-            this.InvestigationCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // PerceptionCheckBox
-            // 
-            this.PerceptionCheckBox.AutoSize = true;
-            this.PerceptionCheckBox.Location = new System.Drawing.Point(49, 294);
-            this.PerceptionCheckBox.Name = "PerceptionCheckBox";
-            this.PerceptionCheckBox.Size = new System.Drawing.Size(77, 17);
-            this.PerceptionCheckBox.TabIndex = 10;
-            this.PerceptionCheckBox.Text = "Perception";
-            this.PerceptionCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // IntimidationCheckBox
-            // 
-            this.IntimidationCheckBox.AutoSize = true;
-            this.IntimidationCheckBox.Location = new System.Drawing.Point(49, 202);
-            this.IntimidationCheckBox.Name = "IntimidationCheckBox";
-            this.IntimidationCheckBox.Size = new System.Drawing.Size(79, 17);
-            this.IntimidationCheckBox.TabIndex = 8;
-            this.IntimidationCheckBox.Text = "Intimidation";
-            this.IntimidationCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // MedicineCheckBox
-            // 
-            this.MedicineCheckBox.AutoSize = true;
-            this.MedicineCheckBox.Location = new System.Drawing.Point(49, 248);
-            this.MedicineCheckBox.Name = "MedicineCheckBox";
-            this.MedicineCheckBox.Size = new System.Drawing.Size(69, 17);
-            this.MedicineCheckBox.TabIndex = 9;
-            this.MedicineCheckBox.Text = "Medicine";
-            this.MedicineCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // Level1ListBox
-            // 
-            this.Level1ListBox.FormattingEnabled = true;
-            this.Level1ListBox.Location = new System.Drawing.Point(281, 41);
-            this.Level1ListBox.Name = "Level1ListBox";
-            this.Level1ListBox.Size = new System.Drawing.Size(154, 173);
-            this.Level1ListBox.TabIndex = 86;
-            // 
-            // RemoveLevel1Btn
-            // 
-            this.RemoveLevel1Btn.Location = new System.Drawing.Point(441, 41);
-            this.RemoveLevel1Btn.Name = "RemoveLevel1Btn";
-            this.RemoveLevel1Btn.Size = new System.Drawing.Size(56, 23);
-            this.RemoveLevel1Btn.TabIndex = 85;
-            this.RemoveLevel1Btn.Text = "Remove Spell";
-            this.RemoveLevel1Btn.UseVisualStyleBackColor = true;
-            // 
-            // AddLevel1Btn
-            // 
-            this.AddLevel1Btn.Location = new System.Drawing.Point(441, 12);
-            this.AddLevel1Btn.Name = "AddLevel1Btn";
-            this.AddLevel1Btn.Size = new System.Drawing.Size(37, 23);
-            this.AddLevel1Btn.TabIndex = 84;
-            this.AddLevel1Btn.Text = "Add Spell";
-            this.AddLevel1Btn.UseVisualStyleBackColor = true;
-            // 
-            // Level1ComboBox
-            // 
-            this.Level1ComboBox.FormattingEnabled = true;
-            this.Level1ComboBox.Location = new System.Drawing.Point(304, 14);
-            this.Level1ComboBox.Name = "Level1ComboBox";
-            this.Level1ComboBox.Size = new System.Drawing.Size(131, 21);
-            this.Level1ComboBox.TabIndex = 83;
-            // 
-            // Level1LabelDd
-            // 
-            this.Level1LabelDd.AutoSize = true;
-            this.Level1LabelDd.Location = new System.Drawing.Point(250, 17);
-            this.Level1LabelDd.Name = "Level1LabelDd";
-            this.Level1LabelDd.Size = new System.Drawing.Size(45, 13);
-            this.Level1LabelDd.TabIndex = 82;
-            this.Level1LabelDd.Text = "Level 1:";
-            // 
-            // Level2ListBox
-            // 
-            this.Level2ListBox.FormattingEnabled = true;
-            this.Level2ListBox.Location = new System.Drawing.Point(525, 41);
-            this.Level2ListBox.Name = "Level2ListBox";
-            this.Level2ListBox.Size = new System.Drawing.Size(154, 173);
-            this.Level2ListBox.TabIndex = 91;
-            // 
-            // RemoveLevel2Btn
-            // 
-            this.RemoveLevel2Btn.Location = new System.Drawing.Point(685, 41);
-            this.RemoveLevel2Btn.Name = "RemoveLevel2Btn";
-            this.RemoveLevel2Btn.Size = new System.Drawing.Size(56, 23);
-            this.RemoveLevel2Btn.TabIndex = 90;
-            this.RemoveLevel2Btn.Text = "Remove Spell";
-            this.RemoveLevel2Btn.UseVisualStyleBackColor = true;
-            // 
-            // AddLevel2Btn
-            // 
-            this.AddLevel2Btn.Location = new System.Drawing.Point(685, 12);
-            this.AddLevel2Btn.Name = "AddLevel2Btn";
-            this.AddLevel2Btn.Size = new System.Drawing.Size(37, 23);
-            this.AddLevel2Btn.TabIndex = 89;
-            this.AddLevel2Btn.Text = "Add Spell";
-            this.AddLevel2Btn.UseVisualStyleBackColor = true;
-            // 
-            // Level2ComboBox
-            // 
-            this.Level2ComboBox.FormattingEnabled = true;
-            this.Level2ComboBox.Location = new System.Drawing.Point(548, 14);
-            this.Level2ComboBox.Name = "Level2ComboBox";
-            this.Level2ComboBox.Size = new System.Drawing.Size(131, 21);
-            this.Level2ComboBox.TabIndex = 88;
-            // 
-            // Level2LabelDd
-            // 
-            this.Level2LabelDd.AutoSize = true;
-            this.Level2LabelDd.Location = new System.Drawing.Point(494, 17);
-            this.Level2LabelDd.Name = "Level2LabelDd";
-            this.Level2LabelDd.Size = new System.Drawing.Size(45, 13);
-            this.Level2LabelDd.TabIndex = 87;
-            this.Level2LabelDd.Text = "Level 2:";
-            // 
-            // Level3ListBox
-            // 
-            this.Level3ListBox.FormattingEnabled = true;
-            this.Level3ListBox.Location = new System.Drawing.Point(771, 41);
-            this.Level3ListBox.Name = "Level3ListBox";
-            this.Level3ListBox.Size = new System.Drawing.Size(154, 173);
-            this.Level3ListBox.TabIndex = 96;
-            // 
-            // RemoveLevel3Btn
-            // 
-            this.RemoveLevel3Btn.Location = new System.Drawing.Point(931, 41);
-            this.RemoveLevel3Btn.Name = "RemoveLevel3Btn";
-            this.RemoveLevel3Btn.Size = new System.Drawing.Size(56, 23);
-            this.RemoveLevel3Btn.TabIndex = 95;
-            this.RemoveLevel3Btn.Text = "Remove Spell";
-            this.RemoveLevel3Btn.UseVisualStyleBackColor = true;
-            // 
-            // AddLevel3Btn
-            // 
-            this.AddLevel3Btn.Location = new System.Drawing.Point(931, 12);
-            this.AddLevel3Btn.Name = "AddLevel3Btn";
-            this.AddLevel3Btn.Size = new System.Drawing.Size(37, 23);
-            this.AddLevel3Btn.TabIndex = 94;
-            this.AddLevel3Btn.Text = "Add Spell";
-            this.AddLevel3Btn.UseVisualStyleBackColor = true;
-            // 
-            // Level3ComboBox
-            // 
-            this.Level3ComboBox.FormattingEnabled = true;
-            this.Level3ComboBox.Location = new System.Drawing.Point(794, 14);
-            this.Level3ComboBox.Name = "Level3ComboBox";
-            this.Level3ComboBox.Size = new System.Drawing.Size(131, 21);
-            this.Level3ComboBox.TabIndex = 93;
-            // 
-            // Level3LabelDd
-            // 
-            this.Level3LabelDd.AutoSize = true;
-            this.Level3LabelDd.Location = new System.Drawing.Point(740, 17);
-            this.Level3LabelDd.Name = "Level3LabelDd";
-            this.Level3LabelDd.Size = new System.Drawing.Size(45, 13);
-            this.Level3LabelDd.TabIndex = 92;
-            this.Level3LabelDd.Text = "Level 3:";
-            // 
-            // Level4ListBox
-            // 
-            this.Level4ListBox.FormattingEnabled = true;
-            this.Level4ListBox.Location = new System.Drawing.Point(1016, 41);
-            this.Level4ListBox.Name = "Level4ListBox";
-            this.Level4ListBox.Size = new System.Drawing.Size(154, 173);
-            this.Level4ListBox.TabIndex = 101;
-            // 
-            // RemoveLevel4Btn
-            // 
-            this.RemoveLevel4Btn.Location = new System.Drawing.Point(1176, 41);
-            this.RemoveLevel4Btn.Name = "RemoveLevel4Btn";
-            this.RemoveLevel4Btn.Size = new System.Drawing.Size(56, 23);
-            this.RemoveLevel4Btn.TabIndex = 100;
-            this.RemoveLevel4Btn.Text = "Remove Spell";
-            this.RemoveLevel4Btn.UseVisualStyleBackColor = true;
-            // 
-            // AddLevel4Btn
-            // 
-            this.AddLevel4Btn.Location = new System.Drawing.Point(1176, 12);
-            this.AddLevel4Btn.Name = "AddLevel4Btn";
-            this.AddLevel4Btn.Size = new System.Drawing.Size(37, 23);
-            this.AddLevel4Btn.TabIndex = 99;
-            this.AddLevel4Btn.Text = "Add Spell";
-            this.AddLevel4Btn.UseVisualStyleBackColor = true;
-            // 
-            // Level4ComboBox
-            // 
-            this.Level4ComboBox.FormattingEnabled = true;
-            this.Level4ComboBox.Location = new System.Drawing.Point(1039, 14);
-            this.Level4ComboBox.Name = "Level4ComboBox";
-            this.Level4ComboBox.Size = new System.Drawing.Size(131, 21);
-            this.Level4ComboBox.TabIndex = 98;
-            // 
-            // Level4LabelDd
-            // 
-            this.Level4LabelDd.AutoSize = true;
-            this.Level4LabelDd.Location = new System.Drawing.Point(985, 17);
-            this.Level4LabelDd.Name = "Level4LabelDd";
-            this.Level4LabelDd.Size = new System.Drawing.Size(45, 13);
-            this.Level4LabelDd.TabIndex = 97;
-            this.Level4LabelDd.Text = "Level 4:";
+            // SpellsTab
+            // 
+            this.SpellsTab.Controls.Add(this.Level9ListBox);
+            this.SpellsTab.Controls.Add(this.RemoveLevel9Btn);
+            this.SpellsTab.Controls.Add(this.AddLevel9Btn);
+            this.SpellsTab.Controls.Add(this.Level9ComboBox);
+            this.SpellsTab.Controls.Add(this.Level9LabelDd);
+            this.SpellsTab.Controls.Add(this.Level8ListBox);
+            this.SpellsTab.Controls.Add(this.RemoveLevel8Btn);
+            this.SpellsTab.Controls.Add(this.AddLevel8Btn);
+            this.SpellsTab.Controls.Add(this.Level8ComboBox);
+            this.SpellsTab.Controls.Add(this.Level8LabelDd);
+            this.SpellsTab.Controls.Add(this.Level7ListBox);
+            this.SpellsTab.Controls.Add(this.RemoveLevel7Btn);
+            this.SpellsTab.Controls.Add(this.AddLevel7Btn);
+            this.SpellsTab.Controls.Add(this.Level7ComboBox);
+            this.SpellsTab.Controls.Add(this.Level7LabelDd);
+            this.SpellsTab.Controls.Add(this.Level6ListBox);
+            this.SpellsTab.Controls.Add(this.RemoveLevel6Btn);
+            this.SpellsTab.Controls.Add(this.AddLevel6Btn);
+            this.SpellsTab.Controls.Add(this.Level6ComboBox);
+            this.SpellsTab.Controls.Add(this.Level6LabelDd);
+            this.SpellsTab.Controls.Add(this.Level5ListBox);
+            this.SpellsTab.Controls.Add(this.RemoveLevel5Btn);
+            this.SpellsTab.Controls.Add(this.AddLevel5Btn);
+            this.SpellsTab.Controls.Add(this.Level5ComboBox);
+            this.SpellsTab.Controls.Add(this.Level5LabelDd);
+            this.SpellsTab.Controls.Add(this.Level4ListBox);
+            this.SpellsTab.Controls.Add(this.RemoveLevel4Btn);
+            this.SpellsTab.Controls.Add(this.AddLevel4Btn);
+            this.SpellsTab.Controls.Add(this.Level4ComboBox);
+            this.SpellsTab.Controls.Add(this.Level4LabelDd);
+            this.SpellsTab.Controls.Add(this.Level3ListBox);
+            this.SpellsTab.Controls.Add(this.RemoveLevel3Btn);
+            this.SpellsTab.Controls.Add(this.AddLevel3Btn);
+            this.SpellsTab.Controls.Add(this.Level3ComboBox);
+            this.SpellsTab.Controls.Add(this.Level3LabelDd);
+            this.SpellsTab.Controls.Add(this.Level2ListBox);
+            this.SpellsTab.Controls.Add(this.RemoveLevel2Btn);
+            this.SpellsTab.Controls.Add(this.AddLevel2Btn);
+            this.SpellsTab.Controls.Add(this.Level2ComboBox);
+            this.SpellsTab.Controls.Add(this.Level2LabelDd);
+            this.SpellsTab.Controls.Add(this.Level1ListBox);
+            this.SpellsTab.Controls.Add(this.RemoveLevel1Btn);
+            this.SpellsTab.Controls.Add(this.AddLevel1Btn);
+            this.SpellsTab.Controls.Add(this.Level1ComboBox);
+            this.SpellsTab.Controls.Add(this.Level1LabelDd);
+            this.SpellsTab.Controls.Add(this.CasterLabel);
+            this.SpellsTab.Controls.Add(this.CasterTextBox);
+            this.SpellsTab.Controls.Add(this.CantripsListBox);
+            this.SpellsTab.Controls.Add(this.RemoveCantripBtn);
+            this.SpellsTab.Controls.Add(this.AddCantripBtn);
+            this.SpellsTab.Controls.Add(this.CantripsComboBox);
+            this.SpellsTab.Controls.Add(this.CantripsLabelDD);
+            this.SpellsTab.Location = new System.Drawing.Point(4, 22);
+            this.SpellsTab.Name = "SpellsTab";
+            this.SpellsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.SpellsTab.Size = new System.Drawing.Size(1294, 580);
+            this.SpellsTab.TabIndex = 2;
+            this.SpellsTab.Text = "Spells";
+            this.SpellsTab.UseVisualStyleBackColor = true;
             // 
             // Level9ListBox
             // 
@@ -1733,12 +1298,447 @@
             this.Level5LabelDd.TabIndex = 102;
             this.Level5LabelDd.Text = "Level 5:";
             // 
+            // Level4ListBox
+            // 
+            this.Level4ListBox.FormattingEnabled = true;
+            this.Level4ListBox.Location = new System.Drawing.Point(1016, 41);
+            this.Level4ListBox.Name = "Level4ListBox";
+            this.Level4ListBox.Size = new System.Drawing.Size(154, 173);
+            this.Level4ListBox.TabIndex = 101;
+            // 
+            // RemoveLevel4Btn
+            // 
+            this.RemoveLevel4Btn.Location = new System.Drawing.Point(1176, 41);
+            this.RemoveLevel4Btn.Name = "RemoveLevel4Btn";
+            this.RemoveLevel4Btn.Size = new System.Drawing.Size(56, 23);
+            this.RemoveLevel4Btn.TabIndex = 100;
+            this.RemoveLevel4Btn.Text = "Remove Spell";
+            this.RemoveLevel4Btn.UseVisualStyleBackColor = true;
+            // 
+            // AddLevel4Btn
+            // 
+            this.AddLevel4Btn.Location = new System.Drawing.Point(1176, 12);
+            this.AddLevel4Btn.Name = "AddLevel4Btn";
+            this.AddLevel4Btn.Size = new System.Drawing.Size(37, 23);
+            this.AddLevel4Btn.TabIndex = 99;
+            this.AddLevel4Btn.Text = "Add Spell";
+            this.AddLevel4Btn.UseVisualStyleBackColor = true;
+            // 
+            // Level4ComboBox
+            // 
+            this.Level4ComboBox.FormattingEnabled = true;
+            this.Level4ComboBox.Location = new System.Drawing.Point(1039, 14);
+            this.Level4ComboBox.Name = "Level4ComboBox";
+            this.Level4ComboBox.Size = new System.Drawing.Size(131, 21);
+            this.Level4ComboBox.TabIndex = 98;
+            // 
+            // Level4LabelDd
+            // 
+            this.Level4LabelDd.AutoSize = true;
+            this.Level4LabelDd.Location = new System.Drawing.Point(985, 17);
+            this.Level4LabelDd.Name = "Level4LabelDd";
+            this.Level4LabelDd.Size = new System.Drawing.Size(45, 13);
+            this.Level4LabelDd.TabIndex = 97;
+            this.Level4LabelDd.Text = "Level 4:";
+            // 
+            // Level3ListBox
+            // 
+            this.Level3ListBox.FormattingEnabled = true;
+            this.Level3ListBox.Location = new System.Drawing.Point(771, 41);
+            this.Level3ListBox.Name = "Level3ListBox";
+            this.Level3ListBox.Size = new System.Drawing.Size(154, 173);
+            this.Level3ListBox.TabIndex = 96;
+            // 
+            // RemoveLevel3Btn
+            // 
+            this.RemoveLevel3Btn.Location = new System.Drawing.Point(931, 41);
+            this.RemoveLevel3Btn.Name = "RemoveLevel3Btn";
+            this.RemoveLevel3Btn.Size = new System.Drawing.Size(56, 23);
+            this.RemoveLevel3Btn.TabIndex = 95;
+            this.RemoveLevel3Btn.Text = "Remove Spell";
+            this.RemoveLevel3Btn.UseVisualStyleBackColor = true;
+            // 
+            // AddLevel3Btn
+            // 
+            this.AddLevel3Btn.Location = new System.Drawing.Point(931, 12);
+            this.AddLevel3Btn.Name = "AddLevel3Btn";
+            this.AddLevel3Btn.Size = new System.Drawing.Size(37, 23);
+            this.AddLevel3Btn.TabIndex = 94;
+            this.AddLevel3Btn.Text = "Add Spell";
+            this.AddLevel3Btn.UseVisualStyleBackColor = true;
+            // 
+            // Level3ComboBox
+            // 
+            this.Level3ComboBox.FormattingEnabled = true;
+            this.Level3ComboBox.Location = new System.Drawing.Point(794, 14);
+            this.Level3ComboBox.Name = "Level3ComboBox";
+            this.Level3ComboBox.Size = new System.Drawing.Size(131, 21);
+            this.Level3ComboBox.TabIndex = 93;
+            // 
+            // Level3LabelDd
+            // 
+            this.Level3LabelDd.AutoSize = true;
+            this.Level3LabelDd.Location = new System.Drawing.Point(740, 17);
+            this.Level3LabelDd.Name = "Level3LabelDd";
+            this.Level3LabelDd.Size = new System.Drawing.Size(45, 13);
+            this.Level3LabelDd.TabIndex = 92;
+            this.Level3LabelDd.Text = "Level 3:";
+            // 
+            // Level2ListBox
+            // 
+            this.Level2ListBox.FormattingEnabled = true;
+            this.Level2ListBox.Location = new System.Drawing.Point(525, 41);
+            this.Level2ListBox.Name = "Level2ListBox";
+            this.Level2ListBox.Size = new System.Drawing.Size(154, 173);
+            this.Level2ListBox.TabIndex = 91;
+            // 
+            // RemoveLevel2Btn
+            // 
+            this.RemoveLevel2Btn.Location = new System.Drawing.Point(685, 41);
+            this.RemoveLevel2Btn.Name = "RemoveLevel2Btn";
+            this.RemoveLevel2Btn.Size = new System.Drawing.Size(56, 23);
+            this.RemoveLevel2Btn.TabIndex = 90;
+            this.RemoveLevel2Btn.Text = "Remove Spell";
+            this.RemoveLevel2Btn.UseVisualStyleBackColor = true;
+            // 
+            // AddLevel2Btn
+            // 
+            this.AddLevel2Btn.Location = new System.Drawing.Point(685, 12);
+            this.AddLevel2Btn.Name = "AddLevel2Btn";
+            this.AddLevel2Btn.Size = new System.Drawing.Size(37, 23);
+            this.AddLevel2Btn.TabIndex = 89;
+            this.AddLevel2Btn.Text = "Add Spell";
+            this.AddLevel2Btn.UseVisualStyleBackColor = true;
+            // 
+            // Level2ComboBox
+            // 
+            this.Level2ComboBox.FormattingEnabled = true;
+            this.Level2ComboBox.Location = new System.Drawing.Point(548, 14);
+            this.Level2ComboBox.Name = "Level2ComboBox";
+            this.Level2ComboBox.Size = new System.Drawing.Size(131, 21);
+            this.Level2ComboBox.TabIndex = 88;
+            // 
+            // Level2LabelDd
+            // 
+            this.Level2LabelDd.AutoSize = true;
+            this.Level2LabelDd.Location = new System.Drawing.Point(494, 17);
+            this.Level2LabelDd.Name = "Level2LabelDd";
+            this.Level2LabelDd.Size = new System.Drawing.Size(45, 13);
+            this.Level2LabelDd.TabIndex = 87;
+            this.Level2LabelDd.Text = "Level 2:";
+            // 
+            // Level1ListBox
+            // 
+            this.Level1ListBox.FormattingEnabled = true;
+            this.Level1ListBox.Location = new System.Drawing.Point(281, 41);
+            this.Level1ListBox.Name = "Level1ListBox";
+            this.Level1ListBox.Size = new System.Drawing.Size(154, 173);
+            this.Level1ListBox.TabIndex = 86;
+            // 
+            // RemoveLevel1Btn
+            // 
+            this.RemoveLevel1Btn.Location = new System.Drawing.Point(441, 41);
+            this.RemoveLevel1Btn.Name = "RemoveLevel1Btn";
+            this.RemoveLevel1Btn.Size = new System.Drawing.Size(56, 23);
+            this.RemoveLevel1Btn.TabIndex = 85;
+            this.RemoveLevel1Btn.Text = "Remove Spell";
+            this.RemoveLevel1Btn.UseVisualStyleBackColor = true;
+            // 
+            // AddLevel1Btn
+            // 
+            this.AddLevel1Btn.Location = new System.Drawing.Point(441, 12);
+            this.AddLevel1Btn.Name = "AddLevel1Btn";
+            this.AddLevel1Btn.Size = new System.Drawing.Size(37, 23);
+            this.AddLevel1Btn.TabIndex = 84;
+            this.AddLevel1Btn.Text = "Add Spell";
+            this.AddLevel1Btn.UseVisualStyleBackColor = true;
+            // 
+            // Level1ComboBox
+            // 
+            this.Level1ComboBox.FormattingEnabled = true;
+            this.Level1ComboBox.Location = new System.Drawing.Point(304, 14);
+            this.Level1ComboBox.Name = "Level1ComboBox";
+            this.Level1ComboBox.Size = new System.Drawing.Size(131, 21);
+            this.Level1ComboBox.TabIndex = 83;
+            // 
+            // Level1LabelDd
+            // 
+            this.Level1LabelDd.AutoSize = true;
+            this.Level1LabelDd.Location = new System.Drawing.Point(250, 17);
+            this.Level1LabelDd.Name = "Level1LabelDd";
+            this.Level1LabelDd.Size = new System.Drawing.Size(45, 13);
+            this.Level1LabelDd.TabIndex = 82;
+            this.Level1LabelDd.Text = "Level 1:";
+            // 
+            // CasterLabel
+            // 
+            this.CasterLabel.AutoSize = true;
+            this.CasterLabel.Location = new System.Drawing.Point(942, 465);
+            this.CasterLabel.Name = "CasterLabel";
+            this.CasterLabel.Size = new System.Drawing.Size(40, 13);
+            this.CasterLabel.TabIndex = 81;
+            this.CasterLabel.Text = "Caster:";
+            // 
+            // CasterTextBox
+            // 
+            this.CasterTextBox.Location = new System.Drawing.Point(988, 465);
+            this.CasterTextBox.Multiline = true;
+            this.CasterTextBox.Name = "CasterTextBox";
+            this.CasterTextBox.Size = new System.Drawing.Size(289, 94);
+            this.CasterTextBox.TabIndex = 80;
+            // 
+            // CantripsListBox
+            // 
+            this.CantripsListBox.FormattingEnabled = true;
+            this.CantripsListBox.Location = new System.Drawing.Point(37, 41);
+            this.CantripsListBox.Name = "CantripsListBox";
+            this.CantripsListBox.Size = new System.Drawing.Size(154, 173);
+            this.CantripsListBox.TabIndex = 78;
+            // 
+            // RemoveCantripBtn
+            // 
+            this.RemoveCantripBtn.Location = new System.Drawing.Point(197, 41);
+            this.RemoveCantripBtn.Name = "RemoveCantripBtn";
+            this.RemoveCantripBtn.Size = new System.Drawing.Size(56, 23);
+            this.RemoveCantripBtn.TabIndex = 77;
+            this.RemoveCantripBtn.Text = "Remove Spell";
+            this.RemoveCantripBtn.UseVisualStyleBackColor = true;
+            this.RemoveCantripBtn.Click += new System.EventHandler(this.RemoveSpellBtn_Click);
+            // 
+            // AddCantripBtn
+            // 
+            this.AddCantripBtn.Location = new System.Drawing.Point(197, 12);
+            this.AddCantripBtn.Name = "AddCantripBtn";
+            this.AddCantripBtn.Size = new System.Drawing.Size(37, 23);
+            this.AddCantripBtn.TabIndex = 76;
+            this.AddCantripBtn.Text = "Add Spell";
+            this.AddCantripBtn.UseVisualStyleBackColor = true;
+            this.AddCantripBtn.Click += new System.EventHandler(this.AddSpellBtn_Click);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.SkillsGroupBox);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1294, 580);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Skills";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // SkillsGroupBox
+            // 
+            this.SkillsGroupBox.Controls.Add(this.AcrobaticsCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.StealthCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.ArcanaCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.SurvivalCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.AnimalHandlingCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.SleightOfHandCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.AthleticsCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.PersuasionCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.HistoryCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.ReligionCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.DeceptionCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.PerformanceCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.InsightCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.NatureCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.InvestigationCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.PerceptionCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.IntimidationCheckBox);
+            this.SkillsGroupBox.Controls.Add(this.MedicineCheckBox);
+            this.SkillsGroupBox.Location = new System.Drawing.Point(277, 32);
+            this.SkillsGroupBox.Name = "SkillsGroupBox";
+            this.SkillsGroupBox.Size = new System.Drawing.Size(200, 474);
+            this.SkillsGroupBox.TabIndex = 18;
+            this.SkillsGroupBox.TabStop = false;
+            this.SkillsGroupBox.Text = "Skill Proficiencies";
+            // 
+            // AcrobaticsCheckBox
+            // 
+            this.AcrobaticsCheckBox.AutoSize = true;
+            this.AcrobaticsCheckBox.Location = new System.Drawing.Point(49, 41);
+            this.AcrobaticsCheckBox.Name = "AcrobaticsCheckBox";
+            this.AcrobaticsCheckBox.Size = new System.Drawing.Size(76, 17);
+            this.AcrobaticsCheckBox.TabIndex = 0;
+            this.AcrobaticsCheckBox.Text = "Acrobatics";
+            this.AcrobaticsCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // StealthCheckBox
+            // 
+            this.StealthCheckBox.AutoSize = true;
+            this.StealthCheckBox.Location = new System.Drawing.Point(49, 409);
+            this.StealthCheckBox.Name = "StealthCheckBox";
+            this.StealthCheckBox.Size = new System.Drawing.Size(59, 17);
+            this.StealthCheckBox.TabIndex = 17;
+            this.StealthCheckBox.Text = "Stealth";
+            this.StealthCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ArcanaCheckBox
+            // 
+            this.ArcanaCheckBox.AutoSize = true;
+            this.ArcanaCheckBox.Location = new System.Drawing.Point(49, 87);
+            this.ArcanaCheckBox.Name = "ArcanaCheckBox";
+            this.ArcanaCheckBox.Size = new System.Drawing.Size(60, 17);
+            this.ArcanaCheckBox.TabIndex = 1;
+            this.ArcanaCheckBox.Text = "Arcana";
+            this.ArcanaCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // SurvivalCheckBox
+            // 
+            this.SurvivalCheckBox.AutoSize = true;
+            this.SurvivalCheckBox.Location = new System.Drawing.Point(49, 432);
+            this.SurvivalCheckBox.Name = "SurvivalCheckBox";
+            this.SurvivalCheckBox.Size = new System.Drawing.Size(64, 17);
+            this.SurvivalCheckBox.TabIndex = 16;
+            this.SurvivalCheckBox.Text = "Survival";
+            this.SurvivalCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // AnimalHandlingCheckBox
+            // 
+            this.AnimalHandlingCheckBox.AutoSize = true;
+            this.AnimalHandlingCheckBox.Location = new System.Drawing.Point(49, 64);
+            this.AnimalHandlingCheckBox.Name = "AnimalHandlingCheckBox";
+            this.AnimalHandlingCheckBox.Size = new System.Drawing.Size(102, 17);
+            this.AnimalHandlingCheckBox.TabIndex = 2;
+            this.AnimalHandlingCheckBox.Text = "Animal Handling";
+            this.AnimalHandlingCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // SleightOfHandCheckBox
+            // 
+            this.SleightOfHandCheckBox.AutoSize = true;
+            this.SleightOfHandCheckBox.Location = new System.Drawing.Point(49, 386);
+            this.SleightOfHandCheckBox.Name = "SleightOfHandCheckBox";
+            this.SleightOfHandCheckBox.Size = new System.Drawing.Size(99, 17);
+            this.SleightOfHandCheckBox.TabIndex = 15;
+            this.SleightOfHandCheckBox.Text = "Sleight of Hand";
+            this.SleightOfHandCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // AthleticsCheckBox
+            // 
+            this.AthleticsCheckBox.AutoSize = true;
+            this.AthleticsCheckBox.Location = new System.Drawing.Point(49, 110);
+            this.AthleticsCheckBox.Name = "AthleticsCheckBox";
+            this.AthleticsCheckBox.Size = new System.Drawing.Size(66, 17);
+            this.AthleticsCheckBox.TabIndex = 3;
+            this.AthleticsCheckBox.Text = "Athletics";
+            this.AthleticsCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // PersuasionCheckBox
+            // 
+            this.PersuasionCheckBox.AutoSize = true;
+            this.PersuasionCheckBox.Location = new System.Drawing.Point(49, 340);
+            this.PersuasionCheckBox.Name = "PersuasionCheckBox";
+            this.PersuasionCheckBox.Size = new System.Drawing.Size(78, 17);
+            this.PersuasionCheckBox.TabIndex = 14;
+            this.PersuasionCheckBox.Text = "Persuasion";
+            this.PersuasionCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // HistoryCheckBox
+            // 
+            this.HistoryCheckBox.AutoSize = true;
+            this.HistoryCheckBox.Location = new System.Drawing.Point(49, 156);
+            this.HistoryCheckBox.Name = "HistoryCheckBox";
+            this.HistoryCheckBox.Size = new System.Drawing.Size(58, 17);
+            this.HistoryCheckBox.TabIndex = 4;
+            this.HistoryCheckBox.Text = "History";
+            this.HistoryCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // ReligionCheckBox
+            // 
+            this.ReligionCheckBox.AutoSize = true;
+            this.ReligionCheckBox.Location = new System.Drawing.Point(49, 363);
+            this.ReligionCheckBox.Name = "ReligionCheckBox";
+            this.ReligionCheckBox.Size = new System.Drawing.Size(64, 17);
+            this.ReligionCheckBox.TabIndex = 13;
+            this.ReligionCheckBox.Text = "Religion";
+            this.ReligionCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // DeceptionCheckBox
+            // 
+            this.DeceptionCheckBox.AutoSize = true;
+            this.DeceptionCheckBox.Location = new System.Drawing.Point(49, 133);
+            this.DeceptionCheckBox.Name = "DeceptionCheckBox";
+            this.DeceptionCheckBox.Size = new System.Drawing.Size(75, 17);
+            this.DeceptionCheckBox.TabIndex = 5;
+            this.DeceptionCheckBox.Text = "Deception";
+            this.DeceptionCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // PerformanceCheckBox
+            // 
+            this.PerformanceCheckBox.AutoSize = true;
+            this.PerformanceCheckBox.Location = new System.Drawing.Point(49, 317);
+            this.PerformanceCheckBox.Name = "PerformanceCheckBox";
+            this.PerformanceCheckBox.Size = new System.Drawing.Size(86, 17);
+            this.PerformanceCheckBox.TabIndex = 12;
+            this.PerformanceCheckBox.Text = "Performance";
+            this.PerformanceCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // InsightCheckBox
+            // 
+            this.InsightCheckBox.AutoSize = true;
+            this.InsightCheckBox.Location = new System.Drawing.Point(49, 179);
+            this.InsightCheckBox.Name = "InsightCheckBox";
+            this.InsightCheckBox.Size = new System.Drawing.Size(57, 17);
+            this.InsightCheckBox.TabIndex = 6;
+            this.InsightCheckBox.Text = "Insight";
+            this.InsightCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // NatureCheckBox
+            // 
+            this.NatureCheckBox.AutoSize = true;
+            this.NatureCheckBox.Location = new System.Drawing.Point(49, 271);
+            this.NatureCheckBox.Name = "NatureCheckBox";
+            this.NatureCheckBox.Size = new System.Drawing.Size(58, 17);
+            this.NatureCheckBox.TabIndex = 11;
+            this.NatureCheckBox.Text = "Nature";
+            this.NatureCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // InvestigationCheckBox
+            // 
+            this.InvestigationCheckBox.AutoSize = true;
+            this.InvestigationCheckBox.Location = new System.Drawing.Point(49, 225);
+            this.InvestigationCheckBox.Name = "InvestigationCheckBox";
+            this.InvestigationCheckBox.Size = new System.Drawing.Size(86, 17);
+            this.InvestigationCheckBox.TabIndex = 7;
+            this.InvestigationCheckBox.Text = "Investigation";
+            this.InvestigationCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // PerceptionCheckBox
+            // 
+            this.PerceptionCheckBox.AutoSize = true;
+            this.PerceptionCheckBox.Location = new System.Drawing.Point(49, 294);
+            this.PerceptionCheckBox.Name = "PerceptionCheckBox";
+            this.PerceptionCheckBox.Size = new System.Drawing.Size(77, 17);
+            this.PerceptionCheckBox.TabIndex = 10;
+            this.PerceptionCheckBox.Text = "Perception";
+            this.PerceptionCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // IntimidationCheckBox
+            // 
+            this.IntimidationCheckBox.AutoSize = true;
+            this.IntimidationCheckBox.Location = new System.Drawing.Point(49, 202);
+            this.IntimidationCheckBox.Name = "IntimidationCheckBox";
+            this.IntimidationCheckBox.Size = new System.Drawing.Size(79, 17);
+            this.IntimidationCheckBox.TabIndex = 8;
+            this.IntimidationCheckBox.Text = "Intimidation";
+            this.IntimidationCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // MedicineCheckBox
+            // 
+            this.MedicineCheckBox.AutoSize = true;
+            this.MedicineCheckBox.Location = new System.Drawing.Point(49, 248);
+            this.MedicineCheckBox.Name = "MedicineCheckBox";
+            this.MedicineCheckBox.Size = new System.Drawing.Size(69, 17);
+            this.MedicineCheckBox.TabIndex = 9;
+            this.MedicineCheckBox.Text = "Medicine";
+            this.MedicineCheckBox.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1399, 789);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.TabControl);
             this.Controls.Add(this.JsonTextBox);
             this.Controls.Add(this.GenerateJsonBtn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1757,13 +1757,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.WisdomNud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.XpNud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TitleOrderNud)).EndInit();
-            this.tabControl1.ResumeLayout(false);
+            this.TabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.SpellsTab.ResumeLayout(false);
+            this.SpellsTab.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.SkillsGroupBox.ResumeLayout(false);
             this.SkillsGroupBox.PerformLayout();
@@ -1844,10 +1844,10 @@
         private System.Windows.Forms.Label TypeLabel;
         private System.Windows.Forms.ComboBox CantripsComboBox;
         private System.Windows.Forms.Label CantripsLabelDD;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl TabControl;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage SpellsTab;
         private System.Windows.Forms.Button RemoveCantripBtn;
         private System.Windows.Forms.Button AddCantripBtn;
         private System.Windows.Forms.ListBox CantripsListBox;
