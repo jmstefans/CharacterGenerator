@@ -25,7 +25,12 @@ namespace CharacterGenerator
                 jsonString = r.ReadToEnd();
             RealSpell[] realSpells = RealSpell.FromJson(jsonString);
             foreach (RealSpell spell in realSpells)
+            {
+                Level spellLevel = spell.Level;
+
                 CantripsComboBox.Items.Add(spell);
+
+            }
             CantripsComboBox.DisplayMember = "Name";
             CantripsListBox.DisplayMember = "Name";
             CantripsComboBox.SelectedIndex = 0;
