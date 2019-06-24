@@ -15,12 +15,12 @@ namespace CharacterGenerator
         {
             InitializeComponent();
             AlignmentComboBox.SelectedIndex = 0;
+            ChallengeRatingComboBox.SelectedIndex = 0;
             InitializeSpells();
         }
 
         private void InitializeSpells()
         {
-            int count = 0;
             // Create an array of the 5e spells from the JSON flat file.
             string jsonString;
             using (var r = new StreamReader(Application.StartupPath + @"/spells.json"))
@@ -31,11 +31,10 @@ namespace CharacterGenerator
             foreach (RealSpell spell in realSpells)
             {
                 Level level = spell.Level;
+
+                // We need at least one of the properties to not be null.
                 if (level.Enum == null && level.Integer == null)
-                {
-                    count++;
                     continue;
-                }
 
                 if (level.Enum == Class.Cantrip)
                     CantripsComboBox.Items.Add(spell);
@@ -72,8 +71,6 @@ namespace CharacterGenerator
                         comboBox.SelectedIndex = 0;
                 }
             }
-
-            MessageBox.Show($"Skipped {count} spells because the level enum was null.");
         }
 
         private void GenerateJsonBtn_Click(object sender, EventArgs e)
@@ -121,30 +118,15 @@ namespace CharacterGenerator
                 };
 
                 // Add comma-separated spells names.
-                foreach (RealSpell spell in CantripsListBox.Items)
-                    character.Spells += spell.Name + ",";
-                character.Spells = character.Spells?.TrimEnd(',');
+                SetCharacterSpells(ref character);
 
                 // Add proficient skills.
                 character.Skills = new Skills();
-                List<string> proficientSkills = AddSkillsToJson(ref character);
-
-                // Add all of the rest of the character properties to the allowed property list for
-                //the contract resolver (excludes the one property of NpcCharacter that should not be output).
-                List<string> charProps = character.GetType().GetProperties().Select(prop => prop.Name)
-                    .Where(prop => !prop.Equals("ChallengeRating")).ToList();
-
-                // Create final list of allowed properties to be output.
-                proficientSkills.AddRange(charProps);
-                List<string> allOutputPropertyNames = proficientSkills;
-
-                // Create the JSON from the object and copy it to the clipboard for easy pasting.
-                JsonTextBox.Text = JsonConvert.SerializeObject(character,
-                    new JsonSerializerSettings
-                    {
-                        ContractResolver = new CustomContractResolver(allOutputPropertyNames)
-                    });
+                AddSkillsToJson(ref character);
                 
+                // Serialize the character into JSON.
+                JsonTextBox.Text = JsonConvert.SerializeObject(character);
+
                 // Save JSON to clipboard for easy pasting.
                 Clipboard.SetText(JsonTextBox.Text);
             }
@@ -154,30 +136,80 @@ namespace CharacterGenerator
             }
         }
 
-        private void AddSpellBtn_Click(object sender, EventArgs e)
+        /// <summary>
+        ///     Sets the character's spells by aggregating the information from the UI.
+        /// </summary>
+        /// <param name="character">A reference to the character whose spells are being set.</param>
+        private void SetCharacterSpells(ref NpcCharacter character)
         {
-            if (CantripsComboBox.SelectedItem == null)
-                return;
+            string cantrips = string.Empty;
+            foreach (RealSpell spell in CantripsListBox.Items)
+                cantrips += spell.Name + ",";
+            cantrips = cantrips.TrimEnd(',');
 
-            var spell = (RealSpell)CantripsComboBox.SelectedItem;
-            CantripsListBox.Items.Add(spell);
+            string level1 = string.Empty;
+            foreach (RealSpell spell in Level1ListBox.Items)
+                level1 += spell.Name + ",";
+            level1 = level1.TrimEnd(',');
+
+            string level2 = string.Empty;
+            foreach (RealSpell spell in Level2ListBox.Items)
+                level2 += spell.Name + ",";
+            level2 = level2.TrimEnd(',');
+
+            string level3 = string.Empty;
+            foreach (RealSpell spell in Level3ListBox.Items)
+                level3 += spell.Name + ",";
+            level3 = level3.TrimEnd(',');
+
+            string level4 = string.Empty;
+            foreach (RealSpell spell in Level4ListBox.Items)
+                level4 += spell.Name + ",";
+            level4 = level4.TrimEnd(',');
+
+            string level5 = string.Empty;
+            foreach (RealSpell spell in Level5ListBox.Items)
+                level5 += spell.Name + ",";
+            level5 = level5.TrimEnd(',');
+
+            string level6 = string.Empty;
+            foreach (RealSpell spell in Level6ListBox.Items)
+                level6 += spell.Name + ",";
+            level6 = level6.TrimEnd(',');
+
+            string level7 = string.Empty;
+            foreach (RealSpell spell in Level7ListBox.Items)
+                level7 += spell.Name + ",";
+            level7 = level7.TrimEnd(',');
+
+            string level8 = string.Empty;
+            foreach (RealSpell spell in Level8ListBox.Items)
+                level8 += spell.Name + ",";
+            level8 = level8.TrimEnd(',');
+
+            string level9 = string.Empty;
+            foreach (RealSpell spell in Level9ListBox.Items)
+                level9 += spell.Name + ",";
+            level9 = level9.TrimEnd(',');
+            
+            character.Spells = new Spells
+            {
+                Cantrips = cantrips,
+                Level1 = level1,
+                Level2 = level2,
+                Level3 = level3,
+                Level4 = level4,
+                Level5 = level5,
+                Level6 = level6,
+                Level7 = level7,
+                Level8 = level8,
+                Level9 = level9,
+                Caster = CasterTextBox.Text
+            };
         }
 
-        private void RemoveSpellBtn_Click(object sender, EventArgs e)
+        private void AddSkillsToJson(ref NpcCharacter character)
         {
-            CantripsListBox.Items.Remove(CantripsListBox.SelectedItem);
-        }
-
-        private void SpellsComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var spell = (RealSpell) CantripsComboBox.SelectedItem;
-            CasterTextBox.Text = spell.ToString();
-        }
-
-        private List<string> AddSkillsToJson(ref NpcCharacter character)
-        {
-            var proficientSkills = new List<string>();
-
             // Set the character's CR with the value from the UI, since we'll need that later to calculate a proficiency bonus.
             character.ChallengeRating = ChallengeRatingComboBox.SelectedItem.ToString();
 
@@ -196,15 +228,154 @@ namespace CharacterGenerator
                         {
                             // Set the character object's skill to the appropriate bonus.
                             propertyInfo.SetValue(character.Skills, character.GetCrProficiencyBonus());
-
-                            // Save the property name for the JSON contract resolver.
-                            proficientSkills.Add(propertyInfo.Name);
                         }
                     }
                 }
             }
-
-            return proficientSkills;
         }
+
+        #region Add and Remove Spell Button Handlers
+
+        private void AddCantripBtn_Click(object sender, EventArgs e)
+        {
+            if (CantripsComboBox.SelectedItem == null)
+                return;
+
+            var spell = (RealSpell)CantripsComboBox.SelectedItem;
+            CantripsListBox.Items.Add(spell);
+        }
+
+        private void RemoveCantripBtn_Click(object sender, EventArgs e)
+        {
+            CantripsListBox.Items.Remove(CantripsListBox.SelectedItem);
+        }
+
+        private void AddLevel1Btn_Click(object sender, EventArgs e)
+        {
+            if (Level1ComboBox.SelectedItem == null)
+                return;
+
+            var spell = (RealSpell)Level1ComboBox.SelectedItem;
+            Level1ListBox.Items.Add(spell);
+        }
+
+        private void RemoveLevel1Btn_Click(object sender, EventArgs e)
+        {
+            Level1ListBox.Items.Remove(Level1ListBox.SelectedItem);
+        }
+
+        private void AddLevel2Btn_Click(object sender, EventArgs e)
+        {
+            if (Level2ComboBox.SelectedItem == null)
+                return;
+
+            var spell = (RealSpell)Level2ComboBox.SelectedItem;
+            Level2ListBox.Items.Add(spell);
+        }
+
+        private void RemoveLevel2Btn_Click(object sender, EventArgs e)
+        {
+            Level2ListBox.Items.Remove(Level2ListBox.SelectedItem);
+        }
+
+        private void AddLevel3Btn_Click(object sender, EventArgs e)
+        {
+            if (Level3ComboBox.SelectedItem == null)
+                return;
+
+            var spell = (RealSpell)Level3ComboBox.SelectedItem;
+            Level3ListBox.Items.Add(spell);
+        }
+
+        private void RemoveLevel3Btn_Click(object sender, EventArgs e)
+        {
+            Level3ListBox.Items.Remove(Level3ListBox.SelectedItem);
+        }
+
+        private void AddLevel4Btn_Click(object sender, EventArgs e)
+        {
+            if (Level4ComboBox.SelectedItem == null)
+                return;
+
+            var spell = (RealSpell)Level4ComboBox.SelectedItem;
+            Level4ListBox.Items.Add(spell);
+        }
+
+        private void RemoveLevel4Btn_Click(object sender, EventArgs e)
+        {
+            Level4ListBox.Items.Remove(Level4ListBox.SelectedItem);
+        }
+
+        private void AddLevel5Btn_Click(object sender, EventArgs e)
+        {
+            if (Level5ComboBox.SelectedItem == null)
+                return;
+
+            var spell = (RealSpell)Level5ComboBox.SelectedItem;
+            Level5ListBox.Items.Add(spell);
+        }
+
+        private void RemoveLevel5Btn_Click(object sender, EventArgs e)
+        {
+            Level5ListBox.Items.Remove(Level5ListBox.SelectedItem);
+        }
+
+        private void AddLevel6Btn_Click(object sender, EventArgs e)
+        {
+            if (Level6ComboBox.SelectedItem == null)
+                return;
+
+            var spell = (RealSpell)Level6ComboBox.SelectedItem;
+            Level6ListBox.Items.Add(spell);
+        }
+
+        private void RemoveLevel6Btn_Click(object sender, EventArgs e)
+        {
+            Level6ListBox.Items.Remove(Level6ListBox.SelectedItem);
+        }
+
+        private void AddLevel7Btn_Click(object sender, EventArgs e)
+        {
+            if (Level7ComboBox.SelectedItem == null)
+                return;
+
+            var spell = (RealSpell)Level7ComboBox.SelectedItem;
+            Level7ListBox.Items.Add(spell);
+        }
+
+        private void RemoveLevel7Btn_Click(object sender, EventArgs e)
+        {
+            Level7ListBox.Items.Remove(Level7ListBox.SelectedItem);
+        }
+
+        private void AddLevel8Btn_Click(object sender, EventArgs e)
+        {
+            if (Level8ComboBox.SelectedItem == null)
+                return;
+
+            var spell = (RealSpell)Level8ComboBox.SelectedItem;
+            Level8ListBox.Items.Add(spell);
+        }
+
+        private void RemoveLevel8Btn_Click(object sender, EventArgs e)
+        {
+            Level8ListBox.Items.Remove(Level8ListBox.SelectedItem);
+        }
+
+        private void AddLevel9Btn_Click(object sender, EventArgs e)
+        {
+            if (Level9ComboBox.SelectedItem == null)
+                return;
+
+            var spell = (RealSpell)Level9ComboBox.SelectedItem;
+            Level9ListBox.Items.Add(spell);
+        }
+
+        private void RemoveLevel9Btn_Click(object sender, EventArgs e)
+        {
+            Level9ListBox.Items.Remove(Level9ListBox.SelectedItem);
+        }
+
+        #endregion Add and Remove Spell Button Handlers
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CharacterGenerator
 {
@@ -6,7 +7,6 @@ namespace CharacterGenerator
     {
         public int ArmorClass { get; set; }
         public string Actions { get; set; }
-        public string Spells { get; set; }
         public string Algn { get; set; }
         public string Character_Traits { get; set; }
         public int Chall { get; set; }
@@ -34,6 +34,7 @@ namespace CharacterGenerator
         public string Racket { get; set; }
         public string Size { get; set; }
         public string Type { get; set; }
+        public Spells Spells { get; set; }
 
         // Not supposed to be output.
         public string ChallengeRating { get; set; }

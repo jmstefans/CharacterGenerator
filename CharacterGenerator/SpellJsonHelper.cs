@@ -15,32 +15,87 @@ namespace CharacterGenerator
 
     public partial class SpellJsonHelper
     {
-        [JsonProperty("SPELLS")]
         public Spells Spells { get; set; }
     }
 
     public class Spells
     {
-        [JsonProperty("1st level (4 slots)")]
-        public string The1StLevel4Slots { get; set; }
+        public string Cantrips { get; set; }
 
-        [JsonProperty("2nd level (3 slots)")]
-        public string The2NdLevel3Slots { get; set; }
+        public string Level1 { get; set; }
 
-        [JsonProperty("3rd level (3 slots)")]
-        public string The3RdLevel3Slots { get; set; }
+        public string Level2 { get; set; }
 
-        [JsonProperty("4th level (3 slots)")]
-        public string The4ThLevel3Slots { get; set; }
+        public string Level3 { get; set; }
 
-        [JsonProperty("5th level (1 slots)")]
-        public string The5ThLevel1Slots { get; set; }
+        public string Level4 { get; set; }
 
-        [JsonProperty("Cantrips (at will)")]
-        public string CantripsAtWill { get; set; }
+        public string Level5 { get; set; }
 
-        [JsonProperty("Caster")]
+        public string Level6 { get; set; }
+
+        public string Level7 { get; set; }
+
+        public string Level8 { get; set; }
+
+        public string Level9 { get; set; }
+
         public string Caster { get; set; }
+
+        public bool ShouldSerializeCantrips()
+        {
+            return !string.IsNullOrWhiteSpace(Cantrips);
+        }
+
+        public bool ShouldSerializeLevel1()
+        {
+            return !string.IsNullOrWhiteSpace(Level1);
+        }
+
+        public bool ShouldSerializeLevel2()
+        {
+            return !string.IsNullOrWhiteSpace(Level2);
+        }
+
+        public bool ShouldSerializeLevel3()
+        {
+            return !string.IsNullOrWhiteSpace(Level3);
+        }
+
+        public bool ShouldSerializeLevel4()
+        {
+            return !string.IsNullOrWhiteSpace(Level4);
+        }
+
+        public bool ShouldSerializeLevel5()
+        {
+            return !string.IsNullOrWhiteSpace(Level5);
+        }
+
+        public bool ShouldSerializeLevel6()
+        {
+            return !string.IsNullOrWhiteSpace(Level6);
+        }
+
+        public bool ShouldSerializeLevel7()
+        {
+            return !string.IsNullOrWhiteSpace(Level7);
+        }
+
+        public bool ShouldSerializeLevel8()
+        {
+            return !string.IsNullOrWhiteSpace(Level8);
+        }
+
+        public bool ShouldSerializeLevel9()
+        {
+            return !string.IsNullOrWhiteSpace(Level9);
+        }
+
+        public bool ShouldSerializeCaster()
+        {
+            return !string.IsNullOrWhiteSpace(Caster);
+        }
     }
 
     public partial class SpellJsonHelper

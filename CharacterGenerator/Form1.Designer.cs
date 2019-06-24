@@ -875,7 +875,6 @@
             this.CantripsComboBox.Name = "CantripsComboBox";
             this.CantripsComboBox.Size = new System.Drawing.Size(131, 21);
             this.CantripsComboBox.TabIndex = 75;
-            this.CantripsComboBox.SelectedIndexChanged += new System.EventHandler(this.SpellsComboBox_SelectedIndexChanged);
             // 
             // CantripsLabelDD
             // 
@@ -1099,6 +1098,7 @@
             this.RemoveLevel9Btn.TabIndex = 125;
             this.RemoveLevel9Btn.Text = "Remove Spell";
             this.RemoveLevel9Btn.UseVisualStyleBackColor = true;
+            this.RemoveLevel9Btn.Click += new System.EventHandler(this.RemoveLevel9Btn_Click);
             // 
             // AddLevel9Btn
             // 
@@ -1108,6 +1108,7 @@
             this.AddLevel9Btn.TabIndex = 124;
             this.AddLevel9Btn.Text = "Add Spell";
             this.AddLevel9Btn.UseVisualStyleBackColor = true;
+            this.AddLevel9Btn.Click += new System.EventHandler(this.AddLevel9Btn_Click);
             // 
             // Level9ComboBox
             // 
@@ -1142,6 +1143,7 @@
             this.RemoveLevel8Btn.TabIndex = 120;
             this.RemoveLevel8Btn.Text = "Remove Spell";
             this.RemoveLevel8Btn.UseVisualStyleBackColor = true;
+            this.RemoveLevel8Btn.Click += new System.EventHandler(this.RemoveLevel8Btn_Click);
             // 
             // AddLevel8Btn
             // 
@@ -1151,6 +1153,7 @@
             this.AddLevel8Btn.TabIndex = 119;
             this.AddLevel8Btn.Text = "Add Spell";
             this.AddLevel8Btn.UseVisualStyleBackColor = true;
+            this.AddLevel8Btn.Click += new System.EventHandler(this.AddLevel8Btn_Click);
             // 
             // Level8ComboBox
             // 
@@ -1185,6 +1188,7 @@
             this.RemoveLevel7Btn.TabIndex = 115;
             this.RemoveLevel7Btn.Text = "Remove Spell";
             this.RemoveLevel7Btn.UseVisualStyleBackColor = true;
+            this.RemoveLevel7Btn.Click += new System.EventHandler(this.RemoveLevel7Btn_Click);
             // 
             // AddLevel7Btn
             // 
@@ -1194,6 +1198,7 @@
             this.AddLevel7Btn.TabIndex = 114;
             this.AddLevel7Btn.Text = "Add Spell";
             this.AddLevel7Btn.UseVisualStyleBackColor = true;
+            this.AddLevel7Btn.Click += new System.EventHandler(this.AddLevel7Btn_Click);
             // 
             // Level7ComboBox
             // 
@@ -1228,6 +1233,7 @@
             this.RemoveLevel6Btn.TabIndex = 110;
             this.RemoveLevel6Btn.Text = "Remove Spell";
             this.RemoveLevel6Btn.UseVisualStyleBackColor = true;
+            this.RemoveLevel6Btn.Click += new System.EventHandler(this.RemoveLevel6Btn_Click);
             // 
             // AddLevel6Btn
             // 
@@ -1237,6 +1243,7 @@
             this.AddLevel6Btn.TabIndex = 109;
             this.AddLevel6Btn.Text = "Add Spell";
             this.AddLevel6Btn.UseVisualStyleBackColor = true;
+            this.AddLevel6Btn.Click += new System.EventHandler(this.AddLevel6Btn_Click);
             // 
             // Level6ComboBox
             // 
@@ -1271,6 +1278,7 @@
             this.RemoveLevel5Btn.TabIndex = 105;
             this.RemoveLevel5Btn.Text = "Remove Spell";
             this.RemoveLevel5Btn.UseVisualStyleBackColor = true;
+            this.RemoveLevel5Btn.Click += new System.EventHandler(this.RemoveLevel5Btn_Click);
             // 
             // AddLevel5Btn
             // 
@@ -1280,6 +1288,7 @@
             this.AddLevel5Btn.TabIndex = 104;
             this.AddLevel5Btn.Text = "Add Spell";
             this.AddLevel5Btn.UseVisualStyleBackColor = true;
+            this.AddLevel5Btn.Click += new System.EventHandler(this.AddLevel5Btn_Click);
             // 
             // Level5ComboBox
             // 
@@ -1314,6 +1323,7 @@
             this.RemoveLevel4Btn.TabIndex = 100;
             this.RemoveLevel4Btn.Text = "Remove Spell";
             this.RemoveLevel4Btn.UseVisualStyleBackColor = true;
+            this.RemoveLevel4Btn.Click += new System.EventHandler(this.RemoveLevel4Btn_Click);
             // 
             // AddLevel4Btn
             // 
@@ -1323,6 +1333,7 @@
             this.AddLevel4Btn.TabIndex = 99;
             this.AddLevel4Btn.Text = "Add Spell";
             this.AddLevel4Btn.UseVisualStyleBackColor = true;
+            this.AddLevel4Btn.Click += new System.EventHandler(this.AddLevel4Btn_Click);
             // 
             // Level4ComboBox
             // 
@@ -1357,6 +1368,7 @@
             this.RemoveLevel3Btn.TabIndex = 95;
             this.RemoveLevel3Btn.Text = "Remove Spell";
             this.RemoveLevel3Btn.UseVisualStyleBackColor = true;
+            this.RemoveLevel3Btn.Click += new System.EventHandler(this.RemoveLevel3Btn_Click);
             // 
             // AddLevel3Btn
             // 
@@ -1366,6 +1378,7 @@
             this.AddLevel3Btn.TabIndex = 94;
             this.AddLevel3Btn.Text = "Add Spell";
             this.AddLevel3Btn.UseVisualStyleBackColor = true;
+            this.AddLevel3Btn.Click += new System.EventHandler(this.AddLevel3Btn_Click);
             // 
             // Level3ComboBox
             // 
@@ -1400,6 +1413,7 @@
             this.RemoveLevel2Btn.TabIndex = 90;
             this.RemoveLevel2Btn.Text = "Remove Spell";
             this.RemoveLevel2Btn.UseVisualStyleBackColor = true;
+            this.RemoveLevel2Btn.Click += new System.EventHandler(this.RemoveLevel2Btn_Click);
             // 
             // AddLevel2Btn
             // 
@@ -1409,6 +1423,7 @@
             this.AddLevel2Btn.TabIndex = 89;
             this.AddLevel2Btn.Text = "Add Spell";
             this.AddLevel2Btn.UseVisualStyleBackColor = true;
+            this.AddLevel2Btn.Click += new System.EventHandler(this.AddLevel2Btn_Click);
             // 
             // Level2ComboBox
             // 
@@ -1443,6 +1458,7 @@
             this.RemoveLevel1Btn.TabIndex = 85;
             this.RemoveLevel1Btn.Text = "Remove Spell";
             this.RemoveLevel1Btn.UseVisualStyleBackColor = true;
+            this.RemoveLevel1Btn.Click += new System.EventHandler(this.RemoveLevel1Btn_Click);
             // 
             // AddLevel1Btn
             // 
@@ -1452,6 +1468,7 @@
             this.AddLevel1Btn.TabIndex = 84;
             this.AddLevel1Btn.Text = "Add Spell";
             this.AddLevel1Btn.UseVisualStyleBackColor = true;
+            this.AddLevel1Btn.Click += new System.EventHandler(this.AddLevel1Btn_Click);
             // 
             // Level1ComboBox
             // 
@@ -1503,7 +1520,7 @@
             this.RemoveCantripBtn.TabIndex = 77;
             this.RemoveCantripBtn.Text = "Remove Spell";
             this.RemoveCantripBtn.UseVisualStyleBackColor = true;
-            this.RemoveCantripBtn.Click += new System.EventHandler(this.RemoveSpellBtn_Click);
+            this.RemoveCantripBtn.Click += new System.EventHandler(this.RemoveCantripBtn_Click);
             // 
             // AddCantripBtn
             // 
@@ -1513,7 +1530,7 @@
             this.AddCantripBtn.TabIndex = 76;
             this.AddCantripBtn.Text = "Add Spell";
             this.AddCantripBtn.UseVisualStyleBackColor = true;
-            this.AddCantripBtn.Click += new System.EventHandler(this.AddSpellBtn_Click);
+            this.AddCantripBtn.Click += new System.EventHandler(this.AddCantripBtn_Click);
             // 
             // tabPage4
             // 
