@@ -41,8 +41,6 @@
             this.AlignmentComboBox = new System.Windows.Forms.ComboBox();
             this.TraitsTextBox = new System.Windows.Forms.TextBox();
             this.TraitsLabel = new System.Windows.Forms.Label();
-            this.ChallNud = new System.Windows.Forms.NumericUpDown();
-            this.ChallLabel = new System.Windows.Forms.Label();
             this.CharIdNud = new System.Windows.Forms.NumericUpDown();
             this.CharIdLabel = new System.Windows.Forms.Label();
             this.FactionTextBox = new System.Windows.Forms.TextBox();
@@ -176,7 +174,6 @@
             this.IntimidationCheckBox = new System.Windows.Forms.CheckBox();
             this.MedicineCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ArmorClassNud)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChallNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharIdNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HitPointsNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpeedNud)).BeginInit();
@@ -314,27 +311,6 @@
             this.TraitsLabel.Size = new System.Drawing.Size(36, 13);
             this.TraitsLabel.TabIndex = 12;
             this.TraitsLabel.Text = "Traits:";
-            // 
-            // ChallNud
-            // 
-            this.ChallNud.Location = new System.Drawing.Point(142, 47);
-            this.ChallNud.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.ChallNud.Name = "ChallNud";
-            this.ChallNud.Size = new System.Drawing.Size(154, 20);
-            this.ChallNud.TabIndex = 15;
-            // 
-            // ChallLabel
-            // 
-            this.ChallLabel.AutoSize = true;
-            this.ChallLabel.Location = new System.Drawing.Point(58, 55);
-            this.ChallLabel.Name = "ChallLabel";
-            this.ChallLabel.Size = new System.Drawing.Size(33, 13);
-            this.ChallLabel.TabIndex = 14;
-            this.ChallLabel.Text = "Chall:";
             // 
             // CharIdNud
             // 
@@ -903,7 +879,6 @@
             this.tabPage1.Controls.Add(this.ChallengeRatingLabel);
             this.tabPage1.Controls.Add(this.ArmorClassNud);
             this.tabPage1.Controls.Add(this.ArmorClassLabel);
-            this.tabPage1.Controls.Add(this.ChallNud);
             this.tabPage1.Controls.Add(this.AlignmentComboBox);
             this.tabPage1.Controls.Add(this.AlignmentLabel);
             this.tabPage1.Controls.Add(this.WisdomNud);
@@ -917,7 +892,6 @@
             this.tabPage1.Controls.Add(this.IntellectNud);
             this.tabPage1.Controls.Add(this.TitleOrderNud);
             this.tabPage1.Controls.Add(this.IntellectLabel);
-            this.tabPage1.Controls.Add(this.ChallLabel);
             this.tabPage1.Controls.Add(this.DexterityNud);
             this.tabPage1.Controls.Add(this.TitleOrderLabel);
             this.tabPage1.Controls.Add(this.DexterityLabel);
@@ -982,7 +956,7 @@
             "11",
             "12",
             "13"});
-            this.ChallengeRatingComboBox.Location = new System.Drawing.Point(142, 279);
+            this.ChallengeRatingComboBox.Location = new System.Drawing.Point(142, 51);
             this.ChallengeRatingComboBox.Name = "ChallengeRatingComboBox";
             this.ChallengeRatingComboBox.Size = new System.Drawing.Size(155, 21);
             this.ChallengeRatingComboBox.TabIndex = 75;
@@ -990,7 +964,7 @@
             // ChallengeRatingLabel
             // 
             this.ChallengeRatingLabel.AutoSize = true;
-            this.ChallengeRatingLabel.Location = new System.Drawing.Point(24, 282);
+            this.ChallengeRatingLabel.Location = new System.Drawing.Point(24, 54);
             this.ChallengeRatingLabel.Name = "ChallengeRatingLabel";
             this.ChallengeRatingLabel.Size = new System.Drawing.Size(115, 13);
             this.ChallengeRatingLabel.TabIndex = 74;
@@ -1762,7 +1736,6 @@
             this.Name = "Form1";
             this.Text = "Character Generator";
             ((System.ComponentModel.ISupportInitialize)(this.ArmorClassNud)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChallNud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharIdNud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HitPointsNud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpeedNud)).EndInit();
@@ -1803,8 +1776,6 @@
         private System.Windows.Forms.ComboBox AlignmentComboBox;
         private System.Windows.Forms.TextBox TraitsTextBox;
         private System.Windows.Forms.Label TraitsLabel;
-        private System.Windows.Forms.NumericUpDown ChallNud;
-        private System.Windows.Forms.Label ChallLabel;
         private System.Windows.Forms.NumericUpDown CharIdNud;
         private System.Windows.Forms.Label CharIdLabel;
         private System.Windows.Forms.TextBox FactionTextBox;

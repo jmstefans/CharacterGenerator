@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace CharacterGenerator
 {
@@ -9,7 +10,6 @@ namespace CharacterGenerator
         public string Actions { get; set; }
         public string Algn { get; set; }
         public string Character_Traits { get; set; }
-        public int Chall { get; set; }
         public int Char_Id { get; set; }
         public string Faction { get; set; }
         public string Faction_Leader { get; set; }
@@ -37,6 +37,7 @@ namespace CharacterGenerator
         public Spells Spells { get; set; }
 
         // Not supposed to be output.
+        [JsonProperty("Chall")]
         public string ChallengeRating { get; set; }
 
         public byte GetCrProficiencyBonus()
