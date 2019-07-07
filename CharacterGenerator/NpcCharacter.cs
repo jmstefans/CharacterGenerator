@@ -35,6 +35,7 @@ namespace CharacterGenerator
         public string Size { get; set; }
         public string Type { get; set; }
         public Spells Spells { get; set; }
+        public string Languages { get; set; }
 
         // Not supposed to be output.
         [JsonProperty("Chall")]

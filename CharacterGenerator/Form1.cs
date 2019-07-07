@@ -114,6 +114,7 @@ namespace CharacterGenerator
                     Accolades = AccoladesTextBox.Text,
                     Motive = MotiveTextBox.Text,
                     Type = TypeTextBox.Text,
+                    Languages = LanguagesTextBox.Text
                 };
 
                 // Add comma-separated spells names.

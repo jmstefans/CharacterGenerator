@@ -173,6 +173,8 @@
             this.PerceptionCheckBox = new System.Windows.Forms.CheckBox();
             this.IntimidationCheckBox = new System.Windows.Forms.CheckBox();
             this.MedicineCheckBox = new System.Windows.Forms.CheckBox();
+            this.LanguagesTextBox = new System.Windows.Forms.TextBox();
+            this.LanguagesLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ArmorClassNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharIdNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HitPointsNud)).BeginInit();
@@ -972,6 +974,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.LanguagesTextBox);
+            this.tabPage2.Controls.Add(this.LanguagesLabel);
             this.tabPage2.Controls.Add(this.TraitsTextBox);
             this.tabPage2.Controls.Add(this.FirstMeetingTextBox);
             this.tabPage2.Controls.Add(this.FirstMeetingLabel);
@@ -1724,6 +1728,24 @@
             this.MedicineCheckBox.Text = "Medicine";
             this.MedicineCheckBox.UseVisualStyleBackColor = true;
             // 
+            // LanguagesTextBox
+            // 
+            this.LanguagesTextBox.Location = new System.Drawing.Point(1010, 273);
+            this.LanguagesTextBox.Multiline = true;
+            this.LanguagesTextBox.Name = "LanguagesTextBox";
+            this.LanguagesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.LanguagesTextBox.Size = new System.Drawing.Size(212, 142);
+            this.LanguagesTextBox.TabIndex = 69;
+            // 
+            // LanguagesLabel
+            // 
+            this.LanguagesLabel.AutoSize = true;
+            this.LanguagesLabel.Location = new System.Drawing.Point(943, 276);
+            this.LanguagesLabel.Name = "LanguagesLabel";
+            this.LanguagesLabel.Size = new System.Drawing.Size(63, 13);
+            this.LanguagesLabel.TabIndex = 68;
+            this.LanguagesLabel.Text = "Languages:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1908,6 +1930,8 @@
         private System.Windows.Forms.Button AddLevel5Btn;
         private System.Windows.Forms.ComboBox Level5ComboBox;
         private System.Windows.Forms.Label Level5LabelDd;
+        private System.Windows.Forms.TextBox LanguagesTextBox;
+        private System.Windows.Forms.Label LanguagesLabel;
     }
 }
 
