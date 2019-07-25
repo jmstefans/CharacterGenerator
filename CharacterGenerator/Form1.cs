@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -79,33 +80,33 @@ namespace CharacterGenerator
             {
                 var character = new NpcCharacter()
                 {
-                    ArmorClass = (int)ArmorClassNud.Value,
+                    AC = (int)ArmorClassNud.Value,
                     Actions = ActionsTextBox.Text,
                     Algn = AlignmentComboBox.SelectedItem.ToString(),
                     Character_Traits = TraitsTextBox.Text,
-                    Char_Id = (int)CharIdNud.Value,
+                    Char_Id = CharIdTextBox.Text,
                     Faction = FactionTextBox.Text,
-                    Faction_Leader = FactionLeaderTextBox.Text,
+                    Faction_Leader = FactionLeaderCheckBox.Checked,
                     First_Name = FirstNameTextBox.Text,
                     First_Meeting = FirstMeetingTextBox.Text,
                     Racial_Features = RacialFeaturesTextBox.Text,
                     Racket = RacketTextBox.Text,
                     Size = SizeTextBox.Text,
-                    Hp = (int)HitPointsNud.Value,
+                    Hp = HitPointsTextBox.Text,
                     Img = ImageTextBox.Text,
                     Last_Name = LastNameTextBox.Text,
                     Location = LocationTextBox.Text,
                     Race = RaceTextBox.Text,
                     Appearance = AppearanceTextBox.Text,
-                    Speed = (int)SpeedNud.Value,
+                    Speed = SpeedTextBox.Text,
                     Stats = new Abilities
                     {
-                        Cha = (int)CharismaNud.Value,
-                        Con = (int)ConstitutionNud.Value,
-                        Dex = (int)DexterityNud.Value,
-                        Int = (int)IntellectNud.Value,
-                        Str = (int)StrengthNud.Value,
-                        Wis = (int)WisdomNud.Value
+                        Cha = CharismaNud.Value.ToString(CultureInfo.InvariantCulture),
+                        Con = ConstitutionNud.Value.ToString(CultureInfo.InvariantCulture),
+                        Dex = DexterityNud.Value.ToString(CultureInfo.InvariantCulture),
+                        Int = IntellectNud.Value.ToString(CultureInfo.InvariantCulture),
+                        Str = StrengthNud.Value.ToString(CultureInfo.InvariantCulture),
+                        Wis = WisdomNud.Value.ToString(CultureInfo.InvariantCulture)
                     },
                     Title = TitleTextBox.Text,
                     Title_Order = (int)TitleOrderNud.Value,

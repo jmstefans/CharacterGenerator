@@ -41,11 +41,9 @@
             this.AlignmentComboBox = new System.Windows.Forms.ComboBox();
             this.TraitsTextBox = new System.Windows.Forms.TextBox();
             this.TraitsLabel = new System.Windows.Forms.Label();
-            this.CharIdNud = new System.Windows.Forms.NumericUpDown();
             this.CharIdLabel = new System.Windows.Forms.Label();
             this.FactionTextBox = new System.Windows.Forms.TextBox();
             this.FactionLabel = new System.Windows.Forms.Label();
-            this.HitPointsNud = new System.Windows.Forms.NumericUpDown();
             this.HpLabel = new System.Windows.Forms.Label();
             this.ImageTextBox = new System.Windows.Forms.TextBox();
             this.ImageLabel = new System.Windows.Forms.Label();
@@ -58,7 +56,6 @@
             this.AppearanceTextBox = new System.Windows.Forms.TextBox();
             this.AppearanceLabel = new System.Windows.Forms.Label();
             this.SpeedLabel = new System.Windows.Forms.Label();
-            this.SpeedNud = new System.Windows.Forms.NumericUpDown();
             this.CharismaNud = new System.Windows.Forms.NumericUpDown();
             this.CharismaLabel = new System.Windows.Forms.Label();
             this.ConstitutionNud = new System.Windows.Forms.NumericUpDown();
@@ -81,7 +78,6 @@
             this.AccoladesLabel = new System.Windows.Forms.Label();
             this.MotiveTextBox = new System.Windows.Forms.TextBox();
             this.MotiveLabel = new System.Windows.Forms.Label();
-            this.FactionLeaderTextBox = new System.Windows.Forms.TextBox();
             this.FactionLeaderLabel = new System.Windows.Forms.Label();
             this.FirstMeetingTextBox = new System.Windows.Forms.TextBox();
             this.FirstMeetingLabel = new System.Windows.Forms.Label();
@@ -102,6 +98,8 @@
             this.ChallengeRatingComboBox = new System.Windows.Forms.ComboBox();
             this.ChallengeRatingLabel = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.LanguagesTextBox = new System.Windows.Forms.TextBox();
+            this.LanguagesLabel = new System.Windows.Forms.Label();
             this.SpellsTab = new System.Windows.Forms.TabPage();
             this.Level9ListBox = new System.Windows.Forms.ListBox();
             this.RemoveLevel9Btn = new System.Windows.Forms.Button();
@@ -173,12 +171,11 @@
             this.PerceptionCheckBox = new System.Windows.Forms.CheckBox();
             this.IntimidationCheckBox = new System.Windows.Forms.CheckBox();
             this.MedicineCheckBox = new System.Windows.Forms.CheckBox();
-            this.LanguagesTextBox = new System.Windows.Forms.TextBox();
-            this.LanguagesLabel = new System.Windows.Forms.Label();
+            this.CharIdTextBox = new System.Windows.Forms.TextBox();
+            this.HitPointsTextBox = new System.Windows.Forms.TextBox();
+            this.FactionLeaderCheckBox = new System.Windows.Forms.CheckBox();
+            this.SpeedTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ArmorClassNud)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CharIdNud)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HitPointsNud)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpeedNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharismaNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConstitutionNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StrengthNud)).BeginInit();
@@ -253,17 +250,17 @@
             // 
             // ActionsTextBox
             // 
-            this.ActionsTextBox.Location = new System.Drawing.Point(91, 67);
+            this.ActionsTextBox.Location = new System.Drawing.Point(67, 30);
             this.ActionsTextBox.Multiline = true;
             this.ActionsTextBox.Name = "ActionsTextBox";
             this.ActionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.ActionsTextBox.Size = new System.Drawing.Size(289, 245);
+            this.ActionsTextBox.Size = new System.Drawing.Size(217, 88);
             this.ActionsTextBox.TabIndex = 7;
             // 
             // ActionsLabel
             // 
             this.ActionsLabel.AutoSize = true;
-            this.ActionsLabel.Location = new System.Drawing.Point(7, 67);
+            this.ActionsLabel.Location = new System.Drawing.Point(7, 30);
             this.ActionsLabel.Name = "ActionsLabel";
             this.ActionsLabel.Size = new System.Drawing.Size(45, 13);
             this.ActionsLabel.TabIndex = 6;
@@ -302,29 +299,17 @@
             this.TraitsTextBox.Multiline = true;
             this.TraitsTextBox.Name = "TraitsTextBox";
             this.TraitsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.TraitsTextBox.Size = new System.Drawing.Size(419, 112);
+            this.TraitsTextBox.Size = new System.Drawing.Size(249, 112);
             this.TraitsTextBox.TabIndex = 13;
             // 
             // TraitsLabel
             // 
             this.TraitsLabel.AutoSize = true;
-            this.TraitsLabel.Location = new System.Drawing.Point(400, 6);
+            this.TraitsLabel.Location = new System.Drawing.Point(381, 9);
             this.TraitsLabel.Name = "TraitsLabel";
-            this.TraitsLabel.Size = new System.Drawing.Size(36, 13);
+            this.TraitsLabel.Size = new System.Drawing.Size(97, 13);
             this.TraitsLabel.TabIndex = 12;
-            this.TraitsLabel.Text = "Traits:";
-            // 
-            // CharIdNud
-            // 
-            this.CharIdNud.Location = new System.Drawing.Point(142, 80);
-            this.CharIdNud.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.CharIdNud.Name = "CharIdNud";
-            this.CharIdNud.Size = new System.Drawing.Size(154, 20);
-            this.CharIdNud.TabIndex = 17;
+            this.TraitsLabel.Text = "Traits/Spell Caster:";
             // 
             // CharIdLabel
             // 
@@ -350,18 +335,6 @@
             this.FactionLabel.Size = new System.Drawing.Size(45, 13);
             this.FactionLabel.TabIndex = 18;
             this.FactionLabel.Text = "Faction:";
-            // 
-            // HitPointsNud
-            // 
-            this.HitPointsNud.Location = new System.Drawing.Point(142, 190);
-            this.HitPointsNud.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.HitPointsNud.Name = "HitPointsNud";
-            this.HitPointsNud.Size = new System.Drawing.Size(154, 20);
-            this.HitPointsNud.TabIndex = 21;
             // 
             // HpLabel
             // 
@@ -438,17 +411,17 @@
             // 
             // AppearanceTextBox
             // 
-            this.AppearanceTextBox.Location = new System.Drawing.Point(993, 6);
+            this.AppearanceTextBox.Location = new System.Drawing.Point(835, 9);
             this.AppearanceTextBox.Multiline = true;
             this.AppearanceTextBox.Name = "AppearanceTextBox";
             this.AppearanceTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.AppearanceTextBox.Size = new System.Drawing.Size(289, 245);
+            this.AppearanceTextBox.Size = new System.Drawing.Size(205, 109);
             this.AppearanceTextBox.TabIndex = 31;
             // 
             // AppearanceLabel
             // 
             this.AppearanceLabel.AutoSize = true;
-            this.AppearanceLabel.Location = new System.Drawing.Point(909, 6);
+            this.AppearanceLabel.Location = new System.Drawing.Point(751, 9);
             this.AppearanceLabel.Name = "AppearanceLabel";
             this.AppearanceLabel.Size = new System.Drawing.Size(68, 13);
             this.AppearanceLabel.TabIndex = 30;
@@ -457,32 +430,15 @@
             // SpeedLabel
             // 
             this.SpeedLabel.AutoSize = true;
-            this.SpeedLabel.Location = new System.Drawing.Point(739, 193);
+            this.SpeedLabel.Location = new System.Drawing.Point(768, 194);
             this.SpeedLabel.Name = "SpeedLabel";
             this.SpeedLabel.Size = new System.Drawing.Size(41, 13);
             this.SpeedLabel.TabIndex = 34;
             this.SpeedLabel.Text = "Speed:";
             // 
-            // SpeedNud
-            // 
-            this.SpeedNud.Location = new System.Drawing.Point(823, 193);
-            this.SpeedNud.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.SpeedNud.Name = "SpeedNud";
-            this.SpeedNud.Size = new System.Drawing.Size(154, 20);
-            this.SpeedNud.TabIndex = 35;
-            this.SpeedNud.Value = new decimal(new int[] {
-            30,
-            0,
-            0,
-            0});
-            // 
             // CharismaNud
             // 
-            this.CharismaNud.Location = new System.Drawing.Point(823, 225);
+            this.CharismaNud.Location = new System.Drawing.Point(823, 402);
             this.CharismaNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -500,7 +456,7 @@
             // CharismaLabel
             // 
             this.CharismaLabel.AutoSize = true;
-            this.CharismaLabel.Location = new System.Drawing.Point(739, 225);
+            this.CharismaLabel.Location = new System.Drawing.Point(776, 404);
             this.CharismaLabel.Name = "CharismaLabel";
             this.CharismaLabel.Size = new System.Drawing.Size(32, 13);
             this.CharismaLabel.TabIndex = 36;
@@ -508,7 +464,7 @@
             // 
             // ConstitutionNud
             // 
-            this.ConstitutionNud.Location = new System.Drawing.Point(823, 258);
+            this.ConstitutionNud.Location = new System.Drawing.Point(823, 303);
             this.ConstitutionNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -526,7 +482,7 @@
             // ConstitutionLabel
             // 
             this.ConstitutionLabel.AutoSize = true;
-            this.ConstitutionLabel.Location = new System.Drawing.Point(739, 258);
+            this.ConstitutionLabel.Location = new System.Drawing.Point(776, 305);
             this.ConstitutionLabel.Name = "ConstitutionLabel";
             this.ConstitutionLabel.Size = new System.Drawing.Size(33, 13);
             this.ConstitutionLabel.TabIndex = 38;
@@ -534,7 +490,7 @@
             // 
             // StrengthNud
             // 
-            this.StrengthNud.Location = new System.Drawing.Point(823, 349);
+            this.StrengthNud.Location = new System.Drawing.Point(823, 237);
             this.StrengthNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -552,7 +508,7 @@
             // StrengthLabel
             // 
             this.StrengthLabel.AutoSize = true;
-            this.StrengthLabel.Location = new System.Drawing.Point(739, 349);
+            this.StrengthLabel.Location = new System.Drawing.Point(776, 239);
             this.StrengthLabel.Name = "StrengthLabel";
             this.StrengthLabel.Size = new System.Drawing.Size(32, 13);
             this.StrengthLabel.TabIndex = 44;
@@ -560,7 +516,7 @@
             // 
             // IntellectNud
             // 
-            this.IntellectNud.Location = new System.Drawing.Point(823, 316);
+            this.IntellectNud.Location = new System.Drawing.Point(823, 336);
             this.IntellectNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -578,7 +534,7 @@
             // IntellectLabel
             // 
             this.IntellectLabel.AutoSize = true;
-            this.IntellectLabel.Location = new System.Drawing.Point(739, 316);
+            this.IntellectLabel.Location = new System.Drawing.Point(776, 338);
             this.IntellectLabel.Name = "IntellectLabel";
             this.IntellectLabel.Size = new System.Drawing.Size(28, 13);
             this.IntellectLabel.TabIndex = 42;
@@ -586,7 +542,7 @@
             // 
             // DexterityNud
             // 
-            this.DexterityNud.Location = new System.Drawing.Point(823, 284);
+            this.DexterityNud.Location = new System.Drawing.Point(823, 270);
             this.DexterityNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -604,7 +560,7 @@
             // DexterityLabel
             // 
             this.DexterityLabel.AutoSize = true;
-            this.DexterityLabel.Location = new System.Drawing.Point(739, 284);
+            this.DexterityLabel.Location = new System.Drawing.Point(776, 272);
             this.DexterityLabel.Name = "DexterityLabel";
             this.DexterityLabel.Size = new System.Drawing.Size(32, 13);
             this.DexterityLabel.TabIndex = 40;
@@ -612,7 +568,7 @@
             // 
             // WisdomNud
             // 
-            this.WisdomNud.Location = new System.Drawing.Point(823, 375);
+            this.WisdomNud.Location = new System.Drawing.Point(823, 369);
             this.WisdomNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -630,7 +586,7 @@
             // WisdomLabel
             // 
             this.WisdomLabel.AutoSize = true;
-            this.WisdomLabel.Location = new System.Drawing.Point(739, 375);
+            this.WisdomLabel.Location = new System.Drawing.Point(776, 371);
             this.WisdomLabel.Name = "WisdomLabel";
             this.WisdomLabel.Size = new System.Drawing.Size(31, 13);
             this.WisdomLabel.TabIndex = 46;
@@ -707,28 +663,21 @@
             // 
             // MotiveTextBox
             // 
-            this.MotiveTextBox.Location = new System.Drawing.Point(403, 334);
+            this.MotiveTextBox.Location = new System.Drawing.Point(67, 291);
             this.MotiveTextBox.Multiline = true;
             this.MotiveTextBox.Name = "MotiveTextBox";
             this.MotiveTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.MotiveTextBox.Size = new System.Drawing.Size(289, 142);
+            this.MotiveTextBox.Size = new System.Drawing.Size(188, 121);
             this.MotiveTextBox.TabIndex = 57;
             // 
             // MotiveLabel
             // 
             this.MotiveLabel.AutoSize = true;
-            this.MotiveLabel.Location = new System.Drawing.Point(353, 338);
+            this.MotiveLabel.Location = new System.Drawing.Point(17, 295);
             this.MotiveLabel.Name = "MotiveLabel";
             this.MotiveLabel.Size = new System.Drawing.Size(42, 13);
             this.MotiveLabel.TabIndex = 56;
             this.MotiveLabel.Text = "Motive:";
-            // 
-            // FactionLeaderTextBox
-            // 
-            this.FactionLeaderTextBox.Location = new System.Drawing.Point(142, 135);
-            this.FactionLeaderTextBox.Name = "FactionLeaderTextBox";
-            this.FactionLeaderTextBox.Size = new System.Drawing.Size(154, 20);
-            this.FactionLeaderTextBox.TabIndex = 61;
             // 
             // FactionLeaderLabel
             // 
@@ -741,17 +690,17 @@
             // 
             // FirstMeetingTextBox
             // 
-            this.FirstMeetingTextBox.Location = new System.Drawing.Point(91, 366);
+            this.FirstMeetingTextBox.Location = new System.Drawing.Point(87, 152);
             this.FirstMeetingTextBox.Multiline = true;
             this.FirstMeetingTextBox.Name = "FirstMeetingTextBox";
             this.FirstMeetingTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.FirstMeetingTextBox.Size = new System.Drawing.Size(289, 142);
+            this.FirstMeetingTextBox.Size = new System.Drawing.Size(213, 110);
             this.FirstMeetingTextBox.TabIndex = 63;
             // 
             // FirstMeetingLabel
             // 
             this.FirstMeetingLabel.AutoSize = true;
-            this.FirstMeetingLabel.Location = new System.Drawing.Point(7, 369);
+            this.FirstMeetingLabel.Location = new System.Drawing.Point(3, 155);
             this.FirstMeetingLabel.Name = "FirstMeetingLabel";
             this.FirstMeetingLabel.Size = new System.Drawing.Size(70, 13);
             this.FirstMeetingLabel.TabIndex = 62;
@@ -763,7 +712,7 @@
             this.RacialFeaturesTextBox.Multiline = true;
             this.RacialFeaturesTextBox.Name = "RacialFeaturesTextBox";
             this.RacialFeaturesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.RacialFeaturesTextBox.Size = new System.Drawing.Size(419, 112);
+            this.RacialFeaturesTextBox.Size = new System.Drawing.Size(261, 112);
             this.RacialFeaturesTextBox.TabIndex = 65;
             // 
             // RacialFeaturesLabel
@@ -771,13 +720,13 @@
             this.RacialFeaturesLabel.AutoSize = true;
             this.RacialFeaturesLabel.Location = new System.Drawing.Point(395, 142);
             this.RacialFeaturesLabel.Name = "RacialFeaturesLabel";
-            this.RacialFeaturesLabel.Size = new System.Drawing.Size(51, 13);
+            this.RacialFeaturesLabel.Size = new System.Drawing.Size(84, 13);
             this.RacialFeaturesLabel.TabIndex = 64;
-            this.RacialFeaturesLabel.Text = "Features:";
+            this.RacialFeaturesLabel.Text = "Racial Features:";
             // 
             // RacketTextBox
             // 
-            this.RacketTextBox.Location = new System.Drawing.Point(725, 270);
+            this.RacketTextBox.Location = new System.Drawing.Point(384, 257);
             this.RacketTextBox.Multiline = true;
             this.RacketTextBox.Name = "RacketTextBox";
             this.RacketTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -787,7 +736,7 @@
             // RacketLabel
             // 
             this.RacketLabel.AutoSize = true;
-            this.RacketLabel.Location = new System.Drawing.Point(675, 273);
+            this.RacketLabel.Location = new System.Drawing.Point(334, 260);
             this.RacketLabel.Name = "RacketLabel";
             this.RacketLabel.Size = new System.Drawing.Size(45, 13);
             this.RacketLabel.TabIndex = 66;
@@ -869,14 +818,19 @@
             this.TabControl.Controls.Add(this.tabPage2);
             this.TabControl.Controls.Add(this.SpellsTab);
             this.TabControl.Controls.Add(this.tabPage4);
-            this.TabControl.Location = new System.Drawing.Point(42, 33);
+            this.TabControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TabControl.Location = new System.Drawing.Point(0, 0);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(1302, 606);
+            this.TabControl.Size = new System.Drawing.Size(1399, 606);
             this.TabControl.TabIndex = 76;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.SpeedTextBox);
+            this.tabPage1.Controls.Add(this.FactionLeaderCheckBox);
+            this.tabPage1.Controls.Add(this.HitPointsTextBox);
+            this.tabPage1.Controls.Add(this.CharIdTextBox);
             this.tabPage1.Controls.Add(this.ChallengeRatingComboBox);
             this.tabPage1.Controls.Add(this.ChallengeRatingLabel);
             this.tabPage1.Controls.Add(this.ArmorClassNud);
@@ -901,17 +855,13 @@
             this.tabPage1.Controls.Add(this.ConstitutionNud);
             this.tabPage1.Controls.Add(this.SizeTextBox);
             this.tabPage1.Controls.Add(this.ConstitutionLabel);
-            this.tabPage1.Controls.Add(this.CharIdNud);
             this.tabPage1.Controls.Add(this.CharismaNud);
             this.tabPage1.Controls.Add(this.SizeLabel);
             this.tabPage1.Controls.Add(this.CharismaLabel);
             this.tabPage1.Controls.Add(this.FactionLabel);
-            this.tabPage1.Controls.Add(this.SpeedNud);
             this.tabPage1.Controls.Add(this.SpeedLabel);
             this.tabPage1.Controls.Add(this.FactionTextBox);
             this.tabPage1.Controls.Add(this.HpLabel);
-            this.tabPage1.Controls.Add(this.FactionLeaderTextBox);
-            this.tabPage1.Controls.Add(this.HitPointsNud);
             this.tabPage1.Controls.Add(this.FactionLeaderLabel);
             this.tabPage1.Controls.Add(this.ImageLabel);
             this.tabPage1.Controls.Add(this.ImageTextBox);
@@ -993,10 +943,28 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1294, 580);
+            this.tabPage2.Size = new System.Drawing.Size(1391, 580);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Descriptions";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // LanguagesTextBox
+            // 
+            this.LanguagesTextBox.Location = new System.Drawing.Point(730, 270);
+            this.LanguagesTextBox.Multiline = true;
+            this.LanguagesTextBox.Name = "LanguagesTextBox";
+            this.LanguagesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.LanguagesTextBox.Size = new System.Drawing.Size(212, 142);
+            this.LanguagesTextBox.TabIndex = 69;
+            // 
+            // LanguagesLabel
+            // 
+            this.LanguagesLabel.AutoSize = true;
+            this.LanguagesLabel.Location = new System.Drawing.Point(663, 273);
+            this.LanguagesLabel.Name = "LanguagesLabel";
+            this.LanguagesLabel.Size = new System.Drawing.Size(63, 13);
+            this.LanguagesLabel.TabIndex = 68;
+            this.LanguagesLabel.Text = "Languages:";
             // 
             // SpellsTab
             // 
@@ -1728,28 +1696,41 @@
             this.MedicineCheckBox.Text = "Medicine";
             this.MedicineCheckBox.UseVisualStyleBackColor = true;
             // 
-            // LanguagesTextBox
+            // CharIdTextBox
             // 
-            this.LanguagesTextBox.Location = new System.Drawing.Point(1010, 273);
-            this.LanguagesTextBox.Multiline = true;
-            this.LanguagesTextBox.Name = "LanguagesTextBox";
-            this.LanguagesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.LanguagesTextBox.Size = new System.Drawing.Size(212, 142);
-            this.LanguagesTextBox.TabIndex = 69;
+            this.CharIdTextBox.Location = new System.Drawing.Point(142, 83);
+            this.CharIdTextBox.Name = "CharIdTextBox";
+            this.CharIdTextBox.Size = new System.Drawing.Size(154, 20);
+            this.CharIdTextBox.TabIndex = 76;
             // 
-            // LanguagesLabel
+            // HitPointsTextBox
             // 
-            this.LanguagesLabel.AutoSize = true;
-            this.LanguagesLabel.Location = new System.Drawing.Point(943, 276);
-            this.LanguagesLabel.Name = "LanguagesLabel";
-            this.LanguagesLabel.Size = new System.Drawing.Size(63, 13);
-            this.LanguagesLabel.TabIndex = 68;
-            this.LanguagesLabel.Text = "Languages:";
+            this.HitPointsTextBox.Location = new System.Drawing.Point(142, 195);
+            this.HitPointsTextBox.Name = "HitPointsTextBox";
+            this.HitPointsTextBox.Size = new System.Drawing.Size(154, 20);
+            this.HitPointsTextBox.TabIndex = 77;
+            // 
+            // FactionLeaderCheckBox
+            // 
+            this.FactionLeaderCheckBox.AutoSize = true;
+            this.FactionLeaderCheckBox.Location = new System.Drawing.Point(146, 135);
+            this.FactionLeaderCheckBox.Name = "FactionLeaderCheckBox";
+            this.FactionLeaderCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.FactionLeaderCheckBox.TabIndex = 78;
+            this.FactionLeaderCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // SpeedTextBox
+            // 
+            this.SpeedTextBox.Location = new System.Drawing.Point(823, 191);
+            this.SpeedTextBox.Name = "SpeedTextBox";
+            this.SpeedTextBox.Size = new System.Drawing.Size(154, 20);
+            this.SpeedTextBox.TabIndex = 79;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1399, 789);
             this.Controls.Add(this.TabControl);
             this.Controls.Add(this.JsonTextBox);
@@ -1758,9 +1739,6 @@
             this.Name = "Form1";
             this.Text = "Character Generator";
             ((System.ComponentModel.ISupportInitialize)(this.ArmorClassNud)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CharIdNud)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HitPointsNud)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SpeedNud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharismaNud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConstitutionNud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StrengthNud)).EndInit();
@@ -1798,11 +1776,9 @@
         private System.Windows.Forms.ComboBox AlignmentComboBox;
         private System.Windows.Forms.TextBox TraitsTextBox;
         private System.Windows.Forms.Label TraitsLabel;
-        private System.Windows.Forms.NumericUpDown CharIdNud;
         private System.Windows.Forms.Label CharIdLabel;
         private System.Windows.Forms.TextBox FactionTextBox;
         private System.Windows.Forms.Label FactionLabel;
-        private System.Windows.Forms.NumericUpDown HitPointsNud;
         private System.Windows.Forms.Label HpLabel;
         private System.Windows.Forms.TextBox ImageTextBox;
         private System.Windows.Forms.Label ImageLabel;
@@ -1815,7 +1791,6 @@
         private System.Windows.Forms.TextBox AppearanceTextBox;
         private System.Windows.Forms.Label AppearanceLabel;
         private System.Windows.Forms.Label SpeedLabel;
-        private System.Windows.Forms.NumericUpDown SpeedNud;
         private System.Windows.Forms.NumericUpDown CharismaNud;
         private System.Windows.Forms.Label CharismaLabel;
         private System.Windows.Forms.NumericUpDown ConstitutionNud;
@@ -1838,7 +1813,6 @@
         private System.Windows.Forms.Label AccoladesLabel;
         private System.Windows.Forms.TextBox MotiveTextBox;
         private System.Windows.Forms.Label MotiveLabel;
-        private System.Windows.Forms.TextBox FactionLeaderTextBox;
         private System.Windows.Forms.Label FactionLeaderLabel;
         private System.Windows.Forms.TextBox FirstMeetingTextBox;
         private System.Windows.Forms.Label FirstMeetingLabel;
@@ -1932,6 +1906,10 @@
         private System.Windows.Forms.Label Level5LabelDd;
         private System.Windows.Forms.TextBox LanguagesTextBox;
         private System.Windows.Forms.Label LanguagesLabel;
+        private System.Windows.Forms.TextBox CharIdTextBox;
+        private System.Windows.Forms.TextBox HitPointsTextBox;
+        private System.Windows.Forms.CheckBox FactionLeaderCheckBox;
+        private System.Windows.Forms.TextBox SpeedTextBox;
     }
 }
 

@@ -2,11 +2,11 @@
 {
     public class Abilities
     {
-        public int Cha { get; set; }
-        public int Con { get; set; }
-        public int Dex { get; set; }
-        public int Int { get; set; }
-        public int Str { get; set; }
-        public int Wis { get; set; }
+        public string Cha { get; set; }
+        public string Con { get; set; }
+        public string Dex { get; set; }
+        public string Int { get; set; }
+        public string Str { get; set; }
+        public string Wis { get; set; }
     }
 }
