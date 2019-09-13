@@ -17,6 +17,8 @@ namespace CharacterGenerator
             InitializeComponent();
             AlignmentComboBox.SelectedIndex = 0;
             ChallengeRatingComboBox.SelectedIndex = 0;
+            RaceComboBox.SelectedIndex = 0;
+            ArmorComboBox.SelectedIndex = 0;
             InitializeSpells();
         }
 
@@ -81,24 +83,24 @@ namespace CharacterGenerator
                 var character = new NpcCharacter()
                 {
                     AC = (int)ArmorClassNud.Value,
+                    Armor = ArmorComboBox.SelectedItem.ToString(),
                     Actions = ActionsTextBox.Text,
                     Algn = AlignmentComboBox.SelectedItem.ToString(),
-                    Character_Traits = TraitsTextBox.Text,
-                    Char_Id = CharIdTextBox.Text,
+                    Personality = PersonalityTextBox.Text,
                     Faction = FactionTextBox.Text,
                     Faction_Leader = FactionLeaderCheckBox.Checked,
                     First_Name = FirstNameTextBox.Text,
                     First_Meeting = FirstMeetingTextBox.Text,
                     Racial_Features = RacialFeaturesTextBox.Text,
-                    Racket = RacketTextBox.Text,
                     Size = SizeTextBox.Text,
                     Hp = HitPointsTextBox.Text,
                     Img = ImageTextBox.Text,
                     Last_Name = LastNameTextBox.Text,
                     Location = LocationTextBox.Text,
-                    Race = RaceTextBox.Text,
+                    Race = RaceComboBox.SelectedItem.ToString(),
                     Appearance = AppearanceTextBox.Text,
                     Speed = SpeedTextBox.Text,
+                    History = HistoryTextBox.Text,
                     Stats = new Abilities
                     {
                         Cha = CharismaNud.Value.ToString(CultureInfo.InvariantCulture),
@@ -109,7 +111,6 @@ namespace CharacterGenerator
                         Wis = WisdomNud.Value.ToString(CultureInfo.InvariantCulture)
                     },
                     Title = TitleTextBox.Text,
-                    Title_Order = (int)TitleOrderNud.Value,
                     Xp_Val = (int)XpNud.Value,
                     Class = ClassTextBox.Text,
                     Accolades = AccoladesTextBox.Text,

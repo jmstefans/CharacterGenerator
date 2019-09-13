@@ -39,9 +39,8 @@
             this.ActionsLabel = new System.Windows.Forms.Label();
             this.AlignmentLabel = new System.Windows.Forms.Label();
             this.AlignmentComboBox = new System.Windows.Forms.ComboBox();
-            this.TraitsTextBox = new System.Windows.Forms.TextBox();
-            this.TraitsLabel = new System.Windows.Forms.Label();
-            this.CharIdLabel = new System.Windows.Forms.Label();
+            this.PersonalityTextBox = new System.Windows.Forms.TextBox();
+            this.PersonalityLabel = new System.Windows.Forms.Label();
             this.FactionTextBox = new System.Windows.Forms.TextBox();
             this.FactionLabel = new System.Windows.Forms.Label();
             this.HpLabel = new System.Windows.Forms.Label();
@@ -51,7 +50,6 @@
             this.LastNameLabel = new System.Windows.Forms.Label();
             this.LocationTextBox = new System.Windows.Forms.TextBox();
             this.LocationLabel = new System.Windows.Forms.Label();
-            this.RaceTextBox = new System.Windows.Forms.TextBox();
             this.RaceLabel = new System.Windows.Forms.Label();
             this.AppearanceTextBox = new System.Windows.Forms.TextBox();
             this.AppearanceLabel = new System.Windows.Forms.Label();
@@ -83,27 +81,22 @@
             this.FirstMeetingLabel = new System.Windows.Forms.Label();
             this.RacialFeaturesTextBox = new System.Windows.Forms.TextBox();
             this.RacialFeaturesLabel = new System.Windows.Forms.Label();
-            this.RacketTextBox = new System.Windows.Forms.TextBox();
-            this.RacketLabel = new System.Windows.Forms.Label();
             this.SizeTextBox = new System.Windows.Forms.TextBox();
             this.SizeLabel = new System.Windows.Forms.Label();
-            this.TitleOrderNud = new System.Windows.Forms.NumericUpDown();
-            this.TitleOrderLabel = new System.Windows.Forms.Label();
             this.TypeTextBox = new System.Windows.Forms.TextBox();
             this.TypeLabel = new System.Windows.Forms.Label();
             this.CantripsComboBox = new System.Windows.Forms.ComboBox();
             this.CantripsLabelDD = new System.Windows.Forms.Label();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.StatsTab = new System.Windows.Forms.TabPage();
+            this.RaceComboBox = new System.Windows.Forms.ComboBox();
+            this.ArmorComboBox = new System.Windows.Forms.ComboBox();
+            this.ArmorLabel = new System.Windows.Forms.Label();
             this.SpeedTextBox = new System.Windows.Forms.TextBox();
             this.FactionLeaderCheckBox = new System.Windows.Forms.CheckBox();
             this.HitPointsTextBox = new System.Windows.Forms.TextBox();
-            this.CharIdTextBox = new System.Windows.Forms.TextBox();
             this.ChallengeRatingComboBox = new System.Windows.Forms.ComboBox();
             this.ChallengeRatingLabel = new System.Windows.Forms.Label();
-            this.DescriptionsSkillsTab = new System.Windows.Forms.TabPage();
-            this.LanguagesTextBox = new System.Windows.Forms.TextBox();
-            this.LanguagesLabel = new System.Windows.Forms.Label();
             this.SpellsTab = new System.Windows.Forms.TabPage();
             this.Level9ListBox = new System.Windows.Forms.ListBox();
             this.RemoveLevel9Btn = new System.Windows.Forms.Button();
@@ -155,6 +148,9 @@
             this.CantripsListBox = new System.Windows.Forms.ListBox();
             this.RemoveCantripBtn = new System.Windows.Forms.Button();
             this.AddCantripBtn = new System.Windows.Forms.Button();
+            this.DescriptionsSkillsTab = new System.Windows.Forms.TabPage();
+            this.HistoryLabel = new System.Windows.Forms.Label();
+            this.HistoryTextBox = new System.Windows.Forms.TextBox();
             this.SkillsGroupBox = new System.Windows.Forms.GroupBox();
             this.AcrobaticsCheckBox = new System.Windows.Forms.CheckBox();
             this.StealthCheckBox = new System.Windows.Forms.CheckBox();
@@ -174,6 +170,8 @@
             this.PerceptionCheckBox = new System.Windows.Forms.CheckBox();
             this.IntimidationCheckBox = new System.Windows.Forms.CheckBox();
             this.MedicineCheckBox = new System.Windows.Forms.CheckBox();
+            this.LanguagesTextBox = new System.Windows.Forms.TextBox();
+            this.LanguagesLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ArmorClassNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CharismaNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConstitutionNud)).BeginInit();
@@ -182,17 +180,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.DexterityNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WisdomNud)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XpNud)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TitleOrderNud)).BeginInit();
             this.TabControl.SuspendLayout();
             this.StatsTab.SuspendLayout();
-            this.DescriptionsSkillsTab.SuspendLayout();
             this.SpellsTab.SuspendLayout();
+            this.DescriptionsSkillsTab.SuspendLayout();
             this.SkillsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // GenerateJsonBtn
             // 
-            this.GenerateJsonBtn.Location = new System.Drawing.Point(541, 648);
+            this.GenerateJsonBtn.Location = new System.Drawing.Point(541, 637);
             this.GenerateJsonBtn.Name = "GenerateJsonBtn";
             this.GenerateJsonBtn.Size = new System.Drawing.Size(184, 23);
             this.GenerateJsonBtn.TabIndex = 0;
@@ -212,7 +209,7 @@
             // FirstNameLabel
             // 
             this.FirstNameLabel.AutoSize = true;
-            this.FirstNameLabel.Location = new System.Drawing.Point(24, 159);
+            this.FirstNameLabel.Location = new System.Drawing.Point(24, 23);
             this.FirstNameLabel.Name = "FirstNameLabel";
             this.FirstNameLabel.Size = new System.Drawing.Size(60, 13);
             this.FirstNameLabel.TabIndex = 2;
@@ -221,7 +218,7 @@
             // ArmorClassLabel
             // 
             this.ArmorClassLabel.AutoSize = true;
-            this.ArmorClassLabel.Location = new System.Drawing.Point(24, 24);
+            this.ArmorClassLabel.Location = new System.Drawing.Point(24, 221);
             this.ArmorClassLabel.Name = "ArmorClassLabel";
             this.ArmorClassLabel.Size = new System.Drawing.Size(65, 13);
             this.ArmorClassLabel.TabIndex = 3;
@@ -229,14 +226,14 @@
             // 
             // FirstNameTextBox
             // 
-            this.FirstNameTextBox.Location = new System.Drawing.Point(146, 156);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(109, 20);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(154, 20);
             this.FirstNameTextBox.TabIndex = 4;
             // 
             // ArmorClassNud
             // 
-            this.ArmorClassNud.Location = new System.Drawing.Point(146, 21);
+            this.ArmorClassNud.Location = new System.Drawing.Point(109, 219);
             this.ArmorClassNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -248,7 +245,7 @@
             // 
             // ActionsTextBox
             // 
-            this.ActionsTextBox.Location = new System.Drawing.Point(87, 9);
+            this.ActionsTextBox.Location = new System.Drawing.Point(372, 29);
             this.ActionsTextBox.Multiline = true;
             this.ActionsTextBox.Name = "ActionsTextBox";
             this.ActionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -258,7 +255,7 @@
             // ActionsLabel
             // 
             this.ActionsLabel.AutoSize = true;
-            this.ActionsLabel.Location = new System.Drawing.Point(7, 9);
+            this.ActionsLabel.Location = new System.Drawing.Point(292, 29);
             this.ActionsLabel.Name = "ActionsLabel";
             this.ActionsLabel.Size = new System.Drawing.Size(45, 13);
             this.ActionsLabel.TabIndex = 6;
@@ -267,7 +264,7 @@
             // AlignmentLabel
             // 
             this.AlignmentLabel.AutoSize = true;
-            this.AlignmentLabel.Location = new System.Drawing.Point(339, 261);
+            this.AlignmentLabel.Location = new System.Drawing.Point(391, 23);
             this.AlignmentLabel.Name = "AlignmentLabel";
             this.AlignmentLabel.Size = new System.Drawing.Size(56, 13);
             this.AlignmentLabel.TabIndex = 10;
@@ -275,6 +272,7 @@
             // 
             // AlignmentComboBox
             // 
+            this.AlignmentComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.AlignmentComboBox.FormattingEnabled = true;
             this.AlignmentComboBox.Items.AddRange(new object[] {
             "Lawful Good",
@@ -286,41 +284,32 @@
             "Lawful Evil",
             "Neutral Evil",
             "Chaotic Evil"});
-            this.AlignmentComboBox.Location = new System.Drawing.Point(423, 258);
+            this.AlignmentComboBox.Location = new System.Drawing.Point(512, 20);
             this.AlignmentComboBox.Name = "AlignmentComboBox";
             this.AlignmentComboBox.Size = new System.Drawing.Size(156, 21);
             this.AlignmentComboBox.TabIndex = 11;
             // 
-            // TraitsTextBox
+            // PersonalityTextBox
             // 
-            this.TraitsTextBox.Location = new System.Drawing.Point(425, 9);
-            this.TraitsTextBox.Multiline = true;
-            this.TraitsTextBox.Name = "TraitsTextBox";
-            this.TraitsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.TraitsTextBox.Size = new System.Drawing.Size(217, 88);
-            this.TraitsTextBox.TabIndex = 13;
+            this.PersonalityTextBox.Location = new System.Drawing.Point(710, 29);
+            this.PersonalityTextBox.Multiline = true;
+            this.PersonalityTextBox.Name = "PersonalityTextBox";
+            this.PersonalityTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.PersonalityTextBox.Size = new System.Drawing.Size(217, 88);
+            this.PersonalityTextBox.TabIndex = 13;
             // 
-            // TraitsLabel
+            // PersonalityLabel
             // 
-            this.TraitsLabel.AutoSize = true;
-            this.TraitsLabel.Location = new System.Drawing.Point(322, 12);
-            this.TraitsLabel.Name = "TraitsLabel";
-            this.TraitsLabel.Size = new System.Drawing.Size(97, 13);
-            this.TraitsLabel.TabIndex = 12;
-            this.TraitsLabel.Text = "Traits/Spell Caster:";
-            // 
-            // CharIdLabel
-            // 
-            this.CharIdLabel.AutoSize = true;
-            this.CharIdLabel.Location = new System.Drawing.Point(24, 78);
-            this.CharIdLabel.Name = "CharIdLabel";
-            this.CharIdLabel.Size = new System.Drawing.Size(70, 13);
-            this.CharIdLabel.TabIndex = 16;
-            this.CharIdLabel.Text = "Character ID:";
+            this.PersonalityLabel.AutoSize = true;
+            this.PersonalityLabel.Location = new System.Drawing.Point(621, 29);
+            this.PersonalityLabel.Name = "PersonalityLabel";
+            this.PersonalityLabel.Size = new System.Drawing.Size(61, 13);
+            this.PersonalityLabel.TabIndex = 12;
+            this.PersonalityLabel.Text = "Personality:";
             // 
             // FactionTextBox
             // 
-            this.FactionTextBox.Location = new System.Drawing.Point(146, 106);
+            this.FactionTextBox.Location = new System.Drawing.Point(903, 21);
             this.FactionTextBox.Name = "FactionTextBox";
             this.FactionTextBox.Size = new System.Drawing.Size(154, 20);
             this.FactionTextBox.TabIndex = 19;
@@ -328,7 +317,7 @@
             // FactionLabel
             // 
             this.FactionLabel.AutoSize = true;
-            this.FactionLabel.Location = new System.Drawing.Point(24, 105);
+            this.FactionLabel.Location = new System.Drawing.Point(781, 23);
             this.FactionLabel.Name = "FactionLabel";
             this.FactionLabel.Size = new System.Drawing.Size(45, 13);
             this.FactionLabel.TabIndex = 18;
@@ -337,7 +326,7 @@
             // HpLabel
             // 
             this.HpLabel.AutoSize = true;
-            this.HpLabel.Location = new System.Drawing.Point(24, 186);
+            this.HpLabel.Location = new System.Drawing.Point(24, 254);
             this.HpLabel.Name = "HpLabel";
             this.HpLabel.Size = new System.Drawing.Size(55, 13);
             this.HpLabel.TabIndex = 20;
@@ -345,7 +334,7 @@
             // 
             // ImageTextBox
             // 
-            this.ImageTextBox.Location = new System.Drawing.Point(146, 212);
+            this.ImageTextBox.Location = new System.Drawing.Point(903, 221);
             this.ImageTextBox.Name = "ImageTextBox";
             this.ImageTextBox.Size = new System.Drawing.Size(154, 20);
             this.ImageTextBox.TabIndex = 23;
@@ -353,7 +342,7 @@
             // ImageLabel
             // 
             this.ImageLabel.AutoSize = true;
-            this.ImageLabel.Location = new System.Drawing.Point(24, 213);
+            this.ImageLabel.Location = new System.Drawing.Point(781, 222);
             this.ImageLabel.Name = "ImageLabel";
             this.ImageLabel.Size = new System.Drawing.Size(39, 13);
             this.ImageLabel.TabIndex = 22;
@@ -361,7 +350,7 @@
             // 
             // LastNameTextBox
             // 
-            this.LastNameTextBox.Location = new System.Drawing.Point(146, 240);
+            this.LastNameTextBox.Location = new System.Drawing.Point(109, 53);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.Size = new System.Drawing.Size(154, 20);
             this.LastNameTextBox.TabIndex = 25;
@@ -369,7 +358,7 @@
             // LastNameLabel
             // 
             this.LastNameLabel.AutoSize = true;
-            this.LastNameLabel.Location = new System.Drawing.Point(24, 240);
+            this.LastNameLabel.Location = new System.Drawing.Point(24, 56);
             this.LastNameLabel.Name = "LastNameLabel";
             this.LastNameLabel.Size = new System.Drawing.Size(61, 13);
             this.LastNameLabel.TabIndex = 24;
@@ -377,7 +366,7 @@
             // 
             // LocationTextBox
             // 
-            this.LocationTextBox.Location = new System.Drawing.Point(423, 20);
+            this.LocationTextBox.Location = new System.Drawing.Point(903, 153);
             this.LocationTextBox.Name = "LocationTextBox";
             this.LocationTextBox.Size = new System.Drawing.Size(154, 20);
             this.LocationTextBox.TabIndex = 27;
@@ -385,23 +374,16 @@
             // LocationLabel
             // 
             this.LocationLabel.AutoSize = true;
-            this.LocationLabel.Location = new System.Drawing.Point(339, 20);
+            this.LocationLabel.Location = new System.Drawing.Point(781, 156);
             this.LocationLabel.Name = "LocationLabel";
             this.LocationLabel.Size = new System.Drawing.Size(51, 13);
             this.LocationLabel.TabIndex = 26;
             this.LocationLabel.Text = "Location:";
             // 
-            // RaceTextBox
-            // 
-            this.RaceTextBox.Location = new System.Drawing.Point(423, 46);
-            this.RaceTextBox.Name = "RaceTextBox";
-            this.RaceTextBox.Size = new System.Drawing.Size(154, 20);
-            this.RaceTextBox.TabIndex = 29;
-            // 
             // RaceLabel
             // 
             this.RaceLabel.AutoSize = true;
-            this.RaceLabel.Location = new System.Drawing.Point(339, 46);
+            this.RaceLabel.Location = new System.Drawing.Point(24, 89);
             this.RaceLabel.Name = "RaceLabel";
             this.RaceLabel.Size = new System.Drawing.Size(36, 13);
             this.RaceLabel.TabIndex = 28;
@@ -409,7 +391,7 @@
             // 
             // AppearanceTextBox
             // 
-            this.AppearanceTextBox.Location = new System.Drawing.Point(87, 410);
+            this.AppearanceTextBox.Location = new System.Drawing.Point(372, 428);
             this.AppearanceTextBox.Multiline = true;
             this.AppearanceTextBox.Name = "AppearanceTextBox";
             this.AppearanceTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -419,7 +401,7 @@
             // AppearanceLabel
             // 
             this.AppearanceLabel.AutoSize = true;
-            this.AppearanceLabel.Location = new System.Drawing.Point(3, 410);
+            this.AppearanceLabel.Location = new System.Drawing.Point(292, 428);
             this.AppearanceLabel.Name = "AppearanceLabel";
             this.AppearanceLabel.Size = new System.Drawing.Size(68, 13);
             this.AppearanceLabel.TabIndex = 30;
@@ -428,7 +410,7 @@
             // SpeedLabel
             // 
             this.SpeedLabel.AutoSize = true;
-            this.SpeedLabel.Location = new System.Drawing.Point(614, 20);
+            this.SpeedLabel.Location = new System.Drawing.Point(391, 58);
             this.SpeedLabel.Name = "SpeedLabel";
             this.SpeedLabel.Size = new System.Drawing.Size(41, 13);
             this.SpeedLabel.TabIndex = 34;
@@ -436,7 +418,7 @@
             // 
             // CharismaNud
             // 
-            this.CharismaNud.Location = new System.Drawing.Point(661, 228);
+            this.CharismaNud.Location = new System.Drawing.Point(512, 266);
             this.CharismaNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -454,7 +436,7 @@
             // CharismaLabel
             // 
             this.CharismaLabel.AutoSize = true;
-            this.CharismaLabel.Location = new System.Drawing.Point(614, 230);
+            this.CharismaLabel.Location = new System.Drawing.Point(391, 268);
             this.CharismaLabel.Name = "CharismaLabel";
             this.CharismaLabel.Size = new System.Drawing.Size(32, 13);
             this.CharismaLabel.TabIndex = 36;
@@ -462,7 +444,7 @@
             // 
             // ConstitutionNud
             // 
-            this.ConstitutionNud.Location = new System.Drawing.Point(661, 129);
+            this.ConstitutionNud.Location = new System.Drawing.Point(512, 161);
             this.ConstitutionNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -480,7 +462,7 @@
             // ConstitutionLabel
             // 
             this.ConstitutionLabel.AutoSize = true;
-            this.ConstitutionLabel.Location = new System.Drawing.Point(614, 131);
+            this.ConstitutionLabel.Location = new System.Drawing.Point(391, 163);
             this.ConstitutionLabel.Name = "ConstitutionLabel";
             this.ConstitutionLabel.Size = new System.Drawing.Size(33, 13);
             this.ConstitutionLabel.TabIndex = 38;
@@ -488,7 +470,7 @@
             // 
             // StrengthNud
             // 
-            this.StrengthNud.Location = new System.Drawing.Point(661, 63);
+            this.StrengthNud.Location = new System.Drawing.Point(512, 91);
             this.StrengthNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -506,7 +488,7 @@
             // StrengthLabel
             // 
             this.StrengthLabel.AutoSize = true;
-            this.StrengthLabel.Location = new System.Drawing.Point(614, 65);
+            this.StrengthLabel.Location = new System.Drawing.Point(391, 93);
             this.StrengthLabel.Name = "StrengthLabel";
             this.StrengthLabel.Size = new System.Drawing.Size(32, 13);
             this.StrengthLabel.TabIndex = 44;
@@ -514,7 +496,7 @@
             // 
             // IntellectNud
             // 
-            this.IntellectNud.Location = new System.Drawing.Point(661, 162);
+            this.IntellectNud.Location = new System.Drawing.Point(512, 196);
             this.IntellectNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -532,7 +514,7 @@
             // IntellectLabel
             // 
             this.IntellectLabel.AutoSize = true;
-            this.IntellectLabel.Location = new System.Drawing.Point(614, 164);
+            this.IntellectLabel.Location = new System.Drawing.Point(391, 198);
             this.IntellectLabel.Name = "IntellectLabel";
             this.IntellectLabel.Size = new System.Drawing.Size(28, 13);
             this.IntellectLabel.TabIndex = 42;
@@ -540,7 +522,7 @@
             // 
             // DexterityNud
             // 
-            this.DexterityNud.Location = new System.Drawing.Point(661, 96);
+            this.DexterityNud.Location = new System.Drawing.Point(512, 126);
             this.DexterityNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -558,7 +540,7 @@
             // DexterityLabel
             // 
             this.DexterityLabel.AutoSize = true;
-            this.DexterityLabel.Location = new System.Drawing.Point(614, 98);
+            this.DexterityLabel.Location = new System.Drawing.Point(391, 128);
             this.DexterityLabel.Name = "DexterityLabel";
             this.DexterityLabel.Size = new System.Drawing.Size(32, 13);
             this.DexterityLabel.TabIndex = 40;
@@ -566,7 +548,7 @@
             // 
             // WisdomNud
             // 
-            this.WisdomNud.Location = new System.Drawing.Point(661, 195);
+            this.WisdomNud.Location = new System.Drawing.Point(512, 231);
             this.WisdomNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -584,7 +566,7 @@
             // WisdomLabel
             // 
             this.WisdomLabel.AutoSize = true;
-            this.WisdomLabel.Location = new System.Drawing.Point(614, 197);
+            this.WisdomLabel.Location = new System.Drawing.Point(391, 233);
             this.WisdomLabel.Name = "WisdomLabel";
             this.WisdomLabel.Size = new System.Drawing.Size(31, 13);
             this.WisdomLabel.TabIndex = 46;
@@ -592,7 +574,12 @@
             // 
             // XpNud
             // 
-            this.XpNud.Location = new System.Drawing.Point(423, 122);
+            this.XpNud.Location = new System.Drawing.Point(109, 285);
+            this.XpNud.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.XpNud.Minimum = new decimal(new int[] {
             100,
             0,
@@ -605,7 +592,7 @@
             // XpLabel
             // 
             this.XpLabel.AutoSize = true;
-            this.XpLabel.Location = new System.Drawing.Point(339, 126);
+            this.XpLabel.Location = new System.Drawing.Point(24, 287);
             this.XpLabel.Name = "XpLabel";
             this.XpLabel.Size = new System.Drawing.Size(24, 13);
             this.XpLabel.TabIndex = 50;
@@ -613,7 +600,7 @@
             // 
             // TitleTextBox
             // 
-            this.TitleTextBox.Location = new System.Drawing.Point(423, 72);
+            this.TitleTextBox.Location = new System.Drawing.Point(903, 83);
             this.TitleTextBox.Name = "TitleTextBox";
             this.TitleTextBox.Size = new System.Drawing.Size(154, 20);
             this.TitleTextBox.TabIndex = 49;
@@ -621,7 +608,7 @@
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Location = new System.Drawing.Point(339, 72);
+            this.TitleLabel.Location = new System.Drawing.Point(781, 89);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(30, 13);
             this.TitleLabel.TabIndex = 48;
@@ -629,7 +616,7 @@
             // 
             // ClassTextBox
             // 
-            this.ClassTextBox.Location = new System.Drawing.Point(423, 151);
+            this.ClassTextBox.Location = new System.Drawing.Point(109, 119);
             this.ClassTextBox.Name = "ClassTextBox";
             this.ClassTextBox.Size = new System.Drawing.Size(154, 20);
             this.ClassTextBox.TabIndex = 53;
@@ -637,7 +624,7 @@
             // ClassLabel
             // 
             this.ClassLabel.AutoSize = true;
-            this.ClassLabel.Location = new System.Drawing.Point(339, 151);
+            this.ClassLabel.Location = new System.Drawing.Point(24, 122);
             this.ClassLabel.Name = "ClassLabel";
             this.ClassLabel.Size = new System.Drawing.Size(35, 13);
             this.ClassLabel.TabIndex = 52;
@@ -645,7 +632,7 @@
             // 
             // AccoladesTextBox
             // 
-            this.AccoladesTextBox.Location = new System.Drawing.Point(423, 180);
+            this.AccoladesTextBox.Location = new System.Drawing.Point(903, 119);
             this.AccoladesTextBox.Name = "AccoladesTextBox";
             this.AccoladesTextBox.Size = new System.Drawing.Size(154, 20);
             this.AccoladesTextBox.TabIndex = 55;
@@ -653,7 +640,7 @@
             // AccoladesLabel
             // 
             this.AccoladesLabel.AutoSize = true;
-            this.AccoladesLabel.Location = new System.Drawing.Point(339, 180);
+            this.AccoladesLabel.Location = new System.Drawing.Point(781, 123);
             this.AccoladesLabel.Name = "AccoladesLabel";
             this.AccoladesLabel.Size = new System.Drawing.Size(60, 13);
             this.AccoladesLabel.TabIndex = 54;
@@ -661,7 +648,7 @@
             // 
             // MotiveTextBox
             // 
-            this.MotiveTextBox.Location = new System.Drawing.Point(87, 291);
+            this.MotiveTextBox.Location = new System.Drawing.Point(372, 295);
             this.MotiveTextBox.Multiline = true;
             this.MotiveTextBox.Name = "MotiveTextBox";
             this.MotiveTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -671,7 +658,7 @@
             // MotiveLabel
             // 
             this.MotiveLabel.AutoSize = true;
-            this.MotiveLabel.Location = new System.Drawing.Point(7, 295);
+            this.MotiveLabel.Location = new System.Drawing.Point(292, 295);
             this.MotiveLabel.Name = "MotiveLabel";
             this.MotiveLabel.Size = new System.Drawing.Size(42, 13);
             this.MotiveLabel.TabIndex = 56;
@@ -680,7 +667,7 @@
             // FactionLeaderLabel
             // 
             this.FactionLeaderLabel.AutoSize = true;
-            this.FactionLeaderLabel.Location = new System.Drawing.Point(24, 132);
+            this.FactionLeaderLabel.Location = new System.Drawing.Point(781, 56);
             this.FactionLeaderLabel.Name = "FactionLeaderLabel";
             this.FactionLeaderLabel.Size = new System.Drawing.Size(81, 13);
             this.FactionLeaderLabel.TabIndex = 60;
@@ -688,7 +675,7 @@
             // 
             // FirstMeetingTextBox
             // 
-            this.FirstMeetingTextBox.Location = new System.Drawing.Point(87, 152);
+            this.FirstMeetingTextBox.Location = new System.Drawing.Point(372, 162);
             this.FirstMeetingTextBox.Multiline = true;
             this.FirstMeetingTextBox.Name = "FirstMeetingTextBox";
             this.FirstMeetingTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -698,7 +685,7 @@
             // FirstMeetingLabel
             // 
             this.FirstMeetingLabel.AutoSize = true;
-            this.FirstMeetingLabel.Location = new System.Drawing.Point(7, 155);
+            this.FirstMeetingLabel.Location = new System.Drawing.Point(292, 162);
             this.FirstMeetingLabel.Name = "FirstMeetingLabel";
             this.FirstMeetingLabel.Size = new System.Drawing.Size(70, 13);
             this.FirstMeetingLabel.TabIndex = 62;
@@ -706,7 +693,7 @@
             // 
             // RacialFeaturesTextBox
             // 
-            this.RacialFeaturesTextBox.Location = new System.Drawing.Point(425, 142);
+            this.RacialFeaturesTextBox.Location = new System.Drawing.Point(710, 162);
             this.RacialFeaturesTextBox.Multiline = true;
             this.RacialFeaturesTextBox.Name = "RacialFeaturesTextBox";
             this.RacialFeaturesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -716,33 +703,15 @@
             // RacialFeaturesLabel
             // 
             this.RacialFeaturesLabel.AutoSize = true;
-            this.RacialFeaturesLabel.Location = new System.Drawing.Point(336, 145);
+            this.RacialFeaturesLabel.Location = new System.Drawing.Point(621, 162);
             this.RacialFeaturesLabel.Name = "RacialFeaturesLabel";
             this.RacialFeaturesLabel.Size = new System.Drawing.Size(84, 13);
             this.RacialFeaturesLabel.TabIndex = 64;
             this.RacialFeaturesLabel.Text = "Racial Features:";
             // 
-            // RacketTextBox
-            // 
-            this.RacketTextBox.Location = new System.Drawing.Point(425, 281);
-            this.RacketTextBox.Multiline = true;
-            this.RacketTextBox.Name = "RacketTextBox";
-            this.RacketTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.RacketTextBox.Size = new System.Drawing.Size(217, 88);
-            this.RacketTextBox.TabIndex = 67;
-            // 
-            // RacketLabel
-            // 
-            this.RacketLabel.AutoSize = true;
-            this.RacketLabel.Location = new System.Drawing.Point(375, 284);
-            this.RacketLabel.Name = "RacketLabel";
-            this.RacketLabel.Size = new System.Drawing.Size(45, 13);
-            this.RacketLabel.TabIndex = 66;
-            this.RacketLabel.Text = "Racket:";
-            // 
             // SizeTextBox
             // 
-            this.SizeTextBox.Location = new System.Drawing.Point(423, 206);
+            this.SizeTextBox.Location = new System.Drawing.Point(109, 152);
             this.SizeTextBox.Name = "SizeTextBox";
             this.SizeTextBox.Size = new System.Drawing.Size(154, 20);
             this.SizeTextBox.TabIndex = 69;
@@ -750,36 +719,15 @@
             // SizeLabel
             // 
             this.SizeLabel.AutoSize = true;
-            this.SizeLabel.Location = new System.Drawing.Point(339, 206);
+            this.SizeLabel.Location = new System.Drawing.Point(24, 155);
             this.SizeLabel.Name = "SizeLabel";
             this.SizeLabel.Size = new System.Drawing.Size(30, 13);
             this.SizeLabel.TabIndex = 68;
             this.SizeLabel.Text = "Size:";
             // 
-            // TitleOrderNud
-            // 
-            this.TitleOrderNud.Location = new System.Drawing.Point(423, 97);
-            this.TitleOrderNud.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.TitleOrderNud.Name = "TitleOrderNud";
-            this.TitleOrderNud.Size = new System.Drawing.Size(154, 20);
-            this.TitleOrderNud.TabIndex = 71;
-            // 
-            // TitleOrderLabel
-            // 
-            this.TitleOrderLabel.AutoSize = true;
-            this.TitleOrderLabel.Location = new System.Drawing.Point(339, 101);
-            this.TitleOrderLabel.Name = "TitleOrderLabel";
-            this.TitleOrderLabel.Size = new System.Drawing.Size(59, 13);
-            this.TitleOrderLabel.TabIndex = 70;
-            this.TitleOrderLabel.Text = "Title Order:";
-            // 
             // TypeTextBox
             // 
-            this.TypeTextBox.Location = new System.Drawing.Point(423, 232);
+            this.TypeTextBox.Location = new System.Drawing.Point(903, 187);
             this.TypeTextBox.Name = "TypeTextBox";
             this.TypeTextBox.Size = new System.Drawing.Size(154, 20);
             this.TypeTextBox.TabIndex = 73;
@@ -787,7 +735,7 @@
             // TypeLabel
             // 
             this.TypeLabel.AutoSize = true;
-            this.TypeLabel.Location = new System.Drawing.Point(339, 232);
+            this.TypeLabel.Location = new System.Drawing.Point(781, 189);
             this.TypeLabel.Name = "TypeLabel";
             this.TypeLabel.Size = new System.Drawing.Size(34, 13);
             this.TypeLabel.TabIndex = 72;
@@ -795,6 +743,7 @@
             // 
             // CantripsComboBox
             // 
+            this.CantripsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CantripsComboBox.FormattingEnabled = true;
             this.CantripsComboBox.Location = new System.Drawing.Point(60, 14);
             this.CantripsComboBox.Name = "CantripsComboBox";
@@ -815,8 +764,8 @@
             this.TabControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TabControl.Controls.Add(this.StatsTab);
-            this.TabControl.Controls.Add(this.DescriptionsSkillsTab);
             this.TabControl.Controls.Add(this.SpellsTab);
+            this.TabControl.Controls.Add(this.DescriptionsSkillsTab);
             this.TabControl.Location = new System.Drawing.Point(0, 0);
             this.TabControl.MinimumSize = new System.Drawing.Size(1399, 0);
             this.TabControl.Name = "TabControl";
@@ -826,10 +775,12 @@
             // 
             // StatsTab
             // 
+            this.StatsTab.Controls.Add(this.RaceComboBox);
+            this.StatsTab.Controls.Add(this.ArmorComboBox);
+            this.StatsTab.Controls.Add(this.ArmorLabel);
             this.StatsTab.Controls.Add(this.SpeedTextBox);
             this.StatsTab.Controls.Add(this.FactionLeaderCheckBox);
             this.StatsTab.Controls.Add(this.HitPointsTextBox);
-            this.StatsTab.Controls.Add(this.CharIdTextBox);
             this.StatsTab.Controls.Add(this.ChallengeRatingComboBox);
             this.StatsTab.Controls.Add(this.ChallengeRatingLabel);
             this.StatsTab.Controls.Add(this.ArmorClassNud);
@@ -845,12 +796,9 @@
             this.StatsTab.Controls.Add(this.StrengthLabel);
             this.StatsTab.Controls.Add(this.FirstNameTextBox);
             this.StatsTab.Controls.Add(this.IntellectNud);
-            this.StatsTab.Controls.Add(this.TitleOrderNud);
             this.StatsTab.Controls.Add(this.IntellectLabel);
             this.StatsTab.Controls.Add(this.DexterityNud);
-            this.StatsTab.Controls.Add(this.TitleOrderLabel);
             this.StatsTab.Controls.Add(this.DexterityLabel);
-            this.StatsTab.Controls.Add(this.CharIdLabel);
             this.StatsTab.Controls.Add(this.ConstitutionNud);
             this.StatsTab.Controls.Add(this.SizeTextBox);
             this.StatsTab.Controls.Add(this.ConstitutionLabel);
@@ -874,7 +822,6 @@
             this.StatsTab.Controls.Add(this.ClassLabel);
             this.StatsTab.Controls.Add(this.RaceLabel);
             this.StatsTab.Controls.Add(this.XpNud);
-            this.StatsTab.Controls.Add(this.RaceTextBox);
             this.StatsTab.Controls.Add(this.XpLabel);
             this.StatsTab.Controls.Add(this.TitleLabel);
             this.StatsTab.Controls.Add(this.TitleTextBox);
@@ -886,9 +833,87 @@
             this.StatsTab.Text = "Stats";
             this.StatsTab.UseVisualStyleBackColor = true;
             // 
+            // RaceComboBox
+            // 
+            this.RaceComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.RaceComboBox.FormattingEnabled = true;
+            this.RaceComboBox.Items.AddRange(new object[] {
+            "Dragonborn",
+            "Dwarf",
+            "Elf",
+            "Gnome",
+            "Half-Elf",
+            "Halfling",
+            "Half-Orc",
+            "Human",
+            "Tiefling",
+            "Aarakocra",
+            "Genasi",
+            "Goliath",
+            "Assimar",
+            "Bugbear",
+            "Firbolg",
+            "Goblin",
+            "Hobgoblin",
+            "Kenku",
+            "Kobold",
+            "Lizardfolk",
+            "Orc",
+            "Tabaxi",
+            "Triton",
+            "Yuan-ti Pureblood",
+            "Feral Tiefling",
+            "Tortle",
+            "Gith",
+            "Changeling",
+            "Kalashtar",
+            "Shifter",
+            "Warforged",
+            "Centaur",
+            "Loxodon",
+            "Minotaur",
+            "Simic Hybrid",
+            "Vedalken",
+            "Verdan"});
+            this.RaceComboBox.Location = new System.Drawing.Point(108, 86);
+            this.RaceComboBox.Name = "RaceComboBox";
+            this.RaceComboBox.Size = new System.Drawing.Size(155, 21);
+            this.RaceComboBox.TabIndex = 82;
+            // 
+            // ArmorComboBox
+            // 
+            this.ArmorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ArmorComboBox.FormattingEnabled = true;
+            this.ArmorComboBox.Items.AddRange(new object[] {
+            "Padded",
+            "Leather",
+            "Studded leather",
+            "Hide",
+            "Chain shirt",
+            "Scale mail",
+            "Breastplate",
+            "Half plate",
+            "Ring mail",
+            "Chain mail",
+            "Splint",
+            "Plate"});
+            this.ArmorComboBox.Location = new System.Drawing.Point(109, 185);
+            this.ArmorComboBox.Name = "ArmorComboBox";
+            this.ArmorComboBox.Size = new System.Drawing.Size(155, 21);
+            this.ArmorComboBox.TabIndex = 81;
+            // 
+            // ArmorLabel
+            // 
+            this.ArmorLabel.AutoSize = true;
+            this.ArmorLabel.Location = new System.Drawing.Point(24, 188);
+            this.ArmorLabel.Name = "ArmorLabel";
+            this.ArmorLabel.Size = new System.Drawing.Size(37, 13);
+            this.ArmorLabel.TabIndex = 80;
+            this.ArmorLabel.Text = "Armor:";
+            // 
             // SpeedTextBox
             // 
-            this.SpeedTextBox.Location = new System.Drawing.Point(661, 17);
+            this.SpeedTextBox.Location = new System.Drawing.Point(512, 56);
             this.SpeedTextBox.Name = "SpeedTextBox";
             this.SpeedTextBox.Size = new System.Drawing.Size(154, 20);
             this.SpeedTextBox.TabIndex = 79;
@@ -896,7 +921,7 @@
             // FactionLeaderCheckBox
             // 
             this.FactionLeaderCheckBox.AutoSize = true;
-            this.FactionLeaderCheckBox.Location = new System.Drawing.Point(146, 134);
+            this.FactionLeaderCheckBox.Location = new System.Drawing.Point(903, 55);
             this.FactionLeaderCheckBox.Name = "FactionLeaderCheckBox";
             this.FactionLeaderCheckBox.Size = new System.Drawing.Size(15, 14);
             this.FactionLeaderCheckBox.TabIndex = 78;
@@ -904,20 +929,14 @@
             // 
             // HitPointsTextBox
             // 
-            this.HitPointsTextBox.Location = new System.Drawing.Point(146, 184);
+            this.HitPointsTextBox.Location = new System.Drawing.Point(109, 252);
             this.HitPointsTextBox.Name = "HitPointsTextBox";
             this.HitPointsTextBox.Size = new System.Drawing.Size(154, 20);
             this.HitPointsTextBox.TabIndex = 77;
             // 
-            // CharIdTextBox
-            // 
-            this.CharIdTextBox.Location = new System.Drawing.Point(146, 78);
-            this.CharIdTextBox.Name = "CharIdTextBox";
-            this.CharIdTextBox.Size = new System.Drawing.Size(154, 20);
-            this.CharIdTextBox.TabIndex = 76;
-            // 
             // ChallengeRatingComboBox
             // 
+            this.ChallengeRatingComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ChallengeRatingComboBox.FormattingEnabled = true;
             this.ChallengeRatingComboBox.Items.AddRange(new object[] {
             "0",
@@ -937,7 +956,7 @@
             "11",
             "12",
             "13"});
-            this.ChallengeRatingComboBox.Location = new System.Drawing.Point(146, 49);
+            this.ChallengeRatingComboBox.Location = new System.Drawing.Point(512, 301);
             this.ChallengeRatingComboBox.Name = "ChallengeRatingComboBox";
             this.ChallengeRatingComboBox.Size = new System.Drawing.Size(155, 21);
             this.ChallengeRatingComboBox.TabIndex = 75;
@@ -945,56 +964,11 @@
             // ChallengeRatingLabel
             // 
             this.ChallengeRatingLabel.AutoSize = true;
-            this.ChallengeRatingLabel.Location = new System.Drawing.Point(24, 51);
+            this.ChallengeRatingLabel.Location = new System.Drawing.Point(391, 303);
             this.ChallengeRatingLabel.Name = "ChallengeRatingLabel";
             this.ChallengeRatingLabel.Size = new System.Drawing.Size(115, 13);
             this.ChallengeRatingLabel.TabIndex = 74;
             this.ChallengeRatingLabel.Text = "Challenge Rating (CR):";
-            // 
-            // DescriptionsSkillsTab
-            // 
-            this.DescriptionsSkillsTab.Controls.Add(this.SkillsGroupBox);
-            this.DescriptionsSkillsTab.Controls.Add(this.LanguagesTextBox);
-            this.DescriptionsSkillsTab.Controls.Add(this.LanguagesLabel);
-            this.DescriptionsSkillsTab.Controls.Add(this.TraitsTextBox);
-            this.DescriptionsSkillsTab.Controls.Add(this.FirstMeetingTextBox);
-            this.DescriptionsSkillsTab.Controls.Add(this.FirstMeetingLabel);
-            this.DescriptionsSkillsTab.Controls.Add(this.ActionsLabel);
-            this.DescriptionsSkillsTab.Controls.Add(this.ActionsTextBox);
-            this.DescriptionsSkillsTab.Controls.Add(this.MotiveTextBox);
-            this.DescriptionsSkillsTab.Controls.Add(this.MotiveLabel);
-            this.DescriptionsSkillsTab.Controls.Add(this.TraitsLabel);
-            this.DescriptionsSkillsTab.Controls.Add(this.AppearanceLabel);
-            this.DescriptionsSkillsTab.Controls.Add(this.AppearanceTextBox);
-            this.DescriptionsSkillsTab.Controls.Add(this.RacialFeaturesLabel);
-            this.DescriptionsSkillsTab.Controls.Add(this.RacialFeaturesTextBox);
-            this.DescriptionsSkillsTab.Controls.Add(this.RacketTextBox);
-            this.DescriptionsSkillsTab.Controls.Add(this.RacketLabel);
-            this.DescriptionsSkillsTab.Location = new System.Drawing.Point(4, 22);
-            this.DescriptionsSkillsTab.Name = "DescriptionsSkillsTab";
-            this.DescriptionsSkillsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.DescriptionsSkillsTab.Size = new System.Drawing.Size(1254, 580);
-            this.DescriptionsSkillsTab.TabIndex = 1;
-            this.DescriptionsSkillsTab.Text = "Descriptions & Skills";
-            this.DescriptionsSkillsTab.UseVisualStyleBackColor = true;
-            // 
-            // LanguagesTextBox
-            // 
-            this.LanguagesTextBox.Location = new System.Drawing.Point(425, 407);
-            this.LanguagesTextBox.Multiline = true;
-            this.LanguagesTextBox.Name = "LanguagesTextBox";
-            this.LanguagesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.LanguagesTextBox.Size = new System.Drawing.Size(217, 88);
-            this.LanguagesTextBox.TabIndex = 69;
-            // 
-            // LanguagesLabel
-            // 
-            this.LanguagesLabel.AutoSize = true;
-            this.LanguagesLabel.Location = new System.Drawing.Point(341, 410);
-            this.LanguagesLabel.Name = "LanguagesLabel";
-            this.LanguagesLabel.Size = new System.Drawing.Size(63, 13);
-            this.LanguagesLabel.TabIndex = 68;
-            this.LanguagesLabel.Text = "Languages:";
             // 
             // SpellsTab
             // 
@@ -1088,6 +1062,7 @@
             // 
             // Level9ComboBox
             // 
+            this.Level9ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Level9ComboBox.FormattingEnabled = true;
             this.Level9ComboBox.Location = new System.Drawing.Point(1039, 245);
             this.Level9ComboBox.Name = "Level9ComboBox";
@@ -1133,6 +1108,7 @@
             // 
             // Level8ComboBox
             // 
+            this.Level8ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Level8ComboBox.FormattingEnabled = true;
             this.Level8ComboBox.Location = new System.Drawing.Point(794, 245);
             this.Level8ComboBox.Name = "Level8ComboBox";
@@ -1178,6 +1154,7 @@
             // 
             // Level7ComboBox
             // 
+            this.Level7ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Level7ComboBox.FormattingEnabled = true;
             this.Level7ComboBox.Location = new System.Drawing.Point(548, 245);
             this.Level7ComboBox.Name = "Level7ComboBox";
@@ -1223,6 +1200,7 @@
             // 
             // Level6ComboBox
             // 
+            this.Level6ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Level6ComboBox.FormattingEnabled = true;
             this.Level6ComboBox.Location = new System.Drawing.Point(304, 245);
             this.Level6ComboBox.Name = "Level6ComboBox";
@@ -1268,6 +1246,7 @@
             // 
             // Level5ComboBox
             // 
+            this.Level5ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Level5ComboBox.FormattingEnabled = true;
             this.Level5ComboBox.Location = new System.Drawing.Point(60, 245);
             this.Level5ComboBox.Name = "Level5ComboBox";
@@ -1313,6 +1292,7 @@
             // 
             // Level4ComboBox
             // 
+            this.Level4ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Level4ComboBox.FormattingEnabled = true;
             this.Level4ComboBox.Location = new System.Drawing.Point(1039, 14);
             this.Level4ComboBox.Name = "Level4ComboBox";
@@ -1358,6 +1338,7 @@
             // 
             // Level3ComboBox
             // 
+            this.Level3ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Level3ComboBox.FormattingEnabled = true;
             this.Level3ComboBox.Location = new System.Drawing.Point(794, 14);
             this.Level3ComboBox.Name = "Level3ComboBox";
@@ -1403,6 +1384,7 @@
             // 
             // Level2ComboBox
             // 
+            this.Level2ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Level2ComboBox.FormattingEnabled = true;
             this.Level2ComboBox.Location = new System.Drawing.Point(548, 14);
             this.Level2ComboBox.Name = "Level2ComboBox";
@@ -1448,6 +1430,7 @@
             // 
             // Level1ComboBox
             // 
+            this.Level1ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Level1ComboBox.FormattingEnabled = true;
             this.Level1ComboBox.Location = new System.Drawing.Point(304, 14);
             this.Level1ComboBox.Name = "Level1ComboBox";
@@ -1466,7 +1449,7 @@
             // CasterLabel
             // 
             this.CasterLabel.AutoSize = true;
-            this.CasterLabel.Location = new System.Drawing.Point(878, 467);
+            this.CasterLabel.Location = new System.Drawing.Point(224, 467);
             this.CasterLabel.Name = "CasterLabel";
             this.CasterLabel.Size = new System.Drawing.Size(40, 13);
             this.CasterLabel.TabIndex = 81;
@@ -1474,10 +1457,10 @@
             // 
             // CasterTextBox
             // 
-            this.CasterTextBox.Location = new System.Drawing.Point(924, 467);
+            this.CasterTextBox.Location = new System.Drawing.Point(281, 467);
             this.CasterTextBox.Multiline = true;
             this.CasterTextBox.Name = "CasterTextBox";
-            this.CasterTextBox.Size = new System.Drawing.Size(289, 94);
+            this.CasterTextBox.Size = new System.Drawing.Size(644, 94);
             this.CasterTextBox.TabIndex = 80;
             // 
             // CantripsListBox
@@ -1508,6 +1491,51 @@
             this.AddCantripBtn.UseVisualStyleBackColor = true;
             this.AddCantripBtn.Click += new System.EventHandler(this.AddCantripBtn_Click);
             // 
+            // DescriptionsSkillsTab
+            // 
+            this.DescriptionsSkillsTab.Controls.Add(this.HistoryLabel);
+            this.DescriptionsSkillsTab.Controls.Add(this.HistoryTextBox);
+            this.DescriptionsSkillsTab.Controls.Add(this.SkillsGroupBox);
+            this.DescriptionsSkillsTab.Controls.Add(this.LanguagesTextBox);
+            this.DescriptionsSkillsTab.Controls.Add(this.LanguagesLabel);
+            this.DescriptionsSkillsTab.Controls.Add(this.PersonalityTextBox);
+            this.DescriptionsSkillsTab.Controls.Add(this.FirstMeetingTextBox);
+            this.DescriptionsSkillsTab.Controls.Add(this.FirstMeetingLabel);
+            this.DescriptionsSkillsTab.Controls.Add(this.ActionsLabel);
+            this.DescriptionsSkillsTab.Controls.Add(this.ActionsTextBox);
+            this.DescriptionsSkillsTab.Controls.Add(this.MotiveTextBox);
+            this.DescriptionsSkillsTab.Controls.Add(this.MotiveLabel);
+            this.DescriptionsSkillsTab.Controls.Add(this.PersonalityLabel);
+            this.DescriptionsSkillsTab.Controls.Add(this.AppearanceLabel);
+            this.DescriptionsSkillsTab.Controls.Add(this.AppearanceTextBox);
+            this.DescriptionsSkillsTab.Controls.Add(this.RacialFeaturesLabel);
+            this.DescriptionsSkillsTab.Controls.Add(this.RacialFeaturesTextBox);
+            this.DescriptionsSkillsTab.Location = new System.Drawing.Point(4, 22);
+            this.DescriptionsSkillsTab.Name = "DescriptionsSkillsTab";
+            this.DescriptionsSkillsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.DescriptionsSkillsTab.Size = new System.Drawing.Size(1391, 580);
+            this.DescriptionsSkillsTab.TabIndex = 1;
+            this.DescriptionsSkillsTab.Text = "Descriptions & Skills";
+            this.DescriptionsSkillsTab.UseVisualStyleBackColor = true;
+            // 
+            // HistoryLabel
+            // 
+            this.HistoryLabel.AutoSize = true;
+            this.HistoryLabel.Location = new System.Drawing.Point(621, 295);
+            this.HistoryLabel.Name = "HistoryLabel";
+            this.HistoryLabel.Size = new System.Drawing.Size(42, 13);
+            this.HistoryLabel.TabIndex = 71;
+            this.HistoryLabel.Text = "History:";
+            // 
+            // HistoryTextBox
+            // 
+            this.HistoryTextBox.Location = new System.Drawing.Point(710, 295);
+            this.HistoryTextBox.Multiline = true;
+            this.HistoryTextBox.Name = "HistoryTextBox";
+            this.HistoryTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.HistoryTextBox.Size = new System.Drawing.Size(217, 88);
+            this.HistoryTextBox.TabIndex = 72;
+            // 
             // SkillsGroupBox
             // 
             this.SkillsGroupBox.Controls.Add(this.AcrobaticsCheckBox);
@@ -1528,7 +1556,7 @@
             this.SkillsGroupBox.Controls.Add(this.PerceptionCheckBox);
             this.SkillsGroupBox.Controls.Add(this.IntimidationCheckBox);
             this.SkillsGroupBox.Controls.Add(this.MedicineCheckBox);
-            this.SkillsGroupBox.Location = new System.Drawing.Point(703, 12);
+            this.SkillsGroupBox.Location = new System.Drawing.Point(26, 29);
             this.SkillsGroupBox.Name = "SkillsGroupBox";
             this.SkillsGroupBox.Size = new System.Drawing.Size(200, 474);
             this.SkillsGroupBox.TabIndex = 70;
@@ -1715,6 +1743,24 @@
             this.MedicineCheckBox.Text = "Medicine";
             this.MedicineCheckBox.UseVisualStyleBackColor = true;
             // 
+            // LanguagesTextBox
+            // 
+            this.LanguagesTextBox.Location = new System.Drawing.Point(710, 428);
+            this.LanguagesTextBox.Multiline = true;
+            this.LanguagesTextBox.Name = "LanguagesTextBox";
+            this.LanguagesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.LanguagesTextBox.Size = new System.Drawing.Size(217, 88);
+            this.LanguagesTextBox.TabIndex = 69;
+            // 
+            // LanguagesLabel
+            // 
+            this.LanguagesLabel.AutoSize = true;
+            this.LanguagesLabel.Location = new System.Drawing.Point(621, 428);
+            this.LanguagesLabel.Name = "LanguagesLabel";
+            this.LanguagesLabel.Size = new System.Drawing.Size(63, 13);
+            this.LanguagesLabel.TabIndex = 68;
+            this.LanguagesLabel.Text = "Languages:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1735,14 +1781,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.DexterityNud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WisdomNud)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.XpNud)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TitleOrderNud)).EndInit();
             this.TabControl.ResumeLayout(false);
             this.StatsTab.ResumeLayout(false);
             this.StatsTab.PerformLayout();
-            this.DescriptionsSkillsTab.ResumeLayout(false);
-            this.DescriptionsSkillsTab.PerformLayout();
             this.SpellsTab.ResumeLayout(false);
             this.SpellsTab.PerformLayout();
+            this.DescriptionsSkillsTab.ResumeLayout(false);
+            this.DescriptionsSkillsTab.PerformLayout();
             this.SkillsGroupBox.ResumeLayout(false);
             this.SkillsGroupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -1762,9 +1807,8 @@
         private System.Windows.Forms.Label ActionsLabel;
         private System.Windows.Forms.Label AlignmentLabel;
         private System.Windows.Forms.ComboBox AlignmentComboBox;
-        private System.Windows.Forms.TextBox TraitsTextBox;
-        private System.Windows.Forms.Label TraitsLabel;
-        private System.Windows.Forms.Label CharIdLabel;
+        private System.Windows.Forms.TextBox PersonalityTextBox;
+        private System.Windows.Forms.Label PersonalityLabel;
         private System.Windows.Forms.TextBox FactionTextBox;
         private System.Windows.Forms.Label FactionLabel;
         private System.Windows.Forms.Label HpLabel;
@@ -1774,7 +1818,6 @@
         private System.Windows.Forms.Label LastNameLabel;
         private System.Windows.Forms.TextBox LocationTextBox;
         private System.Windows.Forms.Label LocationLabel;
-        private System.Windows.Forms.TextBox RaceTextBox;
         private System.Windows.Forms.Label RaceLabel;
         private System.Windows.Forms.TextBox AppearanceTextBox;
         private System.Windows.Forms.Label AppearanceLabel;
@@ -1806,12 +1849,8 @@
         private System.Windows.Forms.Label FirstMeetingLabel;
         private System.Windows.Forms.TextBox RacialFeaturesTextBox;
         private System.Windows.Forms.Label RacialFeaturesLabel;
-        private System.Windows.Forms.TextBox RacketTextBox;
-        private System.Windows.Forms.Label RacketLabel;
         private System.Windows.Forms.TextBox SizeTextBox;
         private System.Windows.Forms.Label SizeLabel;
-        private System.Windows.Forms.NumericUpDown TitleOrderNud;
-        private System.Windows.Forms.Label TitleOrderLabel;
         private System.Windows.Forms.TextBox TypeTextBox;
         private System.Windows.Forms.Label TypeLabel;
         private System.Windows.Forms.ComboBox CantripsComboBox;
@@ -1874,7 +1913,6 @@
         private System.Windows.Forms.Label Level5LabelDd;
         private System.Windows.Forms.TextBox LanguagesTextBox;
         private System.Windows.Forms.Label LanguagesLabel;
-        private System.Windows.Forms.TextBox CharIdTextBox;
         private System.Windows.Forms.TextBox HitPointsTextBox;
         private System.Windows.Forms.CheckBox FactionLeaderCheckBox;
         private System.Windows.Forms.TextBox SpeedTextBox;
@@ -1897,6 +1935,11 @@
         private System.Windows.Forms.CheckBox PerceptionCheckBox;
         private System.Windows.Forms.CheckBox IntimidationCheckBox;
         private System.Windows.Forms.CheckBox MedicineCheckBox;
+        private System.Windows.Forms.Label HistoryLabel;
+        private System.Windows.Forms.TextBox HistoryTextBox;
+        private System.Windows.Forms.ComboBox ArmorComboBox;
+        private System.Windows.Forms.Label ArmorLabel;
+        private System.Windows.Forms.ComboBox RaceComboBox;
     }
 }
 
